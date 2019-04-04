@@ -1,5 +1,5 @@
 /*******************************************
-* Light color on Admin Login Page: #e5b6fc
+* Light purple color on Admin Login Page: #e5b6fc
 *
 *******************************************/
 
@@ -17,7 +17,7 @@ html {
     background-color: #fff;
     color: #555;
     /*---If lato not available, arial used, if arial not available, sans-serif---*/
-    /*--font-family: "Lato", "Arial", sans-serif; --*/
+    font-family: "Lato", "Arial", sans-serif;
     font-weight: 300;
     font-size: 20px;
     /*---Make fonts rendering in perfect way---*/

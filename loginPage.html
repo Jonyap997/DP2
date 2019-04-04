@@ -9,7 +9,7 @@
         <!--HTML5shiv and Respond -->
         <script src="framework/js/html5shiv.js"></script>
         <script src="framework/js/respond.min.js"></script>
-        <link href="framework/css/style.css" rel="stylesheet" />
+        <link href="framework/css/styles.css" rel="stylesheet" />
         <!--Icons-->
         <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css">
         <!--Fonts-->
