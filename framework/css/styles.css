@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+html, body {
+    margin: 0;
+    overflow-x:hidden;
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+#logo {
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    width: 75px;
+    height:auto;
+    float: left;
+    margin: 0px 5px 5px 5px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.nav li {
+    float:right;
+}
+
+.nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 0px 10px;
+    text-decoration: none;
+}
+
+.main{
+    border: none;
+    height: 46vw;
+    background: url("../resources/images/pink-hair-1450045.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: center;
+}
+
+
+.footer {
+    background-color: darkslategrey;
+    width: 100%
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+.footer ul {
+    list-style-type: none;
+    background-color: darkslategrey;
+    overflow: hidden;
+    width: 100%;
+}
+
+.footer a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    margin: 0px 20px;
+}
+
+. footer p {
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 14px 20px;
+    margin: 0px 20px;
+}
+
+.col_container {
+    display: table;
+    width: 100%;
+}
+
+.col {
+    display: table-cell;
+    padding: 16px;
+}
+
