@@ -180,7 +180,7 @@ article p {
 .textbox {
     width: 100%;
     overflow: hidden;
-    font-size: 20px;z
+    font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
     border-bottom: 1px solid #e5b6fc;
@@ -212,5 +212,22 @@ article p {
     font-size: 18px;
     cursor: pointer;
     margin: 15px 0;
+}
+
+/******************
+* ADMIN LOGIN PAGE
+******************/
+
+.space {
+    padding: 30px;
+}
+
+.gap {
+    padding-left: 175px;
+}
+
+.center_space{
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
