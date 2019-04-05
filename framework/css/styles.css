@@ -94,6 +94,15 @@ h2 {
     background-position: center;
 }
 
+.background_text h1{
+    color:palevioletred;
+    float: left;
+    clear:both;
+    padding-left: 3%;
+    font-size: 7vw;
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
 .motto {
     font-family: 'Josefin Slab';
     font-size: 40px;
@@ -171,7 +180,7 @@ article p {
 .textbox {
     width: 100%;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 20px;z
     padding: 8px 0;
     margin: 8px 0;
     border-bottom: 1px solid #e5b6fc;
