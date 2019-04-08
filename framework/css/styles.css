@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", "Arial", sans-serif;
 } 
 
 html {
@@ -26,7 +27,6 @@ html {
 
 html, body {
     overflow-x:hidden;
-    font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .clearfix:after {
@@ -35,10 +35,6 @@ html, body {
     display: block;
     height: 0;
     visibility: hidden;
-}
-
-h1, h2, h3 {
-    font-weight: 300; /*Montserrat link does not have font weight, check the loginPage Lato link for reference*/
 }
 
 h1 {
@@ -85,29 +81,33 @@ h2 {
     background-color: black;
 }
 
+.nav hr {
+    margin:0;
+    padding:0;
+}
+
 .main{
     border: none;
     height: 46vw;
-    background: url("../resources/images/pink-hair-1450045.jpg");
+    background: url("../resources/images/attractive-beautiful-beauty-594421.jpg");
     background-repeat: no-repeat;
     background-size:100%;
-    background-position: center;
+    background-position:center;
 }
 
 .background_text h1{
-    color:palevioletred;
-    float: left;
+    color: whitesmoke;
+    float: right;
     clear:both;
-    padding-left: 3%;
+    padding-right: 3%;
     font-size: 7vw;
-    font-family: "Montserrat", "Arial", sans-serif; /*font-family already applied for all in html, not needed here*/
+    font-family: "Monsieur La Doulaise", "Arial", sans-serif;
 }
 
-.motto {
-    font-family: 'Josefin Slab'; /*Keep Font Family Consistent, webApp good practices unless used for creativity*/
+.motto p {
+    font-family: "Josefin Slab", "Arial", sans-serif; /*Keep Font Family Consistent, webApp good practices unless used for creativity*/
     font-size: 40px;
     text-align: center;
-    width: 100%;
 }
 
 article p {
@@ -119,8 +119,7 @@ article p {
 .footer {
     border-top: 1px black solid;
     background-color:white;
-    width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -142,12 +141,48 @@ article p {
     color:black;
 }
 
-. footer p {
+.footer p {
     display:block;
     color:black;
     text-align: center;
     padding: 14px 20px;
     margin: 0px 20px;
+}
+
+.footer_container {
+    position: relative;
+}
+
+.footer_container img{
+    width: 3.5vw;
+}
+
+.footer_left {
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+}
+
+.footer_center {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+/*adjustment for center image*/
+.footer_center img {
+    width:3.7vw;
+}
+
+.footer_right {
+    position: absolute;
+    left:60%;
+    bottom: 0;
+}
+
+/*adjustment for center image*/
+.footer_right img {
+    width:3.7vw;
 }
 
 /******************
