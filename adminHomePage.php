@@ -13,7 +13,9 @@
         <!--Icons-->
         <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css">
         <!--Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'>
     </head> 
     <body class="loginPage"> 
         <form method="POST" action="process.php">
