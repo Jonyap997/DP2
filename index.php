@@ -1,3 +1,41 @@
+<?php
+session_start();
+
+if(isset($_POST['login'])) {
+    
+    //Connect to database
+    $dbHost="localhost";
+    $dbUser="id9115199_salondemo";
+    $dPassword="qwe121993";
+    $db="id9115199_salon";
+
+    $connection = mysqli_connect($dbHost, $dbUser, $dPassword, $db);
+
+    //Get values from form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    //To prevent sql injection
+    $username = stripcslashes($username);
+    $password = stripcslashes($password);
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+
+    //Query the database for user
+    $result = mysqli_query($connection, "select * from admin where username = '$username' and password = '$password'")
+        or die("Failed to query database ".mysqli_error($connection));
+    $row = mysqli_fetch_array($result);
+    if($row['username'] == $username && $row['password'] == $password) {
+        header("Location: adminHomePage.php");
+    } else {
+        $error = true;
+    }
+} else {
+    $error = false;
+}
+
+?>
+
 <!DOCTYPE html> 
 <html lang="en" data-ng-app=""> 
     <head> 

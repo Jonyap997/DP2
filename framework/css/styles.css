@@ -17,15 +17,12 @@
 html {
     background-color: #fff;
     color: #555;
-    /*---If lato not available, arial used, if arial not available, sans-serif---*/
-    font-family: "Lato", "Arial", sans-serif;
-    font-weight: 300;
     font-size: 20px;
     /*---Make fonts rendering in perfect way---*/
     text-rendering: optimizeLegibility;
 }
 
-html, body {
+body {
     overflow-x:hidden;
 }
 
@@ -37,6 +34,9 @@ html, body {
     visibility: hidden;
 }
 
+/****************
+* HEADINGS
+****************/
 h1 {
     font-size: 100px;
 }
@@ -45,6 +45,9 @@ h2 {
     font-size: 50px;
 }
 
+/***********************
+* NAVIGATION + HOMEPAGE
+***********************/
 #logo {
     position: absolute;
     top: 2%;
@@ -105,7 +108,7 @@ h2 {
 }
 
 .motto p {
-    font-family: "Josefin Slab", "Arial", sans-serif; /*Keep Font Family Consistent, webApp good practices unless used for creativity*/
+    font-family: "Josefin Slab", "Arial", sans-serif;
     font-size: 40px;
     text-align: center;
 }
@@ -116,6 +119,9 @@ article p {
     padding: 5%;
 }
 
+/****************
+* FOOTER
+****************/
 .footer {
     border-top: 1px black solid;
     background-color:white;

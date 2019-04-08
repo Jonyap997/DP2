@@ -9,26 +9,25 @@
         <!--HTML5shiv and Respond -->
         <script src="framework/js/html5shiv.js"></script>
         <script src="framework/js/respond.min.js"></script>
-        <link href="framework/css/styles.css" rel="stylesheet" />
+        <link href="framework/css/style.css" rel="stylesheet" />
         <!--Icons-->
         <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css">
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
     </head> 
     <body class="loginPage"> 
-        <form method="POST" action="index.php">
+        <form method="POST" action="process.php">
             <div class="login-box row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h1>Login</h1>
-                    <div class="col-md-12 col-sm-12 col-xs-12 textbox">
+                <div class="col-md-12">
+                    <h1>ADMIN HOMEPAGE SAMPLE FOR TESTING!!!!</h1>
+                    <div class="col-md-12 textbox">
                         <i class="ion-ios-person-outline icon"></i>
-                        <input type="text" placeholder="Username" name="username" value="" required>
+                        <input type="text" placeholder="Username" name="username" value="">
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12 textbox">
+                    <div class="col-md-12 textbox">
                         <i class="ion-ios-locked-outline icon"></i>
-                        <input type="password" placeholder="Password" name="password" value="" required>
+                        <input type="password" placeholder="Password" name="password" value="">
                     </div>
-                    <?php if( $error) echo "<p style='color:red;font-size:13px;'>Invalid Username or Password</p>" ?>
                     <input class="btn" type="submit" name="login" value="Sign In">
                 </div>
             </div>
