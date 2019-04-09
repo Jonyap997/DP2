@@ -69,7 +69,7 @@ if(isset($_POST['login'])) {
                         <input type="password" placeholder="Password" name="password" value="" required>
                     </div>
                     <?php if( $error) echo "<p style='color:red;font-size:13px;'>Invalid Username or Password</p>" ?>
-                    <input class="btn" type="submit" name="login" value="Sign In">
+                    <input class="loginBtn" type="submit" name="login" value="Sign In">
                 </div>
             </div>
         </form>
