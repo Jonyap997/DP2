@@ -84,7 +84,7 @@ h2 {
     background-color: black;
 }
 
-.nav hr {
+hr {
     margin:0;
     padding:0;
 }
@@ -120,10 +120,45 @@ article p {
 }
 
 /****************
+* VERTICAL NAV
+****************/
+.vertical_nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    position: relative;
+    overflow: auto;
+}
+
+.vertical_nav li a {
+    display: block;
+    color: black;
+    padding: 30px 16px;
+    text-decoration: none;
+    border-right: 1px lightgrey solid;
+    border-bottom: 1px lightgrey solid;
+}
+
+#vertical_nav_last_item a{
+    border-bottom: 0px lightgrey solid;
+}
+
+.vertical_nav li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.vertical_nav li a:hover:not(.active) {
+  background-color: black;
+  color: white;
+}
+
+/****************
 * FOOTER
 ****************/
 .footer {
-    border-top: 1px black solid;
+    border-top: 1px lightgrey solid;
     background-color:white;
     position: relative;
     bottom: 0;
