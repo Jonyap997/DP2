@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang ="en" data-ng-app="">
+<head>
+<title>Smile and Style</title>
+<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<!-- Bootstrap -->
+<link href="framework/css/bootstrap.min.css" rel="stylesheet" />
+<link href="framework/css/styles.css" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+ <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+ <!--[if lt IE 9]>
+ <script src="framework/js/html5shiv.js"></script>
+ <script src="framework/js/respond.min.js"></script>
+ <![endif]-->
+    
+</head>
+<body>
+    <div class="row">
+        <div class="nav col-md-1 col-sm-1 col-xs-1">
+            <a href="hairsalontemplate.html"><img id="logo" alt="logo" src="framework/resources/images/logo.png"/></a>
+        </div>
+        <div class="nav col-md-11 col-sm-11 col-xs-11">
+            <ul>
+                <li><a href="sign_in.html">Admin Sign In</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="hairdressers.html">Our hairdressers</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="timeslot.html">View Hairdressers' Schedule</a></li>
+            </ul>
+        </div>
+    </div>
+   
+   <div class="row">
+       <div class="col-md-12 col-sm-12 col-xs-12">
+           <h4>Time slots</h4>
+           <div class="col-md-5 col-sm-5 col-xs-5" >
+               <p>These are the time slots available for hairdressers</p>
+           <p>Green - Available for booking</p>
+           <p>Red - Time slot fully booked</p>
+           <p>Grey - Time slot not available</p>
+           </div>
+           <div class="col-md-1 col-sm-1 col-xs-1">
+               <p class="p-3 mb-2 bg-success text-white">Available</p>
+               <p class="p-3 mb-2 bg-warning text-dark">Full Booked</p>
+               <p class="p-3 mb-2 bg-secondary text-white">Not available for booking</p>     
+           </div>
+           
+           </div>
+       </div>
+       <div class="space"></div>
+       <div class="container">
+<!--           Time slot program here.-->
+          <div class="row">
+                <div class="col-md-12">
+                     
+                    <div class="btn-group" role="group">
+                        <button type="button" class="hairBtn btn-default" data-ng-click = "chrDisp = 'stylist1'">HairStylist 1</button>
+                        <button type="button" class="hairBtn btn-default" data-ng-click = "chrDisp = 'stylist2'">Hair Stylist 2</button>
+                        <button type="button" class="hairBtn btn-default" data-ng-click = "chrDisp = 'stylist3'">Hair Stylist 3</button>
+                        <button type="button" class="hairBtn btn-default" data-ng-click = "chrDisp = 'stylist4'">Hair Stylist 4</button>
+                    </div>
+                    
+                    <div data-ng-if="chrDisp == 'stylist2'">
+                        <h2>{{chrDisp}} View</h2>
+                        <p>
+                           Not implemented yet. Would you like to take a try to implement something?
+                        </p>
+                    </div>
+                    <div data-ng-if="chrDisp == 'stylist3'">
+                        <h2>{{chrDisp}} View</h2>
+                        <p>
+                           Not implemented yet. Would you like to take a try to implement something?
+                        </p>
+                    </div>
+                    <div data-ng-if="chrDisp == 'stylist4'">
+                        <h2>{{chrDisp}} View</h2>
+                        <p>
+                           Not implemented yet. Would you like to take a try to implement something?
+                        </p>
+                    </div>
+                    
+                    <div data-ng-if="chrDisp == 'stylist1'" data-ng-init="day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']">
+                        <h2>{{chrDisp}} View</h2>
+                        <table class="table table-stripe small">
+                            <tr>
+                                <th>Day</th>
+                                <th>Desc</th>
+                                <th>Day</th>
+                                <th>Desc</th>
+                            </tr>
+                            <tr data-ng-repeat="d in day">
+                                <td>{{d}}</td>
+                                <td></td>
+                                <td>{{d}}</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        
+                    
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class="space"></div>
+       
+
+
+    <div class="row">
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+            <ul>
+                <li><a href="timeslot.html">View Hairdressers' Schedule</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="hairdressers.html">Our hairdressers</a></li>
+                <li><a href="about.html">About Us</a></li>  
+            </ul>
+        </div>
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+            <ul>
+                <li>Be our <b>V.I.P</b></li>
+                <li>Jalan Sotong 1, Taman Monyet</li>
+                <li>10000 Kuching, Sarawak</li>
+                <li><b>Follow us on social media</b></li>
+                <li></li>  
+            </ul>
+        </div>
+        
+    </div>
+    
+   
+   
+ 
+ <!-- jQuery – required for Bootstrap's JavaScript plugins) -->
+ <script src="framework/js/jquery.min.js"></script>
+<!--  All Bootstrap plug-ins file -->
+ <script src="framework/js/bootstrap.min.js"></script>
+ <!-- Basic AngularJS -->
+    <script src="framework/js/angular.min.js"></script>
+ </body>
+</html>
+
