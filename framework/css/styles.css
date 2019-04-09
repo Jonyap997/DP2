@@ -144,7 +144,7 @@ article p {
     border-bottom: 0px lightgrey solid;
 }
 
-.vertical_nav li a.active {
+.vertical_nav li.active a {
   background-color: #4CAF50;
   color: white;
 }
