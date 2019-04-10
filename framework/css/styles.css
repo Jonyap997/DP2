@@ -154,6 +154,15 @@ article p {
   color: white;
 }
 
+.adminHeading h2 {
+    text-align: center;
+}
+
+.adminHeading p {
+    text-align: center;
+
+}
+
 /****************
 * FOOTER
 ****************/
@@ -382,3 +391,31 @@ form {
 /******************
 *  HAIRDRESSER PAGE
 ******************/
+
+/*********************
+*  ADMIN ADD CUSTOMER
+*********************/
+
+form.add_customer {
+    float: left;
+    border: none;
+}
+
+.add_customer fieldset {
+    margin: 20px;
+}
+
+input[type="submit"], input[type="reset"] {
+    float:left;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 16px 32px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: black;
+    color: white;
+}
