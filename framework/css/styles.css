@@ -414,8 +414,15 @@ tr:hover {
 }
 
 /******************
-*  HAIRDRESSER PAGE
+*  PRODUCTS PAGE
 ******************/
+
+.product{
+    width: 247px;
+    height: 247px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /*********************
 *  ADMIN ADD CUSTOMER
