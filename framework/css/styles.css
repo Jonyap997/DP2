@@ -322,14 +322,14 @@ tr {
 th, td {
     border: none;
     height: 30px;
-    padding: 2px;
+    padding: 0 10px;
 }
 
 tr:hover {
     background: #F5F5F5;
 }
 
-form {
+.adminStockForm {
     width: 45%;
     margin: 50px auto;
     text-align: left;
@@ -366,6 +366,31 @@ form {
     border-radius: 5px;
 }
 
+.msg {
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: #35d935;
+    background: #dff0d8;
+    width: 50%;
+    text-align: center;
+}
+
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #2E8B57;
+    color: white;
+    border-radius: 3px;
+}
+
+.delete_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #800000;
+    color: white;
+    border-radius: 3px;
+}
 /******************
 * SERVICES PAGE
 ******************/

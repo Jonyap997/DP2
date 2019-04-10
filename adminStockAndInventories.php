@@ -1,5 +1,19 @@
 <?php
-include("adminStockServer.php");
+    include("adminStockServer.php");
+
+    //Fetch the data to be updated
+    if (isset($_GET['edit'])) {
+        $id = $_GET['edit'];
+        
+        $edit_state = true;
+        $reconnect = mysqli_query($connection, "SELECT * FROM inventories WHERE id=$id");
+        $record = mysqli_fetch_array($reconnect);
+        $id = $record['id'];
+        $name = $record['name'];
+        $price = $record['price'];
+        $amountRemaining = $record['amountRemaining'];
+        $description = $record['description'];
+    }
 
 ?>
 
@@ -38,45 +52,52 @@ include("adminStockServer.php");
                         </tr>
                     </thead>
                     <tbody>
+                       <?php while ($row = mysqli_fetch_array($results)) { ?>
                         <tr>
-                            <td>10001</td>
-                            <td>Magic Shampoo</td>
-                            <td>110</td>
-                            <td>60</td>
-                            <td>magic is real</td>
+                            <td><?php echo $row["id"]; ?></td>
+                            <td><?php echo $row["name"]; ?></td>
+                            <td><?php echo $row["price"]; ?></td>
+                            <td><?php echo $row["amountRemaining"]; ?></td>
+                            <td><?php echo $row["description"]; ?></td>
                             <td>
-                                <a href="#">Edit</a>
+                                <a class="edit_btn" href="adminStockAndInventories.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>
                             <td>
-                                <a href="#">Delete</a>
+                                <a class="delete_btn" href="#">Delete</a>
                             </td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 
-                <form method="POST" action="adminStockServer.php">
+                <form method="POST" action="adminStockServer.php" class="adminStockForm">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <div class="input-group">
                         <label>ID</label>
-                        <input type="text" name="id">
+                        <input type="text" name="id" value="<?php echo $id; ?>">
                     </div>
                     <div class="input-group">
                         <label>Name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" value="<?php echo $name; ?>">
                     </div>
                     <div class="input-group">
                         <label>Price</label>
-                        <input type="text" name="price">
+                        <input type="text" name="price" value="<?php echo $price; ?>">
                     </div>
                     <div class="input-group">
                         <label>Amount In Stock</label>
-                        <input type="text" name="amoutInStock">
+                        <input type="text" name="amountRemaining" value="<?php echo $amountRemaining; ?>">
                     </div>
                     <div class="input-group">
                         <label>Description</label>
-                        <input type="text" name="description">
+                        <input type="text" name="description" value="<?php echo $description; ?>">
                     </div>
                     <div class="input-group">
+                    <?php if ($edit_state == false): ?>
                         <button type="submit" name="save" class="adminStockBtn">Save</button>
+                    <?php else: ?>
+                        <button type="submit" name="update" class="adminStockBtn">Update</button>
+                    <?php endif ?>
                     </div>
                 </form>
             </div>
