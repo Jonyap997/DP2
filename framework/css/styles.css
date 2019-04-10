@@ -419,3 +419,11 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: black;
     color: white;
 }
+
+/*********************
+*  ADMIN EDIT CUSTOMER
+*********************/
+
+input[type="search"] {
+    border: 1px solid black;
+}
