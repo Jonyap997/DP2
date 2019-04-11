@@ -74,8 +74,7 @@ h2 {
 }
 
 .nav ul a:hover {
-    color:white;
-    background-color: black;
+    text-decoration: underline;
 }
 
 hr {
