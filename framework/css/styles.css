@@ -15,8 +15,6 @@
 } 
 
 html {
-    background-color: #fff;
-    color: #555;
     font-size: 20px;
     /*---Make fonts rendering in perfect way---*/
     text-rendering: optimizeLegibility;
@@ -24,6 +22,7 @@ html {
 
 body {
     overflow-x:hidden;
+    background-color: #fbfbf9;
 }
 
 .clearfix:after {
@@ -48,15 +47,6 @@ h2 {
 /***********************
 * NAVIGATION + HOMEPAGE
 ***********************/
-#logo {
-    position: absolute;
-    top: 2%;
-    left: 10%;
-    width: 75px;
-    height:auto;
-    float: left;
-    margin: 0px 5px 5px 5px;
-}
 
 .nav ul {
     list-style-type: none;
@@ -68,6 +58,10 @@ h2 {
 
 .nav li {
     float:right;
+}
+
+.home_icon li{
+    float:left;
 }
 
 .nav a {
@@ -87,12 +81,13 @@ h2 {
 hr {
     margin:0;
     padding:0;
+    color: black;
 }
 
 .main{
     border: none;
     height: 46vw;
-    background: url("../resources/images/attractive-beautiful-beauty-594421.jpg");
+    background: linear-gradient(rgba(204, 204, 204, 0.5),rgba(204, 204, 204, 0.5)), url("../resources/images/attractive-beautiful-beauty-157967.jpg");
     background-repeat: no-repeat;
     background-size:100%;
     background-position:center;
@@ -100,11 +95,20 @@ hr {
 
 .background_text h1{
     color: whitesmoke;
-    float: right;
+    float: left;
     clear:both;
-    padding-right: 3%;
+    padding-left: 3%;
     font-size: 7vw;
-    font-family: "Monsieur La Doulaise", "Arial", sans-serif;
+    font-family: "Dancing Script", "Arial", sans-serif;
+}
+
+.background_text h2 {
+    color: whitesmoke;
+    float: left;
+    clear:both;
+    padding-left: 8%;
+    font-size: 2vw;
+    
 }
 
 .motto p {
@@ -163,14 +167,20 @@ article p {
 
 }
 
+.home_icon i {
+    width: 50px;
+    height: auto;
+}
+
 /****************
 * FOOTER
 ****************/
 .footer {
     border-top: 1px lightgrey solid;
-    background-color:white;
+    background-color: #d6d6d6;
     position: relative;
     bottom: 0;
+    color: black;
 }
 
 .footer ul {
@@ -191,20 +201,14 @@ article p {
     color:black;
 }
 
-.footer p {
-    display:block;
-    color:black;
-    text-align: center;
-    padding: 14px 20px;
-    margin: 0px 20px;
-}
-
 .footer_container {
     position: relative;
+    padding: 13px;
 }
 
-.footer_container img{
-    width: 3.5vw;
+.footer_container i {
+    width: 50px;
+    height: auto;
 }
 
 .footer_left {
@@ -219,20 +223,10 @@ article p {
     bottom: 0;
 }
 
-/*adjustment for center image*/
-.footer_center img {
-    width:3.7vw;
-}
-
 .footer_right {
     position: absolute;
     left:60%;
     bottom: 0;
-}
-
-/*adjustment for center image*/
-.footer_right img {
-    width:3.7vw;
 }
 
 /******************
