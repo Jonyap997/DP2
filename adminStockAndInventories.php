@@ -63,7 +63,7 @@
                                 <a class="edit_btn" href="adminStockAndInventories.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>
                             <td>
-                                <a class="delete_btn" href="#">Delete</a>
+                                <a class="delete_btn" href="adminStockServer.php?delete=<?php echo $row['id']; ?>">Delete</a>
                             </td>
                         </tr>
                         <?php } ?>
@@ -72,10 +72,6 @@
                 
                 <form method="POST" action="adminStockServer.php" class="adminStockForm">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
-                    <div class="input-group">
-                        <label>ID</label>
-                        <input type="text" name="id" value="<?php echo $id; ?>">
-                    </div>
                     <div class="input-group">
                         <label>Name</label>
                         <input type="text" name="name" value="<?php echo $name; ?>">
