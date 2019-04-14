@@ -472,3 +472,17 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 input[type="search"] {
     border: 1px solid black;
 }
+
+/************************
+* ADMIN DAILY REPORT PAGE
+************************/
+
+.dailyCustomer {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.dailyCustomer th, .dailyCustomer td {
+    text-align: center;
+}
