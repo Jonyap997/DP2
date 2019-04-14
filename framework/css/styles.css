@@ -477,12 +477,12 @@ input[type="search"] {
 * ADMIN DAILY REPORT PAGE
 ************************/
 
-.dailyCustomer {
+.report {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
 }
 
-.dailyCustomer th, .dailyCustomer td {
+.report th, .report td {
     text-align: center;
 }
