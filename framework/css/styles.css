@@ -410,9 +410,9 @@ tr:hover {
     vertical-align: middle;
 }
 
-/*********************
-*  ADMIN ADD CUSTOMER
-*********************/
+/*********************************
+*  ADMIN ADD/EDIT CUSTOMER PROFILE
+*********************************/
 
 form.add_customer {
     text-align: center;
