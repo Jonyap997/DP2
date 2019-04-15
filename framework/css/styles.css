@@ -429,16 +429,6 @@ form.add_customer {
  * Give Class name here because input will affect all input type throughtout the web, affecting all page using
  * input type OR YOU CAN use ID #add_customer_submit #add_customer_reset since you have an ID specified*/
 
-input[type="submit"], input[type="reset"] {
-    text-align: center;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 16px 32px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
 /*#add_customer_update {
     text-align: center;
     background-color: white;
@@ -449,7 +439,6 @@ input[type="submit"], input[type="reset"] {
     border-radius: 5px;
 }*/
 
-/*
 #add_customer_submit, #add_customer_reset {
     text-align: center;
     background-color: white;
@@ -458,18 +447,12 @@ input[type="submit"], input[type="reset"] {
     padding: 16px 32px;
     margin: 5px;
     border-radius: 5px;
-}*/
-
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: black;
-    color: white;
 }
 
-/*
 #add_customer_submit:hover, #add_customer_reset:hover {
     background-color: black;
     color: white;
-}*/
+}
 
 #countryCode {
     width: 10%;
@@ -483,9 +466,9 @@ input[type="search"] {
     border: 1px solid black;
 }
 
-/************************
-* ADMIN DAILY REPORT PAGE
-************************/
+/*******************
+* ADMIN REPORT PAGES
+*******************/
 
 .report {
     margin-right: auto;
@@ -495,4 +478,19 @@ input[type="search"] {
 
 .report th, .report td {
     text-align: center;
+}
+
+.generate_report_button button{
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 2px 4px;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+.generate_report_button button:hover {
+    background-color: black;
+    color: white;
 }

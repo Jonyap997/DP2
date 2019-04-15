@@ -60,24 +60,40 @@
                 <p>View how the sales are</p>
             </div>
             
+            <div>
+                <label for="report_year_select">Select a year:</label>
+                <select class="report_year_select" name="report_year_select" id="report_year_select">
+                    <option name="report_year" value="2019">2019</option>
+                    <option name="report_year" value="2018">2018</option>
+                    <option name="report_year" value="2017">2017</option>
+                </select>
+            </div>
+            
+            <div class="generate_report_button">
+                <button>Generate annual report</button>
+            </div>
+            
             <table class="report">
                 <thead>
                     <tr>
                         <th rowspan="2">Month</th>
-                        <th rowspan="2">Day</th>
-                        <th colspan="2">No. of customers</th>
+                        <th colspan="2">Sales (RM)</th>
                     </tr>
                     <tr>
-                        <th>Morning</th>
-                        <th>Afternoon</th>
+                        <th>Products</th>
+                        <th>Services</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2019-04-14</td>
-                        <td>Sunday</td>
-                        <td>10</td>
-                        <td>20</td>
+                        <td>January</td>
+                        <td>10000</td>
+                        <td>20000</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>20000</td>
+                        <td>40000</td>
                     </tr>
                 </tbody>
             </table>
