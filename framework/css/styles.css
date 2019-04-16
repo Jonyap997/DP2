@@ -494,3 +494,35 @@ input[type="search"] {
     background-color: black;
     color: white;
 }
+
+.center {
+    text-align: center;
+}
+
+/*****************
+ADMIN BOOKING PAGE
+*****************/
+
+.timeslot td{
+    text-align: left;
+}
+
+#booking_customer_submit, #booking_customer_reset {
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 16px 32px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#booking_customer_submit:hover, #booking_customer_reset:hover {
+    background-color: black;
+    color: white;
+}
+
+form.booking {
+    text-align: center;
+    border: none;
+}
