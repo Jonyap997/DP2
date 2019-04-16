@@ -31,8 +31,8 @@
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
-                <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-            </ul>
+                <li><a class="active" href="timeslot.php">View Hairdressers' Schedule</a></li>
+            <php
             <hr/>
         </div>
     </div>
@@ -42,14 +42,14 @@
            <h2>Time slots</h2>
            <div class="col-md-5 col-sm-5 col-xs-5" >
                <p>These are the time slots available for hairdressers</p>
-           <p>Green - Available for booking</p>
-           <p>Red - Time slot fully booked</p>
-           <p>Grey - Time slot not available</p>
+           <p><span class="green_text"><strong>Green</strong></span> - Available for booking</p>
+           <p><span class="red_text"><strong>Red</strong></span> - Time slot fully booked</p>
+           <p><span class="grey_text"><strong>Grey</strong></span> - Time slot not available</p>
            </div>
-           <div class="col-md-2 col-sm-2 col-xs-2">s
-               <p class="p-3 mb-2 bg-success text-white">Available</p>
-               <p class="p-3 mb-2 bg-danger text-dark">Full Booked</p>
-               <p class="p-3 mb-2 bg-secondary text-white">Not available for booking</p>     
+           <div class="col-md-2 col-sm-2 col-xs-2">
+               <p class="ava">Available</p>
+               <p class="danger">Full Booked</p>
+               <p class="not_ava">Not available for booking</p>     
            </div>
            
            </div>

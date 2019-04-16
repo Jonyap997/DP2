@@ -30,7 +30,7 @@
                 <li><a href="sign_in.php">Admin Sign In</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
+                <li><a class="active" href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
             </ul>
@@ -112,7 +112,11 @@
            </div>
        </div>
        <div class="col-md-6 col-sm-6 col-xs-6">
-         <h2>_</h2>
+         <div class="row">
+               <div class="col-md-12 col-sm-12 col-xs-12">
+                   <h2 class="gap">_</h2>
+               </div>
+           </div>
           <div class="row">
                <div class="col-md-1 col-sm-1 col-xs-1">
                    <span class="glyphicon glyphicon-triangle-right"></span>
@@ -177,7 +181,7 @@
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="services.php">Services</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
+                <li><a href="hairdressersphpl">Our hairdressers</a></li>
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
@@ -216,4 +220,5 @@
  <!-- Basic AngularJS -->
     <script src="framework/js/angular.min.js"></script>
  </body>
-</htmphp
+</html>
+
