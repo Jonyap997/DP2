@@ -16,6 +16,14 @@
         $phoneNumber = $record['phoneNumber'];
     }
 
+    //Fetch customer's purchase data
+    if (isset($_GET['addPurchase'])) {
+        $add_purchase_state = true;
+        $id = $_GET['addPurchase'];
+        $fullname = $_GET['addPurchase'];
+        $purchaseResult = mysqli_query($connection, "SELECT * FROM customerPurchaseHistory WHERE id=$id");
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +84,7 @@
         <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
 
             <div class="adminHeading">
-                <h2>Edit Custmer Profile</h2>
+                <h2>Edit Customer Profile</h2>
                 <p>Edit a customer's profile</p>
             </div>
             
@@ -84,7 +92,8 @@
                 <label for="customer_profile_search">Customer Name</label>
                 <input type="search" autofocus="autofocus"/>
             </div>
-            
+                     
+            <!-- UPDATE STATE -->
             <?php if ($edit_state == false): ?>
 
             <?php else: ?>
@@ -115,6 +124,219 @@
                     
                 </form>
                 
+            <?php endif ?>
+                 
+            <!-- ADD PURCHASE STATE -->
+            <?php if ($add_purchase_state == false): ?>
+
+            <?php else: ?>
+                <form id="add_purchase" class="add_purchase" method="POST" action="editCustomerServer.php">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <fieldset>
+                        <legend>Services</legend>
+                        <label for="hair_service">Hair Services:</label>
+                        <select id="hair_service" name="hair_service">
+                            <option value="">None</option>
+                            <option value="HairCut(M)">HairCut(Men)</option>
+                            <option value="HairCut(F)">HairCut(Women)</option>
+                            <option value="HairWash(M)">HairWash(Men)</option>
+                            <option value="HairCut(F)">HairWash(Women)</option>
+                            <option value="Styling">Styling</option>
+                            <option value="Hair Colouring">Hair Colouring</option>
+                            <option value="Hair Treatment">Hair Treatment</option>
+                            <option value="Scalp Treatment">Scalp Treatment</option>
+                        </select>
+                        <label for="massage">Massage:</label>
+                        <select id="massage" name="massage">
+                            <option value="">None</option>
+                            <option value="Relaxation Massage(1/2hr)">Relaxation Massage(1/2hr)</option>
+                            <option value="Relaxation Massage(1hr)">Relaxation Massage(1hr)</option>
+                            <option value="Relaxation Massage(1 and 1/2hr)">Relaxation Massage(1 and 1/2hr)</option>
+                            <option value="Sports Therapy(1/2hr)">Sports Therapy(1/2hr)</option>
+                            <option value="Sports Therapy(1hr)">Sports Therapy(1hr)</option>
+                            <option value="Sports Therapy(1 and 1/2hr)">Sports Therapy(1 and 1/2hr)</option>
+                            <option value="Foot Reflexology(40 mins)">Foot Reflexology(40 mins)</option>
+                        </select>
+                        <label for="body_wax">Body Wax:</label>
+                        <select id="body_wax" name="body_wax">
+                            <option value="">None</option>
+                            <option value="Body Part(Bikini)">Body Part(Bikini)</option>
+                            <option value="Body Part(Brazilian)">Body Part(Brazilian)</option>
+                            <option value="Body Part(Full Face)">Body Part(Full Face)</option>
+                            <option value="Face(Eye Brown)">Face(Eye Brown)</option>
+                            <option value="Face(Sideburn)">Face(Sideburn)</option>
+                            <option value="Face(Neck)">Face(Neck)</option>
+                            <option value="Face(Chin)">Face(Chin)</option>
+                            <option value="Upper Body(Underarm)">Upper Body(Underarm)</option>
+                            <option value="Upper Body(Chest)">Upper Body(Chest)</option>
+                            <option value="Upper Body(Navel)">Upper Body(Navel)</option>
+                            <option value="Lower Body(Full Leg)">Lower Body(Full Leg)</option>
+                            <option value="Lower Body(Lower Back)">Lower Body(Lower Back)</option>
+                            <option value="Lower Body(Bums)">Lower Body(Bums)</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Products:</legend>
+                        <label for="product_1">Product 1:</label>
+                        <select id="product_1" name="product_1">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p1_quantity">Quantity:</label>
+                        <input type="number" id="p1_quantity" name="p1_quantity"/>
+                        <br />
+                        <label for="product_2">Product 2:</label>
+                        <select id="product_2" name="product_2">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p2_quantity">Quantity:</label>
+                        <input type="number" id="p2_quantity" name="p2_quantity"/>
+                        <br />
+                        <label for="product_3">Product 3:</label>
+                        <select id="product_3" name="product_3">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p3_quantity">Quantity:</label>
+                        <input type="number" id="p3_quantity" name="p3_quantity"/>
+                        <br />
+                        <label for="product_4">Product 4:</label>
+                        <select id="product_4" name="product_4">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p4_quantity">Quantity:</label>
+                        <input type="number" id="p4_quantity" name="p4_quantity"/>
+                        <br />
+                        <label for="product_5">Product 5:</label>
+                        <select id="product_5" name="product_5">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p5_quantity">Quantity:</label>
+                        <input type="number" id="p5_quantity" name="p5_quantity"/>
+                        <br />
+                        <label for="product_6">Product 6:</label>
+                        <select id="product_6" name="product_6">
+                            <option value="">None</option>
+                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                        </select>
+                        <label for="p6_quantity">Quantity:</label>
+                        <input type="number" id="p6_quantity" name="p6_quantity"/>
+                        <br />
+                        <label for="total">Total:</label>
+                        <input type="text" name="total" id="total" placeholder="Total Price" autofocus="autofocus" value="<?php echo $total; ?>" required="required"/>
+                    </fieldset>
+                    
+                    <input type="submit" id="add_purchase_submit" name="add_purchase_submit" value="Add Purchase"/>
+                    
+                </form> 
+                
+                <br />
+                
+                <div class="adminHeading">
+                    <h2>Purchase History</h2>
+                </div>
+                
+                <div>
+                    <table class="table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date Purchased</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Hair Services</th>
+                                <th>Massage</th>
+                                <th>Body Wax</th>
+                                <th>Item Purchased</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <?php while ($row = mysqli_fetch_array($purchaseResult)) { ?>
+                            <tr>
+                                <td><?php echo $row["datePurchased"]; ?></td>
+                                <td><?php echo $row["id"]; ?></td>
+                                <td><?php echo $row["fullname"]; ?></td>
+                                <td><?php echo $row["hairServices"]; ?></td>
+                                <td><?php echo $row["massage"]; ?></td>
+                                <td><?php echo $row["bodyWax"]; ?></td>
+                                <td><?php echo $row["itemPurchased"]; ?></td>
+                                <td><?php echo $row["total"]; ?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            
             <?php endif ?>
             
             <div class="msg">
@@ -155,6 +377,9 @@
                             </td>
                             <td>
                                 <a class="delete_btn" href="editCustomer.php?delete=<?php echo $row['id']; ?>">Delete</a>
+                            </td>
+                            <td>
+                                <a class="add_purchase_btn" href="editCustomer.php?addPurchase=<?php echo $row['id']; ?>">Add Purchase</a>
                             </td>
                         </tr>
                         <?php } ?>

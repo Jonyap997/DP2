@@ -453,32 +453,16 @@ tr:hover {
 *  ADMIN ADD/EDIT CUSTOMER PROFILE
 *********************************/
 
-form.add_customer {
+form.add_customer, form.add_purchase {
     text-align: center;
     border: none;
 }
 
-.add_customer fieldset {
+.add_customer fieldset, .add_purchase fieldset {
     margin: 20px;
 }
 
-/*************************
- * IMPORTANT NOTE
-*************************
- * Give Class name here because input will affect all input type throughtout the web, affecting all page using
- * input type OR YOU CAN use ID #add_customer_submit #add_customer_reset since you have an ID specified*/
-
-/*#add_customer_update {
-    text-align: center;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    padding: 16px 32px;
-    margin: 5px;
-    border-radius: 5px;
-}*/
-
-#add_customer_submit, #add_customer_reset {
+#add_customer_submit, #add_customer_reset, #add_customer_update, #add_purchase_submit {
     text-align: center;
     background-color: white;
     color: black;
@@ -488,7 +472,7 @@ form.add_customer {
     border-radius: 5px;
 }
 
-#add_customer_submit:hover, #add_customer_reset:hover {
+#add_customer_submit:hover, #add_customer_reset:hover, #add_customer_update:hover, #add_purchase_submit:hover {
     background-color: black;
     color: white;
 }
@@ -497,12 +481,24 @@ form.add_customer {
     width: 10%;
 }
 
+.add_purchase_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #0031ff;
+    color: white;
+    border-radius: 3px;
+}
+
 /*********************
 *  ADMIN EDIT CUSTOMER
 *********************/
 
 input[type="search"] {
     border: 1px solid black;
+}
+
+#product_1, #product_2, #product_3, #product_4, #product_5, #product_6 {
+    width: 20%;
 }
 
 /*******************
