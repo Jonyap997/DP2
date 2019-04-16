@@ -122,6 +122,10 @@ article p {
     padding: 5%;
 }
 
+a.active{
+    text-decoration: underline;
+}
+
 /****************
 * VERTICAL NAV
 ****************/
@@ -169,6 +173,11 @@ article p {
 .home_icon i {
     width: 50px;
     height: auto;
+}
+
+a.vactive{
+    background-color: #4CAF50;
+  color: white;
 }
 
 /****************
@@ -409,6 +418,36 @@ tr:hover {
     display: inline-block;
     vertical-align: middle;
 }
+
+/******************
+*  TIMESLOTS PAGE
+******************/
+
+.green_text{
+   color: limegreen;
+}
+ 
+.red_text{
+    color: red;
+}
+
+.grey_text{
+    color: dimgray;
+}
+
+.ava{
+   background-color: limegreen;
+}
+
+.danger{
+   background-color: red;
+}
+
+.not_ava{
+    background-color: dimgray;
+}
+
+
 
 /*********************************
 *  ADMIN ADD/EDIT CUSTOMER PROFILE

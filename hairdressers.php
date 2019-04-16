@@ -29,7 +29,7 @@
                 </div>
                 <li><a href="sign_in.php">Admin Sign In</a></li>
                 <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
+                <li><a class="active" href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
