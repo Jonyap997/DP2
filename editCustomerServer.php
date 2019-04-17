@@ -77,12 +77,8 @@
     //If add purchase button is clicked
     if(isset($_POST['add_purchase_submit'])) {
 
-        //Get Values from form
-        $reconnectPurchaseHistory = mysqli_query($connection, "SELECT * FROM customerPurchaseHistory WHERE id=$id");
-        $recordPurchaseHistory = mysqli_fetch_array($reconnectPurchaseHistory);
-        
-        $id = $recordPurchaseHistory['id'];
-        $fullname = $recordPurchaseHistory['fullname'];
+        //Get Values from form        
+        $id = $_POST['id'];
         $hair_service = $_POST['hair_service'];
         $massage = $_POST['massage'];
         $body_wax = $_POST['body_wax'];
@@ -101,7 +97,7 @@
         $total = $_POST['total'];
 
         //To prevent sql injection
-        $fullname = stripcslashes($fullname);
+        $id = stripcslashes($id);
         $hair_service = stripcslashes($hair_service);
         $massage = stripcslashes($massage);
         $body_wax = stripcslashes($body_wax);
@@ -119,7 +115,7 @@
         $p6_quantity = stripcslashes($p6_quantity);
         $total = stripcslashes($total);
 
-        $fullname = mysqli_real_escape_string($connection, $fullname);
+        $id = mysqli_real_escape_string($connection, $id);
         $hair_service = mysqli_real_escape_string($connection, $hair_service);
         $massage = mysqli_real_escape_string($connection, $massage);
         $body_wax = mysqli_real_escape_string($connection, $body_wax);
@@ -137,7 +133,7 @@
         $p6_quantity = mysqli_real_escape_string($connection, $p6_quantity);
         $total = mysqli_real_escape_string($connection, $total);
 
-        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, fullname, hair_service, massage, body_wax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$fullname', '$hair_service', '$massage', '$body_wax', CONCAT('$product_1', ' x', '$p1_quantity', ' ', '$product_2', ' x', '$p2_quantity', ' ', '$product_3', ' x', '$p3_quantity', ' ', '$product_4', ' x', '$p4_quantity', ' ', '$product_5', ' x', '$p5_quantity', ' ', '$product_6', ' x', '$p6_quantity', ' ')), '$total'";
+        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, hairServices, massage, bodyWax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$hair_service', '$massage', '$body_wax', CONCAT('$product_1', '$p1_quantity', ' ', '$product_2', '$p2_quantity', ' ', '$product_3', '$p3_quantity', ' ', '$product_4', '$p4_quantity', ' ', '$product_5', '$p5_quantity', ' ', '$product_6', '$p6_quantity'), '$total')";
         mysqli_query($connection, $query)
             or die("Error".mysqli_error($connection));
         $_SESSION['msg'] = "Purchase Added";

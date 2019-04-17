@@ -50,7 +50,7 @@
                 <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
                 <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
                 <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
-                <li class="tab"><a href="stock.php">Stock &amp; Inventory</a></li>
+                <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
                 <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
                 <li><a href="salesReport.php">View Sales Report</a></li>
                 <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
