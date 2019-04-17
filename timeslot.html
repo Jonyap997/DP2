@@ -2,7 +2,7 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -16,6 +16,9 @@
  <script src="framework/js/html5shiv.js"></script>
  <script src="framework/js/respond.min.js"></script>
  <![endif]-->
+   
+   <!-- Media Queries-->
+<link href="framework/css/mediaqueries.css" rel="stylesheet" />
     
 </head>
 <body>
@@ -153,8 +156,8 @@
        
 
 
-    <div class="row">
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+    <div class="row footer">
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -163,7 +166,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>
