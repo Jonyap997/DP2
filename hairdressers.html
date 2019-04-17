@@ -50,20 +50,20 @@
               <div class="col-md-4 col-sm-4 col-xs-4">
 
                       <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                      <h5>Sum Ting Wong</h5>
-                      <h6>Lead Hairstylist</h6>
+                      <p><strong>Sum Ting Wong</strong></p>
+                      <p><small>Lead Hairstylist</small></p>
                       <p>Been serving in the team for the years that Smile &amp; Style has been open. Is a familiar with customers who regularly come back.</p>
               </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
                        <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                       <h5>Noh Yu Mor</h5>
-                       <h6>Senior Hairstylist</h6>
+                       <p><strong>Noh Yu Mor</strong></p>
+                   <p><small>Senior Hairstylist</small></p>
                        <p>New to the team, have been in a the hairstyling business for a few year. Here to know you more.</p>
                </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
                       <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                      <h5>Freddy Jupiter</h5>
-                       <h6>Senior Hairstylist</h6>
+                      <p><strong>Freddy Jupiter</strong></p>
+                   <p><small>Senior Hairstylist</small></p>
                        <p>Several years of styling experience.</p>
               </div>
 
@@ -73,20 +73,20 @@
 
               <div class="col-md-4 col-sm-4 col-xs-4 offset-sm-4">
                       <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                      <h5>Tom Jerry</h5>
-                      <h6>Managing Director</h6>
+                      <p><strong>Tom Jerry</strong></p>
+                  <p><small>Managing Director</small></p>
                        <p>Founder of Styles and Smiles</p>
               </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
                        <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                       <h5>Ek Zack Lee</h5>
-                       <h6>Trainee</h6>
+                       <p><strong>Ek Zack Lee</strong></p>
+                   <p><small>Trainee</small></p>
                        <p>Blank for now</p>
                </div>
                <div class="col-md-4 col-sm-4 col-xs-4">
                       <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                      <h5>Tan Os</h5>
-                       <h6>Trainee</h6>
+                      <p><strong>Tan Os</strong></p>
+                   <p><small>Trainee</small></p>
                        <p>Goal to be here in the long run. Will be with you in a snap</p>
               </div>
 
