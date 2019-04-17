@@ -2,7 +2,7 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initialscale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -10,10 +10,7 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
-   
-<!-- Media Queries-->
-<link href="framework/css/mediaqueries.css" rel="stylesheet" />
-      
+    
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
  <!--[if lt IE 9]>
@@ -30,14 +27,14 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hairsalontemplate.php">Home</a></li>
                 </div>
-                <li><a href="loginPage.php">Admin Sign In</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="hairdressers.html">Our hairdressers</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="timeslot.html">View Hairdressers' Schedule</a></li>
+                <li><a href="sign_in.php">Admin Sign In</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
             </ul>
             <hr/>
         </div>
@@ -46,13 +43,13 @@
     <div class="row">
         <div class="vertical_nav col-md-3 col-sm-3 col-xs-3">
             <ul>
-                <li class="tab"><a href="booking.html">Make/Cancel Booking</a></li>
-                <li class="tab"><a href="addCustomer.html">Add Customer Profile</a></li>
+                <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
+                <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
                 <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
                 <li class="tab"><a class="vactive" href="stock.php">Stock &amp; Inventory</a></li>
-                <li class="tab"><a href="hairdresserPerformance.html">View Hairdressers' Performance</a></li>
-                <li><a href="salesReport.html">View Sales Report</a></li>
-                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.html">View Daily Customer Count Report</a></li>
+                <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
+                <li><a href="salesReport.php">View Sales Report</a></li>
+                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
             </ul>
         </div>
         
@@ -91,8 +88,8 @@
         </div>
 
 
-    <div class="row footer">
-        <div class="col-md-6 col-sm-6 col-xs-6"> 
+    <div class="row">
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -101,7 +98,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6"> 
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>

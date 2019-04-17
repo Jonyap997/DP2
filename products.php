@@ -41,7 +41,7 @@
         </div>
     </div>
     <div class="space"></div>
-    <div class="container">
+    <div class="containerProduct">
             <h2>Products</h2>
    
        <div class="row">

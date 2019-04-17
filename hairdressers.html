@@ -2,7 +2,7 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initialscale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -10,9 +10,6 @@
 <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"/>
 <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
-   
-<!-- Media Queries-->
-<link href="framework/css/mediaqueries.css" rel="stylesheet" />
     
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,63 +39,89 @@
     </div>
    
    <div class="container">
-        
-      <div class="center row">
-          
-          <h2>Our Hairdressers</h2>
+        <h2>Our Hairdressers</h2>
        <p>Striving to serve you better </p>
-            <div class="col-md-4 col-sm-4 col-xs-4">
-                 
+    </div>
+       
+       
+        <div class="container">
+   <div class="row">
+      <div class="center row">
+
+          <div class="col-md-4 col-sm-4 col-xs-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                  <p><strong>Sum Ting Wong</strong></p>
-              <p><small>Lead Hairstylist</small></p>
-              <p>Been serving in the team for the years that Smile &amp; Style has been open. Is a familiar with customers who regularly come back.</p>
           </div>
            <div class="col-md-4 col-sm-4 col-xs-4">
                    <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                   <p><strong>Noh Yu Mor</strong></p>
-               <p><small>Senior Hairstylist</small></p>
-               <p>New to the team, have been in a the hairstyling business for a few year. Here to know you more.</p>
            </div>
            <div class="col-md-4 col-sm-4 col-xs-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                  <p><strong>Freddy Jupiter</strong></p>
-               <p><small>Senior Hairstylist</small></p>
-               <p>Several years of styling experience.</p>
           </div>
 
       </div>
      
-          <div class="center row">
+          <div class="row">
+      
+          <div class="col-md-4 col-sm-4 col-xs-4">
+              <h5>Sum Ting Wong</h5>
+              <h6>Lead Hairstylist</h6>
+              <p>Been serving in the team for the years that Smile &amp; Style has been open. Is a familiar with customers who regularly come back.</p>
+          </div>
+           <div class="col-md-4 col-sm-4 col-xs-4">
+               <h5>Noh Yu Mor</h5>
+               <h6>Senior Hairstylist</h6>
+               <p>New to the team, have been in a the hairstyling business for a few year. Here to know you more.</p>
+           </div>
+           <div class="col-md-4 col-sm-4 col-xs-2">
+               <h5>Freddy Jupiter</h5>
+               <h6>Senior Hairstylist</h6>
+               <p>Several years of styling experience.</p>
+           </div>
+
+      </div>   
+   </div>
+    <div class="row">
+      <div class="center row">
 
           <div class="col-md-4 col-sm-4 col-xs-4 offset-sm-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                  <p><strong>Ack Cher Lee</strong></p>
-              <p><small>Managing Director</small></p>
-               <p>Founder of Styles and Smiles</p>
           </div>
            <div class="col-md-4 col-sm-4 col-xs-4">
                    <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                   <p><strong>Ek Zack Lee</strong></p>
-               <p><small>Trainee</small></p>
-               <p>Blank for now</p>
            </div>
            <div class="col-md-4 col-sm-4 col-xs-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
-                  <p><strong>Tan Os</strong></p>
-               <p><small>Trainee</small></p>
-               <p>Goal to be here in the long run. Will be with you in a snap</p>
           </div>
 
       </div>
-       
+      
+      <div class="row">
+
+          <div class="col-md-4 col-sm-4 col-xs-4">
+              <h5>Tom Jerry</h5>
+              <h6>Managing Director</h6>
+               <p>Founder of Styles and Smiles</p>
+          </div>
+           <div class="col-md-4 col-sm-4 col-xs-4">
+               <h5>Ek Zack Lee</h5>
+               <h6>Trainee</h6>
+               <p>Blank for now</p>
+           </div>
+           <div class="col-md-4 col-sm-4 col-xs-2">
+               <h5>Tan Os</h5>
+               <h6>Trainee</h6>
+               <p>Goal to be here in the long run. Will be with you in a snap</p>
+           </div>
+
+      </div>   
    </div>
           
+      </div>
       
    
     
-   <div class="row footer">
-        <div class="col-md-6 col-sm-6 col-xs-6"> 
+   <div class="row">
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -107,7 +130,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-6"> 
+        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>

@@ -30,7 +30,7 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -45,6 +45,9 @@
  <script src="framework/js/html5shiv.js"></script>
  <script src="framework/js/respond.min.js"></script>
  <![endif]-->
+ 
+<!-- Media Queries-->
+<link href="framework/css/mediaqueries.css" rel="stylesheet" />
 
 <script src="framework/js/navBarActive.js"></script>
     
@@ -55,9 +58,9 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="hairsalontemplate.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                 </div>
-                <li><a href="sign_in.php">Admin Sign In</a></li>
+                <li><a href="loginPage.php">Log out</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
@@ -74,7 +77,7 @@
                 <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
                 <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
                 <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
-                <li class="tab"><a href="stock.php">Stock &amp; Inventory</a></li>
+                <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
                 <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
                 <li><a href="salesReport.php">View Sales Report</a></li>
                 <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
@@ -390,8 +393,8 @@
         </div>
     </div>
     
-    <div class="row">
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+    <div class="row footer">
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -400,7 +403,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>
@@ -424,7 +427,6 @@
         </div>
         
     </div>
-
    
    
  

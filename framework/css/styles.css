@@ -12,10 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", "Arial", sans-serif;
-} 
-
-html {
-    font-size: 20px;
+	font-size: 18px;
     /*---Make fonts rendering in perfect way---*/
     text-rendering: optimizeLegibility;
 }
@@ -396,6 +393,7 @@ tr:hover {
 
 .gap {
     padding-left: 175px;
+	font-size: 200%;
 }
 
 .center_space{
