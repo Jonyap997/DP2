@@ -1,6 +1,6 @@
 /* Big teblet to 1200px: from 1024 - 1200px */
 @media  only screen and (max-width: 1200px) {
-    * { font-size: 13px;}
+    * { font-size: 15px;}
     h1 {
         font-size: 80px;
     }
@@ -40,6 +40,10 @@
     .center_space {
         width: 120%;
         margin-left: -100px;
+    }
+    
+    .adminStockPage {
+        font-size: 15px;
     }
 }
 

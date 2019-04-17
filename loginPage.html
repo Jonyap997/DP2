@@ -54,6 +54,8 @@ if(isset($_POST['login'])) {
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'>
+        <!-- Media Queries-->
+        <link href="framework/css/mediaqueries.css" rel="stylesheet" />
     </head> 
     <body class="loginPage"> 
         <form method="POST" action="loginPage.php">

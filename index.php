@@ -65,8 +65,8 @@
         </div>
     </article>
     
-    <div class="row">
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+    <div class="row footer">
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -75,7 +75,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>

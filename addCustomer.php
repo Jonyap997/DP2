@@ -1,12 +1,8 @@
-<?php
-    include("addCustomerServer.php");
-?>
-
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -21,6 +17,9 @@
  <script src="framework/js/html5shiv.js"></script>
  <script src="framework/js/respond.min.js"></script>
  <![endif]-->
+ 
+<!-- Media Queries-->
+<link href="framework/css/mediaqueries.css" rel="stylesheet" />
 
 <script src="framework/js/navBarActive.js"></script>
     
@@ -47,13 +46,13 @@
     <div class="row">
         <div class="vertical_nav col-md-3 col-sm-3 col-xs-3">
             <ul>
-                <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
-                <li class="tab"><a class="vactive" class="vactive" href="addCustomer.php">Add Customer Profile</a></li>
-                <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
-                <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
-                <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
-                <li><a href="salesReport.php">View Sales Report</a></li>
-                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
+                <li class="tab"><a href="booking.html">Make/Cancel Booking</a></li>
+                <li class="tab"><a class="vactive" href="addCustomer.html">Add Customer Profile</a></li>
+                <li class="tab"><a href="editCustomer.html">Edit Customer Profile</a></li>
+                <li class="tab"><a href="stock.html">Stock &amp; Inventory</a></li>
+                <li class="tab"><a href="hairdresserPerformance.html">View Hairdressers' Performance</a></li>
+                <li><a href="salesReport.html">View Sales Report</a></li>
+                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.html">View Daily Customer Count Report</a></li>
             </ul>
         </div>
         
@@ -63,50 +62,44 @@
                 <p>Enter the profile of the new customer</p>
             </div>
             
-            <form id="add_customer" class="add_customer" method="POST" action="addCustomerServer.php">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <form id="add_customer" class="add_customer" method="post">
                 <fieldset>
                     <legend>Personal Information:</legend>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
+                    <label for="customer_name">Name:</label>
+                    <input type="text" name="customer_name" id="customer_name" placeholder="Customer's Name" autofocus="autofocus" required="required"/>
                     <br/>
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender"  required="required">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
+                    <label for="customer_gender">Gender:</label>
+                    <select id="customer_gender" name="customer_gender" required="required">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                     <br/>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                    <label for="customer_dob">Date of Birth:</label>
+                    <input type="date" name="customer_dob" id="customer_dob" required="required"/>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Contact Information:</legend>
-                    <label for="countryCode">Phone Number:</label>
-                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
-                    <label for="phoneNumber">-</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
+                    <label for="customer_contactNo">Contact Number:</label>
+                    <input type="tel" id="customer_contactNo" name="customer_contactNo" required="required" placeholder="012-3456789"/>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Other Information:</legend>
+                    <label for="date_registered">Date Registered</label>
+                    <input type="date" id="date_registered" name="date_registered" required="required" />
                 </fieldset>
                 
                 <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
                 
                 <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
             </form>
-            
-            <div class="msg">
-                <?php 
-                    if (isset($_SESSION['msg'])) {
-                        echo $_SESSION['msg'];
-                        unset($_SESSION['msg']);
-                    }
-                ?>
-            </div>
 
         </div>
     </div>
 
-    <div class="row">
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+    <div class="row footer">
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -115,7 +108,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>
