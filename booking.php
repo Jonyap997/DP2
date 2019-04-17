@@ -1,7 +1,3 @@
-<?php
-    include("addCustomerServer.php");
-?>
-
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -59,49 +55,93 @@
         
         <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
             <div class="adminHeading">
-                <h2>Add Customer Profile</h2>
-                <p>Enter the profile of the new customer</p>
+                <h2>Manage Bookings</h2>
+                <p>Make or cancel bookings</p>
             </div>
             
-            <form id="add_customer" class="add_customer" method="POST" action="addCustomerServer.php">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <fieldset>
-                    <legend>Personal Information:</legend>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
-                    <br/>
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender"  required="required">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                    </select>
-                    <br/>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
-                </fieldset>
+            <form class="booking">
+                <div>
+                <label for="booking_date">Appointment Date: </label>
+                <input type="date" id="booking_date" name="booking_date" required="required" autofocus="autofocus"/>
                 
-                <fieldset>
-                    <legend>Contact Information:</legend>
-                    <label for="countryCode">Phone Number:</label>
-                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
-                    <label for="phoneNumber">-</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
-                </fieldset>
+                <label for="booking_hairdresser">Hairdresser: </label>
+                <select id="booking_hairdresser" name="booking_hairdresser">
+                    <option value="hairdresser 1">Hairdresser 1</option>
+                    <option value="hairdresser 2">Hairdresser 2</option>
+                    <option value="hairdresser 3">Hairdresser 3</option>
+                    <option value="hairdresser 4">Hairdresser 4</option>
+                </select>
                 
-                <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
+            </div>
+            <br/>
+             <table class="report timeslot">
+                <thead>
+                    <tr>
+                        <th colspan="4">Timeslot</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Morning</th>
+                        <th colspan="2">Afternoon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00</td>
+                        <td></td>
+                        <td>12:00</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>09:00</td>
+                        <td></td>
+                        <td>13:00</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>10:00</td>
+                        <td></td>
+                        <td>14:00</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>11:00</td>
+                        <td></td>
+                        <td>15:00</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>16:00</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>17:00</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <br/>
+            <label for="booking_time" id="booking_time_start">Appointment Time: </label>
+                <input type="time" id="booking_time" name="booking_time" required="required"/>
                 
-                <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
+                 <label for="booking_time" id="booking_time_end">Appointment End Time: </label>
+                <input type="time" id="booking_time" name="booking_time" required="required"/>
+            
+                <br/>
+            <input type="submit" id="booking_customer_submit" name="booking_customer_submit" value="Submit"/>
+                
+                <input type="reset" id="booking_customer_reset" name="booking_customer_reset" value="Reset"/>
             </form>
             
-            <div class="msg">
-                <?php 
-                    if (isset($_SESSION['msg'])) {
-                        echo $_SESSION['msg'];
-                        unset($_SESSION['msg']);
-                    }
-                ?>
-            </div>
-
         </div>
     </div>
 

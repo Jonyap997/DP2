@@ -27,14 +27,14 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="hairsalontemplate.html">Home</a></li>
+                    <li><a href="hairsalontemplate.php">Home</a></li>
                 </div>
-                <li><a href="sign_in.html">Admin Sign In</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="hairdressers.html">Our hairdressers</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="timeslot.html">View Hairdressers' Schedule</a></li>
+                <li><a href="sign_in.php">Admin Sign In</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
             </ul>
             <hr/>
         </div>
@@ -43,58 +43,59 @@
     <div class="row">
         <div class="vertical_nav col-md-3 col-sm-3 col-xs-3">
             <ul>
-                <li class="tab"><a href="booking.html">Make/Cancel Booking</a></li>
-                <li class="tab"><a href="addCustomer.html">Add Customer Profile</a></li>
+                <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
+                <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
                 <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
-                <li class="tab"><a class="vactive" href="stock.php">Stock &amp; Inventory</a></li>
-                <li class="tab"><a href="hairdresserPerformance.html">View Hairdressers' Performance</a></li>
-                <li><a href="salesReport.html">View Sales Report</a></li>
-                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.html">View Daily Customer Count Report</a></li>
+                <li class="tab"><a href="stock.php">Stock &amp; Inventory</a></li>
+                <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
+                <li><a href="salesReport.php">View Sales Report</a></li>
+                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
             </ul>
         </div>
         
         <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
-            <h2>Stock &amp; Inventory</h2>
-
-               <table class="table table-striped table-hover">
-               
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Brand</th>
-                        <th>Quantity</th>
-                        <th>Volume</th>
-                        <th>Price</th>
-                        <th>Source</th>
-                        <th>Description</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                    <tr>
-                        <td>000001</td>
-                        <td>SE Vitamino Color Fresh Feel Conditioner</td>
-                        <td>L'Oreal</td>
-                        <td>10</td>
-                        <td>150ml</td>
-                        <td>58.00</td>
-                        <td>Jared</td>
-                        <td>None</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
-                </table>
             
+            <div class="adminHeading">
+                <h2>Daily Customer Count</h2>
+                <p>The number of customers</p>
             </div>
+            
+            <div class="generate_report_button center">
+                <button>Generate monthly report</button>
+            </div>
+            
+            <table class="report">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Date</th>
+                        <th rowspan="2">Day</th>
+                        <th colspan="2">No. of customers</th>
+                    </tr>
+                    <tr>
+                        <th>Morning</th>
+                        <th>Afternoon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2019-04-14</td>
+                        <td>Sunday</td>
+                        <td>10</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </div>
-
+    </div>
 
     <div class="row">
         <div class="footer col-md-6 col-sm-6 col-xs-6"> 
             <ul>
-                <li><a href="timeslot.html">View Hairdressers' Schedule</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="hairdressers.html">Our hairdressers</a></li>
+                <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="about.html">About Us</a></li>  
             </ul>
         </div>

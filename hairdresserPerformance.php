@@ -1,7 +1,3 @@
-<?php
-    include("addCustomerServer.php");
-?>
-
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -26,7 +22,7 @@
     
 </head>
 <body>
-    <div class="row">
+   <div class="row">
             
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
@@ -58,50 +54,66 @@
         </div>
         
         <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
+   
             <div class="adminHeading">
-                <h2>Add Customer Profile</h2>
-                <p>Enter the profile of the new customer</p>
+                <h2>Hairdressers' Performance</h2>
+                <p>View how well each hairdresser did</p>
             </div>
             
-            <form id="add_customer" class="add_customer" method="POST" action="addCustomerServer.php">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <fieldset>
-                    <legend>Personal Information:</legend>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
-                    <br/>
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender"  required="required">
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                    </select>
-                    <br/>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
-                </fieldset>
+            <div class="center">
+                <label for="report_year_select">Select a year:</label>
+                <select class="report_year_select" name="report_year_select" id="report_year_select">
+                    <option name="report_year" value="2019">2019</option>
+                    <option name="report_year" value="2018">2018</option>
+                    <option name="report_year" value="2017">2017</option>
+                </select>
                 
-                <fieldset>
-                    <legend>Contact Information:</legend>
-                    <label for="countryCode">Phone Number:</label>
-                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
-                    <label for="phoneNumber">-</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
-                </fieldset>
+                <label for="report_month_select">Select a month:</label>
+                <select class="report_month_select" name="report_month_select" id="report_month_select">
+                    <option name="report_month" value="2019">January</option>
+                    <option name="report_month" value="2018">February</option>
+                    <option name="report_month" value="2017">March</option>
+                    <option name="report_month" value="2017">April</option>
+                    <option name="report_month" value="2017">May</option>
+                    <option name="report_month" value="2017">June</option>
+                    <option name="report_month" value="2017">July</option>
+                    <option name="report_month" value="2017">August</option>
+                    <option name="report_month" value="2017">September</option>
+                    <option name="report_month" value="2017">October</option>
+                    <option name="report_month" value="2017">November</option>
+                    <option name="report_month" value="2017">December</option>
+                </select>
                 
-                <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
-                
-                <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
-            </form>
-            
-            <div class="msg">
-                <?php 
-                    if (isset($_SESSION['msg'])) {
-                        echo $_SESSION['msg'];
-                        unset($_SESSION['msg']);
-                    }
-                ?>
+                <div class="generate_report_button">
+                <button>Generate annual report</button>
+                </div>
             </div>
-
+            
+            <table class="report">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Hairdresser</th>
+                        <th colspan="2">Performance</th>
+                    </tr>
+                    <tr>
+                        <th>No. of customers</th>
+                        <th>Sales (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hairdresser 1</td>
+                        <td>100</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>Hairdresser 2</td>
+                        <td>200</td>
+                        <td>1400</td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </div>
     </div>
 
