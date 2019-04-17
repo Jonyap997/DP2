@@ -7,6 +7,10 @@
     h2 {
         font-size: 30px;
     }
+    .gap {
+        padding-left: 175px;
+        font-size: 180%;
+    }
 }
 
 /* Small tablet to big tablet: from 768px - 1023px */
@@ -18,6 +22,11 @@
     }
     h2 {
         font-size: 25px;
+    }
+    
+    .gap {
+        padding-left: 175px;
+        font-size: 150%;
     }
     
     /*Navigation*/
@@ -69,13 +78,14 @@
     }
     
     .home_icon a {
-        font-size: 13px;
         margin-right: -20px;
     }
 }
 
 /* Small phones: from 0 - 480px */
 @media  only screen and (max-width: 480px) {
+    * { font-size: 10px;}
+    
     h1 {
         font-size: 45px;
     }
@@ -85,12 +95,5 @@
     
     h5, h6 {
         font-size: 110%;
-    }
-    
-    * { font-size: 10px;}
-    
-    /*Navigation*/
-    .home_icon a {
-        font-size: 10px;
     }
 }
