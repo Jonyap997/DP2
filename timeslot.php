@@ -32,7 +32,7 @@
                 <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a class="active" href="timeslot.php">View Hairdressers' Schedule</a></li>
-            <php
+            </ul>
             <hr/>
         </div>
     </div>

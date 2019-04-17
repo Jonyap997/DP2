@@ -49,7 +49,7 @@
                 <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
                 <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
                 <li><a href="salesReport.php">View Sales Report</a></li>
-                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
+                <li id="vertical_nav_last_item" class="tab"><a class="vactive" href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
             </ul>
         </div>
         
