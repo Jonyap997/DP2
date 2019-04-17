@@ -26,9 +26,9 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="hairsalontemplate.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                 </div>
-                <li><a href="sign_in.php">Admin Sign In</a></li>
+                <li><a href="loginPage.php">Admin Sign In</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
@@ -65,7 +65,7 @@
                 <li><a href="products.php">Products</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.hphp">About Us</a></li>  
+                <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
         <div class="footer col-md-6 col-sm-6 col-xs-6"> 
