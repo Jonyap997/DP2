@@ -2,13 +2,16 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"/>
+   
+<!-- Media Queries-->
+<link href="framework/css/mediaqueries.css" rel="stylesheet" />
     
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,15 +27,15 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="hairsalontemplate.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                 </div>
-                <li><a href="sign_in.php">Admin Sign In</a></li>
+                <li><a href="loginPage.php">Admin Sign In</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a class="active" href="timeslot.php">View Hairdressers' Schedule</a></li>
-            <php
+            </ul>
             <hr/>
         </div>
     </div>
@@ -153,8 +156,8 @@
        
 
 
-    <div class="row">
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+   <div class="row footer">
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="products.php">Products</a></li>
@@ -163,7 +166,7 @@
                 <li><a href="about.php">About Us</a></li>  
             </ul>
         </div>
-        <div class="footer col-md-6 col-sm-6 col-xs-6"> 
+        <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
                 <li>Be our <b>V.I.P</b></li>
                 <li>Jalan Sotong 1, Taman Monyet</li>
