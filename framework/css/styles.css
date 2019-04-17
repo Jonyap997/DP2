@@ -12,13 +12,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", "Arial", sans-serif;
-} 
-
-html {
     font-size: 20px;
     /*---Make fonts rendering in perfect way---*/
     text-rendering: optimizeLegibility;
-}
+} 
 
 body {
     overflow-x:hidden;
@@ -112,13 +109,13 @@ hr {
 
 .motto p {
     font-family: "Josefin Slab", "Arial", sans-serif;
-    font-size: 40px;
+    font-size: 200%;
     text-align: center;
 }
 
 article p {
     text-align: center;
-    font-size: 20px;
+    font-size: 100%;
     padding: 5%;
 }
 
@@ -189,6 +186,7 @@ a.vactive{
     position: relative;
     bottom: 0;
     color: black;
+    height: 100%;
 }
 
 .footer ul {

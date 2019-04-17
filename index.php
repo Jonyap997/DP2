@@ -2,7 +2,7 @@
 <html lang ="en" data-ng-app="">
 <head>
 <title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initialscale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Bootstrap -->
 <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
 <link href="framework/css/styles.css" rel="stylesheet" />
@@ -11,6 +11,9 @@
 <link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'/>
 <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"/>
+
+<!-- Media Queries-->
+<link href="framework/css/mediaqueries.css" rel="stylesheet" />
     
  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,12 +53,16 @@
     </div>
     
     <article>
-        <div class="motto">
-            <p>"We strive to provide top-notch hair-related services for reasonable prices."</p>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12"> 
+                <div class="motto">
+                    <p>"We strive to provide top-notch hair-related services for reasonable prices."</p>
+                </div>
+                <p>Smile &amp; Style Hair Salon is a <em>top-class</em> hair salon with a <em>top-class</em> team of hairdressers. To give back to the community, we at Smile & Style Hair Salon strive to provide <em>top-notch</em> hair-related services at reasonable prices.</p>
+                <p>Some of our regular customers include: veteran actor, Mr. John Seenya, veteran radio host, Ms. GeeGee and many other famous faces.</p>
+                <p>Visit us to enjoy <em>top-class</em> services and be our <b>V.I.P</b></p>
+            </div>
         </div>
-        <p>Smile &amp; Style Hair Salon is a <em>top-class</em> hair salon with a <em>top-class</em> team of hairdressers. To give back to the community, we at Smile & Style Hair Salon strive to provide <em>top-notch</em> hair-related services at reasonable prices.</p>
-        <p>Some of our regular customers include: veteran actor, Mr. John Seenya, veteran radio host, Ms. GeeGee and many other famous faces.</p>
-        <p>Visit us to enjoy <em>top-class</em> services and be our <b>V.I.P</b></p>
     </article>
     
     <div class="row">
