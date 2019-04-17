@@ -1,0 +1,105 @@
+/* Big teblet to 1200px: from 1024 - 1200px */
+@media  only screen and (max-width: 1200px) {
+    * { font-size: 15px;}
+    h1 {
+        font-size: 80px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .gap {
+        padding-left: 175px;
+        font-size: 180%;
+    }
+}
+
+/* Small tablet to big tablet: from 768px - 1023px */
+@media  only screen and (max-width: 1023px) {
+    * { font-size: 12px;}
+    
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    
+    .gap {
+        padding-left: 175px;
+        font-size: 150%;
+    }
+    
+    /*Navigation*/
+    .nav a {
+        padding: 10px 15px;
+        margin: 0 15px;
+    }
+    
+    /*Hairdressers Page*/
+    .center img {
+        height: 80%;
+        width: 80%;
+    }
+    
+    /*Products Page*/
+    .containerProduct img {
+        height: 80%;
+        width: 80%;
+    }
+    
+    .center h5, .center h6, .center p{
+        padding: 0 10px;
+    }
+    
+    /*Services Page*/
+    .center_space {
+        width: 120%;
+        margin-left: -100px;
+    }
+    
+    .adminStockPage {
+        font-size: 15px;
+    }
+}
+
+/* Small phones to small tablets: from 481px - 767px */
+@media  only screen and (max-width: 767px) {
+    * { font-size: 11px;}
+    
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    
+    /*Navigation*/
+    .nav a {
+        padding: 5px 5px;
+        margin: 0 5px;
+    }
+    
+    .home_icon li {
+        margin: 0 10px;
+    }
+    
+    .home_icon a {
+        margin-right: -20px;
+    }
+}
+
+/* Small phones: from 0 - 480px */
+@media  only screen and (max-width: 480px) {
+    * { font-size: 10px;}
+    
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    
+    h5, h6 {
+        font-size: 110%;
+    }
+}
