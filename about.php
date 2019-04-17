@@ -26,9 +26,9 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <div class="home_icon">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="hairsalontemplate.php">Home</a></li>
                 </div>
-                <li><a href="loginPage.php">Admin Sign In</a></li>
+                <li><a href="sign_in.php">Admin Sign In</a></li>
                 <li><a class="active" href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
@@ -39,19 +39,27 @@
         </div>
     </div>
    
-     <div class="container">
-       <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
+     
+       
+          <div class="jumbotron jumbotron-fluid">
+             <div class="container">
               <h2 class="gap">ABOUT US</h2>
+              <p class="lead">This is a page about us....</p>
           </div>
-           
+           </div>
            <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12">
                    I don't know what I have to write about us here......
                </div>
+               <br/>
+               <br/>
            </div>
-           </div>
-           </div>
+           <div class="space"></div>
+            <div class="space"></div>
+             <div class="space"></div>
+              <div class="space"></div>
+               <div class="space"></div>
+          
     
    
     
