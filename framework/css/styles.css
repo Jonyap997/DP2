@@ -560,3 +560,11 @@ form.booking {
     text-align: center;
     border: none;
 }
+
+/***********
+* SCROLLING
+***********/
+.pageContent {
+    height: 550px;
+    overflow-y: auto;
+}

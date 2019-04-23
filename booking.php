@@ -46,7 +46,7 @@
     <div class="row">
         <div class="vertical_nav col-md-3 col-sm-3 col-xs-3">
             <ul>
-                <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
+                <li class="tab"><a href="booking.php" class="vactive">Make/Cancel Booking</a></li>
                 <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
                 <li class="tab"><a href="editCustomer.php">Edit Customer Profile</a></li>
                 <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
