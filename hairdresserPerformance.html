@@ -56,8 +56,8 @@
             </ul>
         </div>
         
-        <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
-   
+        <div class="col-md-9 col-sm-9 col-xs-9">
+            <div class="pageContent">
             <div class="adminHeading">
                 <h2>Hairdressers' Performance</h2>
                 <p>View how well each hairdresser did</p>
@@ -117,6 +117,7 @@
                 </tbody>
             </table>
             
+        </div>
         </div>
     </div>
 

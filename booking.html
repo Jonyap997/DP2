@@ -56,7 +56,8 @@
             </ul>
         </div>
         
-        <div class="vertical_nav col-md-9 col-sm-9 col-xs-9">
+        <div class="col-md-9 col-sm-9 col-xs-9">
+            <div class="pageContent">
             <div class="adminHeading">
                 <h2>Manage Bookings</h2>
                 <p>Make or cancel bookings</p>
@@ -145,6 +146,7 @@
                 <input type="reset" id="booking_customer_reset" name="booking_customer_reset" value="Reset"/>
             </form>
             
+        </div>
         </div>
     </div>
 
