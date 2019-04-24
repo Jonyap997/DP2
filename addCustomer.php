@@ -1,3 +1,7 @@
+<?php
+    include("addCustomerServer.php");
+?>
+
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -62,15 +66,16 @@
                 <h2>Add Customer Profile</h2>
                 <p>Enter the profile of the new customer</p>
             </div>
-            
-            <form id="add_customer" class="add_customer" method="post">
+
+             <form id="add_customer" class="add_customer" method="POST" action="addCustomerServer.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <fieldset>
                     <legend>Personal Information:</legend>
                     <label for="fullname">Full Name:</label>
                     <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
                     <br/>
                     <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required="required">
+                    <select id="gender" name="gender"  required="required">
                         <option value="M">Male</option>
                         <option value="F">Female</option>
                     </select>
@@ -78,37 +83,31 @@
                     <label for="dob">Date of Birth:</label>
                     <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
                 </fieldset>
-                
-                <fieldset>
+
+                 <fieldset>
                     <legend>Contact Information:</legend>
-                    <label for="customer_contactNo">Contact Number:</label>
-                    <input type="tel" id="customer_contactNo" name="customer_contactNo" required="required" placeholder="012-3456789"/>
-                </fieldset>
-                
-                <fieldset>
-                    <legend>Other Information:</legend>
                     <label for="countryCode">Phone Number:</label>
-                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>	  
-                     <label for="phoneNumber">-</label>
+                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
+                    <label for="phoneNumber">-</label>
                     <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
                 </fieldset>
-                
-                <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
-                
-                <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
+
+                 <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
+
+                 <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
             </form>
-            
-            <div class="msg">	
-                <?php 	
-                    if (isset($_SESSION['msg'])) {	
-                        echo $_SESSION['msg'];	
-                        unset($_SESSION['msg']);	
-                    }	
-                ?>	
+
+             <div class="msg">
+                <?php 
+                    if (isset($_SESSION['msg'])) {
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
             </div>
 
-        </div>
-        </div>
+         </div>
+    </div>
     </div>
 
     <div class="row footer">

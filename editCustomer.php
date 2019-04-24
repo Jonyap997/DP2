@@ -76,7 +76,7 @@
             <ul>
                 <li class="tab"><a href="booking.php">Make/Cancel Booking</a></li>
                 <li class="tab"><a href="addCustomer.php">Add Customer Profile</a></li>
-                <li class="tab"><a href="editCustomer.php class="vactive"">Edit Customer Profile</a></li>
+                <li class="tab"><a href="editCustomer.php" class="vactive">Edit Customer Profile</a></li>
                 <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
                 <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
                 <li><a href="salesReport.php">View Sales Report</a></li>
@@ -184,18 +184,18 @@
                         <label for="product_1">Product 1:</label>
                         <select id="product_1" name="product_1">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p1_quantity">Quantity:</label>
                         <input type="number" id="p1_quantity" name="p1_quantity"/>
@@ -203,18 +203,18 @@
                         <label for="product_2">Product 2:</label>
                         <select id="product_2" name="product_2">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p2_quantity">Quantity:</label>
                         <input type="number" id="p2_quantity" name="p2_quantity"/>
@@ -222,18 +222,18 @@
                         <label for="product_3">Product 3:</label>
                         <select id="product_3" name="product_3">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p3_quantity">Quantity:</label>
                         <input type="number" id="p3_quantity" name="p3_quantity"/>
@@ -241,18 +241,18 @@
                         <label for="product_4">Product 4:</label>
                         <select id="product_4" name="product_4">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p4_quantity">Quantity:</label>
                         <input type="number" id="p4_quantity" name="p4_quantity"/>
@@ -260,18 +260,18 @@
                         <label for="product_5">Product 5:</label>
                         <select id="product_5" name="product_5">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p5_quantity">Quantity:</label>
                         <input type="number" id="p5_quantity" name="p5_quantity"/>
@@ -279,24 +279,24 @@
                         <label for="product_6">Product 6:</label>
                         <select id="product_6" name="product_6">
                             <option value="">None</option>
-                            <option value="Art Hairspray(420ml)">Art Hairspray(420ml)</option>
-                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
-                            <option value="Notel Spiky Clap (100ml)">Notel Spiky Clap (100ml)</option>
-                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
-                            <option value="Kerastase Elixir Ultime (100ml)">Kerastase Elixir Ultime (100ml)</option>
-                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
-                            <option value="MNM Aromatic Hairspray (420ml)">MNM Aromatic Hairspray (420ml)</option>
-                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
-                            <option value="Ketastase Resistance Ciment Thermique (150ml)">Ketastase Resistance Ciment Thermique (150ml)</option>
-                            <option value="Elegance Plus Matte Hair Wax (140g)">Elegance Plus Matte Hair Wax (140g)</option>
-                            <option value="Arimino Spice Water Shining Straight">Arimino Spice Water Shining Straight</option>
-                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
+                            <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
+                            <option value="L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x">L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</option>
+                            <option value="Notel Spiky Clap (100ml) x">Notel Spiky Clap (100ml)</option>
+                            <option value="Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x">Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</option>
+                            <option value="Kerastase Elixir Ultime (100ml) x">Kerastase Elixir Ultime (100ml)</option>
+                            <option value="Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x">Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</option>
+                            <option value="MNM Aromatic Hairspray (420ml) x">MNM Aromatic Hairspray (420ml)</option>
+                            <option value="Schwarzkopf Osis+ Dust It Mattifying Powder 10g x">Schwarzkopf Osis+ Dust It Mattifying Powder 10g</option>
+                            <option value="Ketastase Resistance Ciment Thermique (150ml) x">Ketastase Resistance Ciment Thermique (150ml)</option>
+                            <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
+                            <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
+                            <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
                         <label for="p6_quantity">Quantity:</label>
                         <input type="number" id="p6_quantity" name="p6_quantity"/>
                         <br />
                         <label for="total">Total:</label>
-                        <input type="text" name="total" id="total" placeholder="Total Price" autofocus="autofocus" value="<?php echo $total; ?>" required="required"/>
+                        <input type="text" name="total" value="<?php echo $total; ?>" required="required"/>
                     </fieldset>
                     
                     <input type="submit" id="add_purchase_submit" name="add_purchase_submit" value="Add Purchase"/>
@@ -315,7 +315,6 @@
                             <tr>
                                 <th>Date Purchased</th>
                                 <th>ID</th>
-                                <th>Name</th>
                                 <th>Hair Services</th>
                                 <th>Massage</th>
                                 <th>Body Wax</th>
@@ -328,7 +327,6 @@
                             <tr>
                                 <td><?php echo $row["datePurchased"]; ?></td>
                                 <td><?php echo $row["id"]; ?></td>
-                                <td><?php echo $row["fullname"]; ?></td>
                                 <td><?php echo $row["hairServices"]; ?></td>
                                 <td><?php echo $row["massage"]; ?></td>
                                 <td><?php echo $row["bodyWax"]; ?></td>
