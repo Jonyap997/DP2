@@ -133,7 +133,7 @@
         $p6_quantity = mysqli_real_escape_string($connection, $p6_quantity);
         $total = mysqli_real_escape_string($connection, $total);
 
-        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, hairServices, massage, bodyWax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$fullname', '$hair_service', '$massage', '$body_wax', CONCAT('$product_1', '$p1_quantity', ' ', '$product_2', '$p2_quantity', ' ', '$product_3', '$p3_quantity', ' ', '$product_4', '$p4_quantity', ' ', '$product_5', '$p5_quantity', ' ', '$product_6', '$p6_quantity'), '$total')";
+        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, hairServices, massage, bodyWax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$hair_service', '$massage', '$body_wax', CONCAT('$product_1', '$p1_quantity', ' ', '$product_2', '$p2_quantity', ' ', '$product_3', '$p3_quantity', ' ', '$product_4', '$p4_quantity', ' ', '$product_5', '$p5_quantity', ' ', '$product_6', '$p6_quantity'), '$total')";
         mysqli_query($connection, $query)
             or die("Error".mysqli_error($connection));
         $_SESSION['msg'] = "Purchase Added";

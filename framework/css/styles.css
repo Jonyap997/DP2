@@ -486,6 +486,7 @@ form.add_customer, form.add_purchase {
     background: #0031ff;
     color: white;
     border-radius: 3px;
+    white-space: nowrap;
 }
 
 /*********************
