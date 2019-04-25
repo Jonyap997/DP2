@@ -55,7 +55,17 @@
            </div>
            </div>
     
-   
+   <div class="space"></div>
+   <div class="space"></div>
+   <div class="space"></div>
+   <div class="space"></div>
+   <div class="space"></div>
+   <div class="space"></div>
+   <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
     
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
