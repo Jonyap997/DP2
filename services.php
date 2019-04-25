@@ -49,7 +49,15 @@
                </div>
            </div>
            <div class="row">
-              <div class="col-md- col-sm-3 col-xs-3"></div>
+               <div class="col-md-3 col-sm-3 col-xs-3"></div>
+               <div class="col-md-1 col-sm-1 col-xs-1"></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Services</u></strong></p></div>
+               <div class="col-md-3 col-sm-3 col-xs-3"><p><strong><u>Type of Haircut</u></strong></p></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Gender</u></strong></p></div>
+               <div class="col-md-1 col-sm-1 col-xs-1"><p><strong><u>Price</u></strong></p></div>
+           </div>
+           <div class="row">
+              <div class="col-md-3 col-sm-3 col-xs-3"></div>
                <div class="col-md-1 col-sm-1 col-xs-1"><span class="glyphicon glyphicon-triangle-right"></span></div>
                <div class="col-md-2 col-sm-2 col-xs-2"><strong>Hair services</strong></div>
                <div class="col-md-3 col-sm-3 col-xs-3">
@@ -80,6 +88,14 @@
                </div>
            </div>
            <div class="space row"></div>
+           <div class="row">
+               <div class="col-md-3 col-sm-3 col-xs-3"></div>
+               <div class="col-md-1 col-sm-1 col-xs-1"></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Services</u></strong></p></div>
+               <div class="col-md-3 col-sm-3 col-xs-3"><p><strong><u>Type of Massages</u></strong></p></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Hour</u></strong></p></div>
+               <div class="col-md-1 col-sm-1 col-xs-1"><p><strong><u>Price</u></strong></p></div>
+           </div>
            <div class="row">
               <div class="col-md- col-sm-3 col-xs-3"></div>
                <div class="col-md-1 col-sm-1 col-xs-1"><span class="glyphicon glyphicon-triangle-right"></span></div>
@@ -118,6 +134,14 @@
                <div class="col-md-12 col-sm-12 col-xs-12">
                    <h2 class="gap">_</h2>
                </div>
+           </div>
+           <div class="row">
+               <div class="col-md-1 col-sm-1 col-xs-1"></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Services</u></strong></p></div>
+               <div class="col-md-3 col-sm-3 col-xs-3"><p><strong><u>Body Section</u></strong></p></div>
+               <div class="col-md-2 col-sm-2 col-xs-2"><p><strong><u>Body Part</u></strong></p></div>
+               <div class="col-md-1 col-sm-1 col-xs-1"><p><strong><u>Price</u></strong></p></div>
+               <div class="col-md-3 col-sm-3 col-xs-3"></div>
            </div>
           <div class="row">
                <div class="col-md-1 col-sm-1 col-xs-1">

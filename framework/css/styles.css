@@ -431,15 +431,15 @@ tr:hover {
     color: dimgray;
 }
 
-.ava{
+.open{
    background-color: limegreen;
 }
 
-.danger{
+.booked{
    background-color: red;
 }
 
-.not_ava{
+.closed{
     background-color: dimgray;
 }
 

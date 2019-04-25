@@ -44,14 +44,14 @@
            <h2>Time slots</h2>
            <div class="col-md-5 col-sm-5 col-xs-5" >
                <p>These are the time slots available for hairdressers</p>
-           <p><span class="green_text"><strong>Green</strong></span> - Available for booking</p>
-           <p><span class="red_text"><strong>Red</strong></span> - Time slot fully booked</p>
-           <p><span class="grey_text"><strong>Grey</strong></span> - Time slot not available</p>
+           <p><span><strong class="green_text">Green</strong></span> - Available for booking</p>
+           <p><span><strong class="red_text">Red</strong></span> - Time slot fully booked</p>
+           <p><span><strong class="grey_text">Grey</strong></span> - Time slot not available</p>
            </div>
            <div class="col-md-2 col-sm-2 col-xs-2">
-               <p class="ava">Available</p>
-               <p class="danger">Full Booked</p>
-               <p class="not_ava">Not available for booking</p>     
+               <p class="open">Available</p>
+               <p class="booked">Full Booked</p>
+               <p class="closed">Not available for booking</p>     
            </div>
            
            </div>
@@ -69,82 +69,1216 @@
                         <button type="button" class="hairBtn btn-default" data-ng-click = "chrDisp = 'Hair Stylist 4'">Hair Stylist 4</button>
                     </div>
                     
-                    <div data-ng-if="chrDisp == 'Hair Stylist 1'" data-ng-init="day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']">
+                    <div data-ng-if="chrDisp == 'Hair Stylist 1'">
                         <h2>{{chrDisp}} time slot</h2>
                         <div class="space"></div>
                         <table class="table table-stripe small">
                             <tr>
                                 <th>Day</th>
                                 <th>Time</th>
-                                <th>Day</th>
+                                <th>Time</th>
                                 <th>Time</th>
                             </tr>
-                            <tr data-ng-repeat="d in day">
-                                <td>{{d}}</td>
+                            <tr>
+                                <td>Monday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
                                 <td></td>
-                                <td>{{d}}</td>
+                                <td class="booked">9:00AM</td>
+                                <td class="closed">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
                                 <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="booked">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="closed">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thurday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td class="booked">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="booked">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="booked">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="open">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
                             </tr>
                         </table>
                         
                     
                     </div>
                     
-                    <div data-ng-if="chrDisp == 'Hair Stylist 2'" data-ng-init="day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']">
-                       <h2>{{chrDisp}} time slot</h2>
-                       <div class="space"></div>
-                        <table class="table table-stripe small">
-                            <tr>
-                                <th>Day</th>
-                                <th>Time</th>
-                                <th>Day</th>
-                                <th>Time</th>
-                            </tr>
-                            <tr data-ng-repeat="d in day">
-                                <td>{{d}}</td>
-                                <td></td>
-                                <td>{{d}}</td>
-                                <td></td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    <div data-ng-if="chrDisp == 'Hair Stylist 3'" data-ng-init="day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']">
+                    <div data-ng-if="chrDisp == 'Hair Stylist 2'">
                         <h2>{{chrDisp}} time slot</h2>
                         <div class="space"></div>
                         <table class="table table-stripe small">
                             <tr>
                                 <th>Day</th>
                                 <th>Time</th>
-                                <th>Day</th>
+                                <th>Time</th>
                                 <th>Time</th>
                             </tr>
-                            <tr data-ng-repeat="d in day">
-                                <td>{{d}}</td>
+                            <tr>
+                                <td>Monday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
                                 <td></td>
-                                <td>{{d}}</td>
+                                <td class="booked">9:00AM</td>
+                                <td class="closed">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="booked">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="closed">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="closed">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                             </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thurday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td class="booked">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="booked">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="booked">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="open">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
                         </table>
+                        
+                    
                     </div>
                     
-                    <div data-ng-if="chrDisp == 'Hair Stylist 4'" data-ng-init="day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']">
+                    <div data-ng-if="chrDisp == 'Hair Stylist 3'">
                         <h2>{{chrDisp}} time slot</h2>
                         <div class="space"></div>
                         <table class="table table-stripe small">
                             <tr>
                                 <th>Day</th>
                                 <th>Time</th>
-                                <th>Day</th>
+                                <th>Time</th>
                                 <th>Time</th>
                             </tr>
-                            <tr data-ng-repeat="d in day">
-                                <td>{{d}}</td>
+                            <tr>
+                                <td>Monday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
                                 <td></td>
-                                <td>{{d}}</td>
+                                <td class="closed">9:00AM</td>
+                                <td class="closed">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="booked">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="closed">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                             </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thurday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td class="booked">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="booked">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="booked">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="open">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
                         </table>
+                        
+                    
+                    </div>
+                    
+                    <div data-ng-if="chrDisp == 'Hair Stylist 4'">
+                        <h2>{{chrDisp}} time slot</h2>
+                        <div class="space"></div>
+                        <table class="table table-stripe small">
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Time</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="closed">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="booked">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="closed">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="closed">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thurday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="open">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td class="booked">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="open">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">10:00AM</td>
+                                <td class="open">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="open">5:00PM</td>
+                                <td class="booked">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="open">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">9:00AM</td>
+                                <td class="open">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="closed">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">11:00AM</td>
+                                <td class="open">3:00PM</td>
+                                <td class="booked">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="booked">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="open">11:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td class="closed">8:00AM</td>
+                                <td class="booked">12:00PM</td>
+                                <td class="booked">6:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">9:00AM</td>
+                                <td class="booked">1:00PM</td>
+                                <td class="booked">7:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open">10:00AM</td>
+                                <td class="booked">2:00PM</td>
+                                <td class="open">8:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="booked">11:00AM</td>
+                                <td class="booked">3:00PM</td>
+                                <td class="open">9:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">4:00PM</td>
+                                <td class="open">10:00PM</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td class="booked">5:00PM</td>
+                                <td class="closed">11:00PM</td>
+                            </tr>
+                        </table>
+                        
+                    
                     </div>
                     
                     
