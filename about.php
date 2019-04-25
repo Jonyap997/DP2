@@ -38,7 +38,6 @@
                 <li><a href="products.php">Products</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
             </ul>
-            <hr/>
         </div>
     </div>
    

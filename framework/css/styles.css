@@ -15,11 +15,12 @@
 	font-size: 18px;
     /*---Make fonts rendering in perfect way---*/
     text-rendering: optimizeLegibility;
+    color: white;
 }
 
 body {
     overflow-x:hidden;
-    background-color: #fbfbf9;
+    background-color: #1F2833;
 }
 
 .clearfix:after {
@@ -50,7 +51,7 @@ h2 {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: #010101;
 }
 
 .nav li {
@@ -63,7 +64,7 @@ h2 {
 
 .nav a {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 15px 20px;
     margin: 0px 10px;
@@ -71,7 +72,7 @@ h2 {
 }
 
 .nav ul a:hover {
-    text-decoration: underline;
+    color:#66FCF1;
 }
 
 hr {
@@ -83,7 +84,7 @@ hr {
 .main{
     border: none;
     height: 46vw;
-    background: linear-gradient(rgba(204, 204, 204, 0.5),rgba(204, 204, 204, 0.5)), url("../resources/images/attractive-beautiful-beauty-157967.jpg");
+    background: url("../resources/images/attractive-beautiful-beauty-157967.jpg");
     background-repeat: no-repeat;
     background-size:100%;
     background-position:center;
@@ -120,7 +121,7 @@ article p {
 }
 
 a.active{
-    text-decoration: underline;
+    color:#66FCF1 ;
 }
 
 /****************
@@ -130,14 +131,14 @@ a.active{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: black;
     position: relative;
     overflow: auto;
 }
 
 .vertical_nav li a {
     display: block;
-    color: black;
+    color: #66FCF1;
     padding: 30px 16px;
     text-decoration: none;
     border-right: 1px lightgrey solid;
@@ -154,8 +155,7 @@ a.active{
 }
 
 .vertical_nav li a:hover:not(.active) {
-  background-color: black;
-  color: white;
+  text-decoration: underline;
 }
 
 .adminHeading h2 {
@@ -172,20 +172,20 @@ a.active{
     height: auto;
 }
 
-a.vactive{
-    background-color: #4CAF50;
-  color: white;
+.vactive{
+    /*background-color: #66FCF1;
+    color: #66FCF1;*/
+    background-color: #66FCF1;
+    color: black;
 }
 
 /****************
 * FOOTER
 ****************/
 .footer {
-    border-top: 1px lightgrey solid;
-    background-color: #d6d6d6;
+    background-color: #010101;
     position: relative;
     bottom: 0;
-    color: black;
     height: 100%;
 }
 
@@ -204,7 +204,7 @@ a.vactive{
 }
 
 .footer a {
-    color:black;
+    color:white;
 }
 
 .footer_container {
