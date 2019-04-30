@@ -27,9 +27,7 @@
             
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
-                <div class="home_icon">
-                    <li><a href="index.php">Home</a></li>
-                </div>
+                <li class="home_icon"><a href="index.php">Home</a></li>
                 <li><a href="loginPage.php">Admin Sign In</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>

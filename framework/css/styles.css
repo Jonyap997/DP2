@@ -58,7 +58,7 @@ h2 {
     float:right;
 }
 
-.home_icon li{
+li.home_icon {
     float:left;
 }
 
@@ -167,10 +167,11 @@ a.active{
 
 }
 
+/* Not sure what's this
 .home_icon i {
     width: 50px;
     height: auto;
-}
+}*/
 
 .vactive{
     background-color: #66FCF1;
