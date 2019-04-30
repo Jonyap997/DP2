@@ -154,7 +154,7 @@ a.active{
   color: white;
 }
 
-.vertical_nav li a:hover:not(.active) {
+.vertical_nav li a:hover:not(.vactive) {
  color: #66FCF1;
 }
 
