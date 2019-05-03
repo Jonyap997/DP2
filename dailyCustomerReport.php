@@ -60,8 +60,36 @@
                 <p>The number of customers</p>
             </div>
             
-            <div class="generate_report_button center">
-                <button>Generate monthly report</button>
+            <div class="center">
+                
+                <form id="daily_customer" class="daily_customer" method="POST" action="fetchChartData.php">
+                    
+                <label for="report_year_select">Select a year:</label>
+                <select class="report_year_select" name="report_year_select" id="report_year_select">
+                    <option name="report_year" value="2019">2019</option>
+                    <option name="report_year" value="2018">2018</option>
+                    <option name="report_year" value="2017">2017</option>
+                </select>
+                    
+                <label for="report_month_select">Select a month:</label>
+                <select class="report_month_select" name="report_month_select" id="report_month_select">
+                    <option name="report_month" value="1">January</option>
+                    <option name="report_month" value="2">February</option>
+                    <option name="report_month" value="3">March</option>
+                    <option name="report_month" value="4">April</option>
+                    <option name="report_month" value="5">May</option>
+                    <option name="report_month" value="6">June</option>
+                    <option name="report_month" value="7">July</option>
+                    <option name="report_month" value="8">August</option>
+                    <option name="report_month" value="9">September</option>
+                    <option name="report_month" value="10">October</option>
+                    <option name="report_month" value="11">November</option>
+                    <option name="report_month" value="12">December</option>
+                </select>
+                <br/>
+                    <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
+                </form>
+
             </div>
             
             <table class="report">
