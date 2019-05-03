@@ -374,12 +374,23 @@
                                 <a class="edit_btn" href="editCustomer.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>
                             <td>
-                                <a class="delete_btn" href="editCustomer.php?delete=<?php echo $row['id']; ?>">Delete</a>
+                                <input type="button" class="delete_btn" onclick="deleteCustomer()" name="Delete" value="Delete">
                             </td>
                             <td>
                                 <a class="add_purchase_btn" href="editCustomer.php?addPurchase=<?php echo $row['id']; ?>">Add Purchase</a>
                             </td>
                         </tr>
+                        
+                        <script language="javascript">
+                            function deleteCustomer()
+                            {
+                                if(confirm("Delete this customer?")){
+                                    window.location.href="editCustomer.php?delete=<?php echo $row['id']; ?>";
+                                    return true;
+                                }
+                            }
+                        </script>
+                        
                         <?php } ?>
                     </tbody>
                 </table>

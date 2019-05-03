@@ -162,9 +162,20 @@
                                 <a class="edit_btn" href="adminStockAndInventories.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>
                             <td>
-                                <a class="delete_btn" href="adminStockServer.php?delete=<?php echo $row['id']; ?>">Delete</a>
+                                <input type="button" class="delete_btn" onclick="deleteStock()" name="Delete" value="Delete">
                             </td>
                         </tr>
+                    <script language="javascript">
+                        function deleteStock()
+                        {
+                            if(confirm("Delete this item?")){
+                                window.location.href="adminStockServer.php?delete=<?php echo $row['id']; ?>";
+                                return true;
+                            }
+                        }
+                    </script>
+                        
+                        
                     <?php } ?>
                 </tbody>
             </table>

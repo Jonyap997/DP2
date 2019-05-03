@@ -71,6 +71,7 @@
     if (isset($_GET['delete'])) {
         $id = $_GET['delete'];
         mysqli_query($connection, "DELETE FROM customers WHERE id=$id");
+        $_SESSION['msg'] = "Data Deleted";
         header("Location: editCustomer.php");
     }
 

@@ -31,6 +31,12 @@ body {
     visibility: hidden;
 }
 
+input[type=button], input[type=submit], input[type=reset] {
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 /****************
 * HEADINGS
 ****************/
@@ -377,7 +383,7 @@ tr:hover {
 
 .delete_btn {
     text-decoration: none;
-    padding: 2px 5px;
+    padding: 0.5px 5px;
     background: #800000;
     color: white;
     border-radius: 3px;
