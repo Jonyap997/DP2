@@ -27,19 +27,20 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
-                <li><a href="loginPage.php">Admin Sign In</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
+                <li><a href="loginPage.php">Admin Sign In</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a class="active" href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
    
+   <div class="container">
    <div class="row">
        <div class="col-md-12 col-sm-12 col-xs-12">
-           <h2>Time slots</h2>
+           <h2 class="text-center">Time slots</h2>
            <div class="col-md-5 col-sm-5 col-xs-5" >
                <p>These are the time slots available for hairdressers</p>
            <p><span><strong class="green_text">Green</strong></span> - Available for booking</p>
@@ -47,15 +48,22 @@
            <p><span><strong class="grey_text">Grey</strong></span> - Time slot not available</p>
            </div>
            <div class="col-md-2 col-sm-2 col-xs-2">
+               <p>_</p>
                <p class="open">Available</p>
                <p class="booked">Full Booked</p>
                <p class="closed">Not available for booking</p>     
            </div>
+           <div class="col-md-5 col-sm-5 col-xs-2 text-right">
+               <a href="hairdressers.html" class="btn btn-primary btn-info role=button active btn-sm">View our Hairdressers' info here >>></a>
+           </div>
            
            </div>
        </div>
-       <div class="space"></div>
-       <div class="container">
+       <div class="space">
+           
+       </div>
+       
+       
 <!--           Time slot program here.-->
           <div class="row">
                 <div class="col-md-12">

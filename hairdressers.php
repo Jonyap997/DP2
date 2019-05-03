@@ -28,12 +28,12 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
-                <li><a href="loginPage.php">Admin Sign In</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a class="active" href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
+                <li><a href="loginPage.php">Admin Sign In</a></li>
                 <li><a href="products.php">Products</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a class="active" href="hairdressers.php">Our hairdressers</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -42,6 +42,9 @@
       <div class="center row">
         <h2>Our Hairdressers</h2>
            <p>Striving to serve you better </p>
+           <div class="space text-right">
+               <a href="timeslot.html" class="btn btn-primary btn-info role=button active btn-sm">View their Schedules here >>></a>
+           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
                   <p>Sum Ting Wong</p>
@@ -86,6 +89,7 @@
           </div>
 
       </div>
+      <div class="space"></div>
        </div>
       
    
