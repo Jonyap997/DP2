@@ -513,7 +513,7 @@ input[type="search"] {
     text-align: center;
 }
 
-.generate_report_button button{
+.generate_report_button{
     text-align: center;
     background-color: white;
     color: black;
@@ -523,7 +523,7 @@ input[type="search"] {
     border-radius: 5px;
 }
 
-.generate_report_button button:hover {
+.generate_report_button:hover {
     background-color: black;
     color: white;
 }
