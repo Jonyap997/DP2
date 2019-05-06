@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
-<title>Smile and Style</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- Bootstrap -->
-<link href="framework/css/bootstrap.min.css" rel="stylesheet" />
-<link href="framework/css/styles.css" rel="stylesheet" />
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'>
-<link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
-    
- <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
- <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
- <!--[if lt IE 9]>
- <script src="framework/js/html5shiv.js"></script>
- <script src="framework/js/respond.min.js"></script>
- <![endif]-->
- 
-<!-- Media Queries-->
-<link href="framework/css/mediaqueries.css" rel="stylesheet" />
+    <title>Smile and Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Bootstrap -->
+    <link href="framework/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="framework/css/styles.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Monsieur La Doulaise' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="outsource/css/ionicons.min.css"/>
 
-<script src="framework/js/navBarActive.js"></script>
-    
+     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!--[if lt IE 9]>
+     <script src="framework/js/html5shiv.js"></script>
+     <script src="framework/js/respond.min.js"></script>
+     <![endif]-->
+
+    <!-- Media Queries-->
+    <link href="framework/css/mediaqueries.css" rel="stylesheet" />
+
+    <script src="framework/js/navBarActive.js"></script>
+   
+    <!--JQuery Calander-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <script>
+   
+    $(document).ready(function() {
+        var calendar = $('#calendar').fullCalendar({
+            editable:true,
+            header:{
+                left:'prev,next today',
+                center:'title',
+                right:'month,agendaWeek,agendaDay'}
+      });
+
+    });
+    </script>
 </head>
 <body>
     <div class="row">
@@ -55,95 +75,14 @@
         
         <div class="col-md-9 col-sm-9 col-xs-9">
             <div class="pageContent">
-            <div class="adminHeading">
-                <h2>Manage Bookings</h2>
-                <p>Make or cancel bookings</p>
+                <div class="adminHeading">
+                    <h2>Manage Bookings</h2>
+                    <p>Make or cancel bookings</p>
+                </div>
+                <div id="calendar"></div>
+                
+
             </div>
-            
-            <form class="booking">
-                <div>
-                <label for="booking_date">Appointment Date: </label>
-                <input type="date" id="booking_date" name="booking_date" required="required" autofocus="autofocus"/>
-                
-                <label for="booking_hairdresser">Hairdresser: </label>
-                <select id="booking_hairdresser" name="booking_hairdresser">
-                    <option value="hairdresser 1">Hairdresser 1</option>
-                    <option value="hairdresser 2">Hairdresser 2</option>
-                    <option value="hairdresser 3">Hairdresser 3</option>
-                    <option value="hairdresser 4">Hairdresser 4</option>
-                </select>
-                
-            </div>
-            <br/>
-             <table class="report timeslot">
-                <thead>
-                    <tr>
-                        <th colspan="4">Timeslot</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Morning</th>
-                        <th colspan="2">Afternoon</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>08:00</td>
-                        <td></td>
-                        <td>12:00</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>09:00</td>
-                        <td></td>
-                        <td>13:00</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>10:00</td>
-                        <td></td>
-                        <td>14:00</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>11:00</td>
-                        <td></td>
-                        <td>15:00</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>16:00</td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>17:00</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <br/>
-            <label for="booking_time" id="booking_time_start">Appointment Time: </label>
-                <input type="time" id="booking_time" name="booking_time" required="required"/>
-                
-                 <label for="booking_time" id="booking_time_end">Appointment End Time: </label>
-                <input type="time" id="booking_time" name="booking_time" required="required"/>
-            
-                <br/>
-            <input type="submit" id="booking_customer_submit" name="booking_customer_submit" value="Submit"/>
-                
-                <input type="reset" id="booking_customer_reset" name="booking_customer_reset" value="Reset"/>
-            </form>
-            
-        </div>
         </div>
     </div>
 
@@ -185,7 +124,7 @@
    
  
  <!-- jQuery – required for Bootstrap's JavaScript plugins) -->
- <script src="framework/js/jquery.min.js"></script>
+<!-- <script src="framework/js/jquery.min.js"></script>-->
 <!--  All Bootstrap plug-ins file -->
  <script src="framework/js/bootstrap.min.js"></script>
  <!-- Basic AngularJS -->

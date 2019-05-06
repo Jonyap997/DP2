@@ -1,7 +1,8 @@
-/**************************************************
-* Light purple color on Admin Login Page: #e5b6fc
-*
-**************************************************/
+/**************************************************************
+* Light purple color on Admin Login Page (previously): #e5b6fc
+* Background color of site: #1F2833
+* Theme color: #66FCF1
+**************************************************************/
 
 /**********************************
 * BASIC SETUP
@@ -261,7 +262,7 @@ a.active{
 .login-box h1 {
     float: left;
     font-size: 40px;
-    border-bottom: 6px solid #e5b6fc;
+    border-bottom: 6px solid #66FCF1;
     margin-bottom: 30px;
     padding: 13px 0;
 }
@@ -272,7 +273,7 @@ a.active{
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
-    border-bottom: 1px solid #e5b6fc;
+    border-bottom: 1px solid #66FCF1;
 }
 
 .textbox i {
@@ -296,7 +297,7 @@ a.active{
 .loginBtn {
     width: 100%;
     background: none;
-    border: 2px solid #e5b6fc;
+    border: 2px solid #66FCF1 !important;
     color: white;
     padding: 5px;
     font-size: 18px;
@@ -322,9 +323,10 @@ th, td {
     padding: 0 10px;
 }
 
+/* The hover was a bit annoying so I comment it out for now
 tr:hover {
     background: #F5F5F5;
-}
+}*/
 
 .adminStockForm {
     width: 97%;
@@ -572,4 +574,12 @@ form.booking {
 .pageContent {
     height: 550px;
     overflow-y: auto;
+}
+
+/*************
+* CALENDAR
+*************/
+.fc-unthemed td.fc-today {
+    background: #337ab7 !important;
+    /*background: #66FCF1 !important;*/
 }
