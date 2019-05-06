@@ -22,6 +22,8 @@
 <link href="framework/css/mediaqueries.css" rel="stylesheet" />
 
 <script src="framework/js/navBarActive.js"></script>
+<script src="framework/js/Chart.min.js"></script>
+<script src="framework/js/displayChart.js"></script>
     
 </head>
 <body>
@@ -93,27 +95,7 @@
             </div>
                 
             
-            <table class="report">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Date</th>
-                        <th rowspan="2">Day</th>
-                        <th colspan="2">No. of customers</th>
-                    </tr>
-                    <tr>
-                        <th>Morning</th>
-                        <th>Afternoon</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2019-04-14</td>
-                        <td>Sunday</td>
-                        <td>10</td>
-                        <td>20</td>
-                    </tr>
-                </tbody>
-            </table>
+            <canvas id="dailyCustomerChart" width="400" height="400"></canvas>
             
         </div>
         </div>

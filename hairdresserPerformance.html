@@ -22,6 +22,8 @@
 <link href="framework/css/mediaqueries.css" rel="stylesheet" />
 
 <script src="framework/js/navBarActive.js"></script>
+<script src="framework/js/Chart.min.js"></script>
+<script src="framework/js/displayChart.js"></script>
     
 </head>
 <body>
@@ -92,30 +94,7 @@
 
             </div>
             
-            <table class="report">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Hairdresser</th>
-                        <th colspan="2">Performance</th>
-                    </tr>
-                    <tr>
-                        <th>No. of customers</th>
-                        <th>Sales (RM)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hairdresser 1</td>
-                        <td>100</td>
-                        <td>2500</td>
-                    </tr>
-                    <tr>
-                        <td>Hairdresser 2</td>
-                        <td>200</td>
-                        <td>1400</td>
-                    </tr>
-                </tbody>
-            </table>
+            <canvas id="performanceChart" width="400" height="400"></canvas>
             
         </div>
         </div>

@@ -22,6 +22,8 @@
 <link href="framework/css/mediaqueries.css" rel="stylesheet" />
 
 <script src="framework/js/navBarActive.js"></script>
+<script src="framework/js/Chart.min.js"></script>
+<script src="framework/js/displayChart.js"></script>
     
 </head>
 <body>
@@ -92,30 +94,7 @@
 
             </div>
             
-            <table class="report">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Month</th>
-                        <th colspan="2">Sales (RM)</th>
-                    </tr>
-                    <tr>
-                        <th>Products</th>
-                        <th>Services</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>January</td>
-                        <td>10000</td>
-                        <td>20000</td>
-                    </tr>
-                    <tr>
-                        <td>February</td>
-                        <td>20000</td>
-                        <td>40000</td>
-                    </tr>
-                </tbody>
-            </table>
+            <canvas id="salesChart" width="400" height="400"></canvas>
             
         </div>
         </div>
