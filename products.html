@@ -1,3 +1,18 @@
+<?php
+
+//make connection
+$sql=mysqli_connect("localhost","id9115199_salondemo","qwe121993","id9115199_salon");
+
+//check connection
+if(mysqli_connect_errno())
+{
+    echo "Failed to connect to 000web: " . mysqli_connect_error();
+}
+
+$records=mysqli_query($sql,"SELECT * FROM inventories");
+
+?>
+
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -39,191 +54,32 @@
     </div>
     <div class="space"></div>
     <div class="container">
-            <h2>Products</h2>
-   
-       <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product1.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Art Hairspray(420ml)</p>
-                        <p><strong>RM 12.00</strong></p>
-                        <p><strong>10</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product2.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml)</p>
-                        <p><strong>RM65.00</strong></p>
-                        <p><strong>14</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product3.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Notel Spiky Clap (100ml)</p>
-                        <p><strong>RM25.00</strong></p>
-                        <p><strong>9</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product4.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g)</p>
-                        <p><strong>RM300.00</strong></p>
-                        <p><strong>7</strong> left</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product"  src="framework/resources/products/product5.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Kerastase Elixir Ultime (100ml)</p>
-                        <p><strong>RM120.00</strong></p>
-                        <p><strong>16</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product6.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml</p>
-                        <p><strong>RM230.00</strong></p>
-                        <p><strong>10</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product7.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>MNM Aromatic Hairspray (420ml)</p>
-                        <p><strong>RM12.00</strong></p>
-                        <p><strong>13</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product8.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Schwarzkopf Osis+ Dust It Mattifying Powder 10g</p>
-                        <p><strong>RM30.00</strong></p>
-                        <p><strong>12</strong> left</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product9.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Ketastase Resistance Ciment Thermique (150ml)</p>
-                        <p><strong>RM90.00</strong></p>
-                        <p><strong>5</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product10.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Elegance Plus Matte Hair Wax (140g)</p>
-                        <p><strong>RM45.00</strong></p>
-                        <p><strong>8</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product11.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>Arimino Spice Water Shining Straight</p>
-                        <p><strong>RM90.00</strong></p>
-                        <p><strong>15</strong> left</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <img class="product" alt="product" src="framework/resources/products/product12.jpg" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <p>L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</p>
-                        <p><strong>RM150.00</strong></p>
-                        <p><strong>20</strong> left</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-   
-</div>
-            
-        
-    
-    
-    
-       
+            <h2 class="text-center">Products</h2>
+      <div class="space"></div>
+      <div class="row">                
+                      <?php
+                      
+                      while($inventories=mysqli_fetch_assoc($records)){
+                          
+                            echo "<div class=\"col-md-3 col-sm-6 col-xs-6\">";
+                                echo "<div class=\"row\">";
+                                    echo "<div class=\"col-md-12 col-sm-12 col-xs-12\">";
+                                        echo "<img class=\"product\" alt=\"product\" src=\"framework/resources/products/".$inventories['image_id']."\" />";
+                                        echo "<p>".$inventories['name']."</p>";
+                                        echo "<p>".$inventories['volume']."</p>";
+                                        echo "<p>Brand: ".$inventories['brand']."</p>";
+                                        echo "<p><strong>RM ".$inventories['price']."</strong></p>";
+                                        echo "<p>In Stock: <strong>".$inventories['amountRemaining']."</strong></p>";
+                                    echo "</div>";
+                                echo "</div>";
+                            echo "</div>";
+                          
 
+                      }//end while
+                      
+                      ?>
+              </div>
+        </div>                
 
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
