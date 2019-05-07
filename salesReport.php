@@ -90,12 +90,15 @@
                 </select>
                 <br/>
                     <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
+                    <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
 
             </div>
             
+            <div id="chart_container">
             <canvas id="salesChart" width="400" height="400"></canvas>
-            
+            </div>
+                
         </div>
         </div>
     </div>

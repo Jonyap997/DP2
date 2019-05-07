@@ -11,6 +11,8 @@ $(document).ready(function(){
         hairdressers.push(result[i].name);
         customerCount.push(result[i].customers);
       }
+        
+    document.getElementById("generate_PDF").style.visibility = "visible";
 
       var chartdata = {
         labels: hairdressers,

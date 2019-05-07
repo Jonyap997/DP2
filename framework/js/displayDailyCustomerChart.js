@@ -11,6 +11,8 @@ $(document).ready(function(){
         days.push(result[i].day);
         customerCount.push(result[i].count);
       }
+        
+    document.getElementById("generate_PDF").style.visibility = "visible";
 
       var chartdata = {
         labels: days,

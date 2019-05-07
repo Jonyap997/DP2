@@ -583,3 +583,10 @@ form.booking {
     background: #337ab7 !important;
     /*background: #66FCF1 !important;*/
 }
+
+/*************
+* GENERATE PDF
+*************/
+#generate_PDF {
+    visibility: hidden;
+}

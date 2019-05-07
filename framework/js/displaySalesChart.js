@@ -11,6 +11,8 @@ $(document).ready(function(){
         months.push(result[i].month);
         monthlySales.push(result[i].sales);
       }
+        
+    document.getElementById("generate_PDF").style.visibility = "visible";
 
       var chartdata = {
         labels: months,
