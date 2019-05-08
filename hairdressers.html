@@ -43,7 +43,7 @@
         <h2>Our Hairdressers</h2>
            <p>Striving to serve you better </p>
            <div class="space text-right">
-               <a href="timeslot.html" class="btn btn-primary btn-info role=button active btn-sm">View their Schedules here >>></a>
+               <a href="timeslot.php" class="btn btn-primary btn-info role=button active btn-sm">View their Schedules here >>></a>
            </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
                   <img alt="profile pic" src="framework/resources/images/default_profile.png"/>
