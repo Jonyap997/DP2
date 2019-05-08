@@ -16,6 +16,7 @@
         $price = $record['price'];
         $source = $record['source'];
         $description = $record['description'];
+        $image_id = $record['image_id'];
     }
 
 ?>
@@ -114,6 +115,10 @@
                         <input type="text" name="description" value="<?php echo $description; ?>">
                     </div>
                     <div class="input-group">
+                        <label>Image Name</label>
+                        <input type="text" name="image_id" value="<?php echo $image_id; ?>">
+                    </div>
+                    <div class="input-group">
                     <?php if ($edit_state == false): ?>
                         <button type="submit" name="save" class="adminStockBtn">Add New Item</button>
                     <?php else: ?>
@@ -133,7 +138,7 @@
                 ?>
             </div>
 
-            <table class="table table-striped table-hover">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Item Code</th>
@@ -144,6 +149,7 @@
                         <th>Price</th>
                         <th>Source</th>
                         <th>Description</th>
+                        <th>Image ID</th>
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
@@ -158,6 +164,7 @@
                             <td><?php echo $row["price"]; ?></td>
                             <td><?php echo $row["source"]; ?></td>
                             <td><?php echo $row["description"]; ?></td>
+                            <td><?php echo $row["imageName"]; ?></td>
                             <td>
                                 <a class="edit_btn" href="adminStockAndInventories.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>

@@ -590,3 +590,11 @@ form.booking {
 #generate_PDF {
     visibility: hidden;
 }
+
+/*************
+* FORM DESIGN
+*************/
+
+input[type=text] {
+  color: black;
+}

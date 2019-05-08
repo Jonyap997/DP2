@@ -9,6 +9,7 @@
     $price = "";
     $source = "";
     $description = "";
+    $image_id = "";
     $edit_state = false;
 
     //Connect to database
@@ -31,6 +32,7 @@
         $price = $_POST['price'];
         $source = $_POST['source'];
         $description = $_POST['description'];
+        $image_id = $_POST['image_id'];
 
         //To prevent sql injection
         $name = stripcslashes($name);
@@ -40,6 +42,7 @@
         $price = stripcslashes($price);
         $source = stripcslashes($source);
         $description = stripcslashes($description);
+        $image_id = stripcslashes($image_id);
 
         $name = mysqli_real_escape_string($connection, $name);
         $brand = mysqli_real_escape_string($connection, $brand);
@@ -48,12 +51,23 @@
         $price = mysqli_real_escape_string($connection, $price);
         $source = mysqli_real_escape_string($connection, $source);
         $description = mysqli_real_escape_string($connection, $description);
+        $image_id = mysqli_real_escape_string($connection, $image_id);
 
-        $query = "INSERT INTO inventories (name, brand, amountRemaining, volume, price, source, description) VALUES ('$name', '$brand', '$amountRemaining', '$volume', '$price', '$source', '$description')";
+        //validate
+        $query = "SELECT name FROM inventories WHERE name='$name' ";
+        $result = mysqli_query($connection, $query)
+            or die("Error".mysqli_error($connection));
+        header("Location: adminStockAndInventories.php");
+        if(mysqli_num_rows($result)>0){
+            $_SESSION['msg'] = "Item is already in the list";
+        }else{
+            //insertion
+        $query = "INSERT INTO inventories (name, brand, amountRemaining, volume, price, source, description,image_id) VALUES ('$name', '$brand', '$amountRemaining', '$volume', '$price', '$source', '$description', '$image_id')";
         mysqli_query($connection, $query)
             or die("Error".mysqli_error($connection));
         $_SESSION['msg'] = "Data Saved";
         header("Location: adminStockAndInventories.php");
+        }
     }
 
     //Update data
@@ -68,6 +82,7 @@
         $price = $_POST['price'];
         $source = $_POST['source'];
         $description = $_POST['description'];
+        $image_id = $_POST['image_id'];
 
         //To prevent sql injection
         $id = stripcslashes($id);
@@ -78,6 +93,7 @@
         $price = stripcslashes($price);
         $source = stripcslashes($source);
         $description = stripcslashes($description);
+        $image_id = stripcslashes($image_id);
 
         $id = mysqli_real_escape_string($connection, $id);
         $name = mysqli_real_escape_string($connection, $name);
@@ -87,8 +103,9 @@
         $price = mysqli_real_escape_string($connection, $price);
         $source = mysqli_real_escape_string($connection, $source);
         $description = mysqli_real_escape_string($connection, $description);
+        $image_id = mysqli_real_escape_string($connection, $image_id);
         
-        mysqli_query($connection, "UPDATE inventories SET name='$name', brand='$brand', amountRemaining='$amountRemaining', volume='$volume', price='$price', source='$source', description='$description' WHERE id='$id'");
+        mysqli_query($connection, "UPDATE inventories SET name='$name', brand='$brand', amountRemaining='$amountRemaining', volume='$volume', price='$price', source='$source', description='$description', image_id='$image_id' WHERE id='$id'");
         $_SESSION['msg'] = "Data Updated";
         header("Location: adminStockAndInventories.php");
     }
