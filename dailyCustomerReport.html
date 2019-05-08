@@ -23,7 +23,11 @@
 
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
-<script src="framework/js/displayChart.js"></script>
+<script src="framework/js/displayDailyCustomerChart.js"></script>
+<script src="framework/js/html2canvas.min.js"></script>
+<script src="framework/js/jquery.min.js"></script>
+<script src="framework/js/jspdf.min.js"></script>
+<script src="framework/js/saveAsPDF.js"></script>
     
 </head>
 <body>
@@ -64,7 +68,7 @@
             
             <div class="center">
                 
-                <form id="daily_customer" class="daily_customer" method="POST" action="fetchChartData.php">
+                <form id="daily_customer" class="daily_customer" method="POST" action="fetchDailyCustomerChartData.php">
                     
                 <label for="report_year_select">Select a year:</label>
                 <select class="report_year_select" name="report_year_select" id="report_year_select">

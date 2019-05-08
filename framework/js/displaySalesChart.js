@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
   $.ajax({
     url: "https://demosalon.000webhostapp.com/fetchSalesChartData.php",
     method: "GET",
@@ -41,16 +42,6 @@ $(document).ready(function(){
   });
 });
 
-{
-    var generateSalesReport = document.getElementById("sales_report");
-    var generateDailyCustomerReport = document.getElementById("daily_customer");
-    var generateHairdresserPerformanceReport = document.getElementById("hairdresser_performance");
-    
-    generateSalesReport.onsubmit = displaySalesChart;
-    generateDailyCustomerReport.onsubmit = displayDailyCustomerChart;
-    generateHairdresserPerformanceReport.onsubmit = displayHairdresserPerformanceChart;
-}
 
-window.onload = init;
 
 

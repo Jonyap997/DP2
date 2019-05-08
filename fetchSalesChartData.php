@@ -1,5 +1,8 @@
 <?php
 
+    //setting header to json
+    header('Content-Type: application/json');
+
     //database
     $dbHost="localhost";
     $dbUser="id9115199_salondemo";
@@ -30,9 +33,6 @@
             $result[i] = mysqli_query($connection, "SELECT SUM(total) AS sales, MONTH(datePurchased) as month FROM customerPurchaseHistory WHERE $year = YEAR(datePurchased) AND $month = MONTH(datePurchased)")
             or die("Error".mysqli_error($connection));
         }
-        
-        $_SESSION['msg'] = "Data Updated";
-        header("Location: fetchChartData.php");
         
         print json_encode($result);
         

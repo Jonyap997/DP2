@@ -1,5 +1,8 @@
 <?php
 
+    //setting header to json
+    header('Content-Type: application/json');
+
     //database
     $dbHost="localhost";
     $dbUser="id9115199_salondemo";
@@ -43,8 +46,6 @@
             or die("Error".mysqli_error($connection));
         }
         
-        $_SESSION['msg'] = "Data Updated";
-        header("Location: fetchChartData.php");
-        
         print json_encode($result);
     }
+?>
