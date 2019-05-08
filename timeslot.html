@@ -54,7 +54,7 @@
                <p class="closed">Not available for booking</p>     
            </div>
            <div class="col-md-5 col-sm-5 col-xs-2 text-right">
-               <a href="hairdressers.html" class="btn btn-primary btn-info role=button active btn-sm">View our Hairdressers' info here >>></a>
+               <a href="hairdressers.php" class="btn btn-primary btn-info role=button active btn-sm">View our Hairdressers' info here >>></a>
            </div>
            
            </div>
