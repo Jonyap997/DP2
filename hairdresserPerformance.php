@@ -23,7 +23,6 @@
 
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
-<script src="framework/js/displayPerformanceChart.js"></script>
 <script src="framework/js/html2canvas.min.js"></script>
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
@@ -93,7 +92,7 @@
                     <option name="report_month" value="12">December</option>
                 </select>
                 <br/>
-                    <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
+                    <input type="submit" id="generate_performance_report" name="generate_performance_report" class="generate_report_button" value="Generate Monthly Report"/>
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
 
@@ -102,6 +101,8 @@
             <div id="chart_container">
             <canvas id="performanceChart" width="400" height="400"></canvas>
             </div>
+                
+            <script type="text/javascript" src="framework/js/displayPerformanceChart.js"></script>
             
         </div>
         </div>

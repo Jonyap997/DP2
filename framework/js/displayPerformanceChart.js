@@ -2,8 +2,8 @@ $(document).ready(function(){
   $.ajax({
     url: "https://demosalon.000webhostapp.com/fetchPerformanceChartData.php",
     method: "GET",
-    success: function(data) {
-      console.log(data);
+    success: function(result) {
+      console.log(result);
       var hairdressers = [];
       var customerCount = [];
 

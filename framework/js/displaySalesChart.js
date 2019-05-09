@@ -1,10 +1,11 @@
+/*
 $(document).ready(function()
 {
   $.ajax({
     url: "https://demosalon.000webhostapp.com/fetchSalesChartData.php",
     method: "GET",
-    success: function(data) {
-      console.log(data);
+    success: function(result) {
+      console.log(result);
       var months = [];
       var monthlySales = [];
 
@@ -41,7 +42,6 @@ $(document).ready(function()
     }
   });
 });
-
-
+*/
 
 
