@@ -30,11 +30,11 @@
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
                 <li><a href="loginPage.php">Admin Sign In</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -61,19 +61,20 @@
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.php">About Us</a></li>  
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>   
             </ul>
         </div>
+        
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
-                <li>Be our <b>V.I.P</b></li>
+                <li>Be our V.I.P</li>
                 <li>Jalan Sotong 1, Taman Monyet</li>
                 <li>10000 Kuching, Sarawak</li>
-                <li><b>Follow us on social media</b></li>
+                <li>Follow us on social media</li>
                 <br/>
                 <div class="footer_container">
                     <div class="footer_left">

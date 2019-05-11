@@ -23,6 +23,7 @@
 
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
+<script src="framework/js/displayPerformanceChart.js"></script>
 <script src="framework/js/html2canvas.min.js"></script>
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
@@ -36,11 +37,11 @@
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
                 <li><a href="loginPage.php">Log out</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -67,7 +68,7 @@
             
             <div class="center">
                 
-                <form id="hairdresser_performance" class="hairdresser_performance" method="POST">
+                <form id="hairdresser_performance" class="hairdresser_performance" method="POST" action="fetchPerformanceChartData.php">
                     
                 <label for="report_year_select">Select a year:</label>
                 <select class="report_year_select" name="report_year_select" id="report_year_select">
@@ -101,8 +102,6 @@
             <div id="chart_container">
             <canvas id="performanceChart" width="400" height="400"></canvas>
             </div>
-                
-            <script type="text/javascript" src="framework/js/displayPerformanceChart.js"></script>
             
         </div>
         </div>
@@ -111,11 +110,11 @@
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.php">About Us</a></li>  
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6"> 
