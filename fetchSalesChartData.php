@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     //setting header to json
     header('Content-Type: application/json');
@@ -15,8 +16,9 @@
     // get sales data for sales report chart
     //if (isset($_POST['generate_sales_report'])) {
         
+        
         //Get Values from form
-        $year = 2019;//$_POST['report_year_select'];
+        $year = $_SESSION['sales_year'];
         
         //To prevent sql injection
         $year = stripcslashes($year);
@@ -38,4 +40,4 @@
     //}
 
     
-    ?>
+?>

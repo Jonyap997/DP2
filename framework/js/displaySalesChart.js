@@ -1,17 +1,16 @@
-/*
-$(document).ready(function()
+function displaySalesChart()
 {
   $.ajax({
-    url: "https://demosalon.000webhostapp.com/fetchSalesChartData.php",
+    url: "https://demosalon.000webhostapp.com/salesReport.php",
     method: "GET",
-    success: function(result) {
-      console.log(result);
+    success: function(data) {
+      console.log(data);
       var months = [];
       var monthlySales = [];
 
-      for(var i in result) {
-        months.push(result[i].month);
-        monthlySales.push(result[i].sales);
+      for(var i in data) {
+        months.push(data[i].month);
+        monthlySales.push(data[i].sales);
       }
         
     document.getElementById("generate_PDF").style.visibility = "visible";
@@ -37,11 +36,21 @@ $(document).ready(function()
         data: chartdata
       });
     },
-    error: function(result) {
-      console.log(result);
+    error: function(data) {
+      console.log(data);
     }
   });
-});
-*/
+}
+
+function init() 
+{
+    var generateReport = document.getElementById("sales_report");
+    
+    generateReport.onsubmit = displaySalesChart;
+    
+}
+
+document.addEventListener("DOMContentLoaded",init);
+
 
 

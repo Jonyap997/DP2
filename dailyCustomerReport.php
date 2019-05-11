@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -27,6 +28,51 @@
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
 <script src="framework/js/saveAsPDF.js"></script>
+    
+<script>
+    function displayDailyCustomerChart(){
+  $.ajax({
+    url: "https://demosalon.000webhostapp.com/fetchDailyCustomerChartData.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var days = [];
+      var customerCount = [];
+
+      for(var i in data) {
+        days.push(data[i].day);
+        customerCount.push(data[i].count);
+      }
+        
+    document.getElementById("generate_PDF").style.visibility = "visible";
+
+      var chartdata = {
+        labels: days,
+        datasets : [
+          {
+            label: 'Daily Customer',
+            backgroundColor: 'rgba(200, 200, 200, 0.75)',
+            borderColor: 'rgba(200, 200, 200, 0.75)',
+            hoverBackgroundColor: 'rgba(255, 255, 255, 1)',
+            hoverBorderColor: 'rgba(255, 255, 255, 1)',
+            data: customerCount
+          }
+        ]
+      };
+
+      var ctx = $("#dailyCustomerChart");
+
+      var barGraph = new Chart(ctx, {
+        type: 'bar',
+        data: chartdata
+      });
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+}
+</script>
     
 </head>
 <body>
@@ -67,17 +113,21 @@
             
             <div class="center">
                 
-                <form id="daily_customer" class="daily_customer" method="POST">
+                <form id="daily_customer" class="daily_customer" method="POST" action="dailyCustomerReport.php">
                     
-                <label for="report_year_select">Select a year:</label>
-                <select class="report_year_select" name="report_year_select" id="report_year_select">
+                <label for="daily_customer_report_year">Select a year:</label>
+                <select class="daily_customer_report_year" name="daily_customer_report_year">
                     <option name="report_year" value="2019">2019</option>
                     <option name="report_year" value="2018">2018</option>
                     <option name="report_year" value="2017">2017</option>
                 </select>
+                <?php
+                
+                $_SESSION['daily_year'] = $_POST['daily_customer_report_year'];
+                ?>
                     
                 <label for="report_month_select">Select a month:</label>
-                <select class="report_month_select" name="report_month_select" id="report_month_select">
+                <select class="daily_customer_report_month" name="daily_customer_report_month">
                     <option name="report_month" value="1">January</option>
                     <option name="report_month" value="2">February</option>
                     <option name="report_month" value="3">March</option>
@@ -91,19 +141,29 @@
                     <option name="report_month" value="11">November</option>
                     <option name="report_month" value="12">December</option>
                 </select>
+                    
+                <?php
+                
+                $_SESSION['daily_month'] = $_POST['daily_customer_report_month'];
+                ?>
                 <br/>
                     <input type="submit" id="generate_customer_report" name="generate_customer_report" class="generate_report_button" value="Generate Monthly Report"/>
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
+                
+                <?php
+                    if (isset($_POST['generate_customer_report'])) 
+                    {
+                        echo "<script> displayDailyCustomerChart();</script>";
+                    }
+                ?>
 
             </div>
             
             <div id="chart_container">
-            <canvas id="dailyCustomerChart" width="400" height="400"></canvas>
+            <canvas id="dailyCustomerChart" width="400" height="170"></canvas>
             </div>
                 
-            <script type="text/javascript" src="framework/js/displayDailyCustomerChart.js"></script>
-            
         </div>
         </div>
     </div>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -27,6 +28,52 @@
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
 <script src="framework/js/saveAsPDF.js"></script>
+    
+<script>
+    function displaySalesChart()
+{ 
+  $.ajax({
+    url: "https://demosalon.000webhostapp.com/fetchSalesChartData.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var months = [];
+      var monthlySales = [];
+
+      for(var i in data) {
+        months.push(data[i].month);
+        monthlySales.push(data[i].sales);
+      }
+
+    document.getElementById("generate_PDF").style.visibility = "visible";
+
+      var chartdata = {
+        labels: months,
+        datasets : [
+          {
+            label: 'Monthly Sales',
+            backgroundColor: 'rgba(200, 200, 200, 0.75)',
+            borderColor: 'rgba(200, 200, 200, 0.75)',
+            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            data: monthlySales
+          }
+        ]
+      };
+
+      var ctx = $("#salesChart");
+
+      var barGraph = new Chart(ctx, {
+        type: 'bar',
+        data: chartdata
+      });
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+}
+</script>
     
 </head>
 <body>
@@ -66,43 +113,38 @@
             </div>
             
             <div class="center">
+        
+                <form id="sales_report" method="POST" action="salesReport.php">
+                    
+                <label for="sales_report_year">Select a year:</label>
+                <select name="sales_report_year">
+                    <option value="2019" selected = "selected">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                </select>
+                <?php
                 
-                <form id="sales_report" class="sales_report" method="POST">
+                $_SESSION['sales_year'] = $_POST['sales_report_year'];
+                ?>
                     
-                <label for="report_year_select">Select a year:</label>
-                <select class="report_year_select" name="report_year_select" id="report_year_select">
-                    <option name="report_year" value="2019">2019</option>
-                    <option name="report_year" value="2018">2018</option>
-                    <option name="report_year" value="2017">2017</option>
-                </select>
-                    
-                <label for="report_month_select">Select a month:</label>
-                <select class="report_month_select" name="report_month_select" id="report_month_select">
-                    <option name="report_month" value="1">January</option>
-                    <option name="report_month" value="2">February</option>
-                    <option name="report_month" value="3">March</option>
-                    <option name="report_month" value="4">April</option>
-                    <option name="report_month" value="5">May</option>
-                    <option name="report_month" value="6">June</option>
-                    <option name="report_month" value="7">July</option>
-                    <option name="report_month" value="8">August</option>
-                    <option name="report_month" value="9">September</option>
-                    <option name="report_month" value="10">October</option>
-                    <option name="report_month" value="11">November</option>
-                    <option name="report_month" value="12">December</option>
-                </select>
                 <br/>
-                    <input type="submit" id="generate_sales_report" name="generate_sales_report" class="generate_report_button" value="Generate Monthly Report"/>
+                    <input type="submit" name="generate_sales_report" class="generate_report_button" value="Generate Monthly Report"/>
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
+                
+                <?php
+                    if (isset($_POST['generate_sales_report'])) 
+                    {
+                        echo $_SESSION['year'];
+                        echo "<script> displaySalesChart();</script>";
+                    }
+                ?>
 
             </div>
             
             <div id="chart_container">
-            <canvas id="salesChart" width="400" height="400"></canvas>
-            </div>
-                
-            <script type="text/javascript" src="framework/js/displaySalesChart.js"></script>
+            <canvas id="salesChart" width="400" height="170"></canvas>
+            </div>  
                 
         </div>
         </div>

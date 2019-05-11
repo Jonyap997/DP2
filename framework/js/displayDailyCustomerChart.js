@@ -1,15 +1,15 @@
-$(document).ready(function(){
+function displayDailyCustomerChart(){
   $.ajax({
     url: "https://demosalon.000webhostapp.com/fetchDailyCustomerChartData.php",
     method: "GET",
-    success: function(result) {
-      console.log(result);
+    success: function(data) {
+      console.log(data);
       var days = [];
       var customerCount = [];
 
-      for(var i in result) {
-        days.push(result[i].day);
-        customerCount.push(result[i].count);
+      for(var i in data) {
+        days.push(data[i].day);
+        customerCount.push(data[i].count);
       }
         
     document.getElementById("generate_PDF").style.visibility = "visible";
@@ -35,8 +35,18 @@ $(document).ready(function(){
         data: chartdata
       });
     },
-    error: function(result) {
-      console.log(result);
+    error: function(data) {
+      console.log(data);
     }
   });
-});
+}
+
+function init() 
+{
+    var generateReport = document.getElementById("daily_customer");
+    
+    generateReport.onsubmit = displayDailyCustomerChart;
+    
+}
+
+document.addEventListener("DOMContentLoaded",init);

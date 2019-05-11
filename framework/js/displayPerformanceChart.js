@@ -1,15 +1,15 @@
-$(document).ready(function(){
+function displayPerformanceChart(){
   $.ajax({
     url: "https://demosalon.000webhostapp.com/fetchPerformanceChartData.php",
     method: "GET",
-    success: function(result) {
-      console.log(result);
+    success: function(data) {
+      console.log(data);
       var hairdressers = [];
       var customerCount = [];
 
-      for(var i in result) {
-        hairdressers.push(result[i].name);
-        customerCount.push(result[i].customers);
+      for(var i in data) {
+        hairdressers.push(data[i].hairdressers);
+        customerCount.push(data[i].customers);
       }
         
     document.getElementById("generate_PDF").style.visibility = "visible";
@@ -35,9 +35,19 @@ $(document).ready(function(){
         data: chartdata
       });
     },
-    error: function(result) {
-      console.log(result);
+    error: function(data) {
+      console.log(data);
     }
   });
-});
+}
+
+function init() 
+{
+    var generateReport = document.getElementById("hairdresser_performance");
+    
+    generateReport.onsubmit = displayPerformanceChart;
+    
+}
+
+document.addEventListener("DOMContentLoaded",init);
 

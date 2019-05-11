@@ -1,4 +1,5 @@
 function saveAsPDF() {
+    
    html2canvas(document.getElementById("chart_container"), {
       onrendered: function(canvas) {
          var img = canvas.toDataURL(); //image data of canvas
@@ -8,4 +9,5 @@ function saveAsPDF() {
       }
    });
 }
+
 

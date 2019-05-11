@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang ="en" data-ng-app="">
 <head>
@@ -27,6 +28,52 @@
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
 <script src="framework/js/saveAsPDF.js"></script>
+    
+<script>
+    function displayPerformanceChart(){
+  $.ajax({
+    url: "https://demosalon.000webhostapp.com/fetchPerformanceChartData.php",
+    method: "GET",
+    success: function(data) {
+      console.log(data);
+      var hairdressers = [];
+      var customerCount = [];
+
+      for(var i in data) {
+        hairdressers.push(data[i].hairdressers);
+        customerCount.push(data[i].customers);
+      }
+        
+    document.getElementById("generate_PDF").style.visibility = "visible";
+
+      var chartdata = {
+        labels: hairdressers,
+        datasets : [
+          {
+            label: 'Daily Customer',
+            backgroundColor: 'rgba(200, 200, 200, 0.75)',
+            borderColor: 'rgba(200, 200, 200, 0.75)',
+            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            data: customerCount
+          }
+        ]
+      };
+
+      var ctx = $("#performanceChart");
+
+      var barGraph = new Chart(ctx, {
+        type: 'bar',
+        data: chartdata
+      });
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+}
+
+</script>
     
 </head>
 <body>
@@ -67,17 +114,23 @@
             
             <div class="center">
                 
-                <form id="hairdresser_performance" class="hairdresser_performance" method="POST">
+                <form id="hairdresser_performance" class="hairdresser_performance" method="POST"
+                      action="hairdresserPerformance.php">
                     
                 <label for="report_year_select">Select a year:</label>
-                <select class="report_year_select" name="report_year_select" id="report_year_select">
+                <select class="performance_report_year" name="performance_report_year">
                     <option name="report_year" value="2019">2019</option>
                     <option name="report_year" value="2018">2018</option>
                     <option name="report_year" value="2017">2017</option>
                 </select>
                     
-                <label for="report_month_select">Select a month:</label>
-                <select class="report_month_select" name="report_month_select" id="report_month_select">
+                <?php
+                
+                $_SESSION['performance_year'] = $_POST['performance_report_year'];
+                ?>
+                    
+                <label for="performance_report_month">Select a month:</label>
+                <select class="performance_report_month" name="performance_report_month">
                     <option name="report_month" value="1">January</option>
                     <option name="report_month" value="2">February</option>
                     <option name="report_month" value="3">March</option>
@@ -91,18 +144,31 @@
                     <option name="report_month" value="11">November</option>
                     <option name="report_month" value="12">December</option>
                 </select>
+                    
+                <?php
+                
+                $_SESSION['performance_month'] = $_POST['performance_report_month'];
+                ?>
+                    
                 <br/>
-                    <input type="submit" id="generate_performance_report" name="generate_performance_report" class="generate_report_button" value="Generate Monthly Report"/>
+                    <input type="submit" name="generate_performance_report" class="generate_report_button" value="Generate Monthly Report" onsubmit="displayPerformanceChart"/>
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
+                
+                <?php
+                    if (isset($_POST['generate_performance_report'])) 
+                    {
+                        echo "<script> displayPerformanceChart();</script>";
+                    }
+                ?>
 
             </div>
             
             <div id="chart_container">
-            <canvas id="performanceChart" width="400" height="400"></canvas>
+            <canvas id="performanceChart" width="400" height="170"></canvas>
             </div>
                 
-            <script type="text/javascript" src="framework/js/displayPerformanceChart.js"></script>
+            
             
         </div>
         </div>
