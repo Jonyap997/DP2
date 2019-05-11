@@ -24,6 +24,7 @@
 
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
+<script src="framework/js/displaySalesChart.js"></script>
 <script src="framework/js/html2canvas.min.js"></script>
 <script src="framework/js/jquery.min.js"></script>
 <script src="framework/js/jspdf.min.js"></script>
@@ -83,11 +84,11 @@
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
                 <li><a href="loginPage.php">Log out</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -113,8 +114,9 @@
             </div>
             
             <div class="center">
-        
-                <form id="sales_report" method="POST" action="salesReport.php">
+
+                
+                <form id="sales_report" class="sales_report" method="POST" action="fetchSalesChartData.php">
                     
                 <label for="sales_report_year">Select a year:</label>
                 <select name="sales_report_year">
@@ -128,7 +130,9 @@
                 ?>
                     
                 <br/>
-                    <input type="submit" name="generate_sales_report" class="generate_report_button" value="Generate Monthly Report"/>
+
+                    <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
+
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
                 
@@ -143,8 +147,10 @@
             </div>
             
             <div id="chart_container">
-            <canvas id="salesChart" width="400" height="170"></canvas>
-            </div>  
+
+            <canvas id="salesChart" width="400" height="400"></canvas>
+            </div>
+
                 
         </div>
         </div>
@@ -153,11 +159,11 @@
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.php">About Us</a></li>  
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li> 
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6"> 

@@ -31,11 +31,11 @@
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
                 <li><a href="loginPage.php">Log out</a></li>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -49,7 +49,7 @@
                 <li class="tab"><a href="adminStockAndInventories.php">Stock &amp; Inventory</a></li>
                 <li class="tab"><a href="hairdresserPerformance.php">View Hairdressers' Performance</a></li>
                 <li><a href="salesReport.php">View Sales Report</a></li>
-                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.php">View Daily Customer Count Report</a></li>
+                <li id="vertical_nav_last_item" class="tab"><a href="dailyCustomerReport.html">View Daily Customer Count Report</a></li>
             </ul>
         </div>
         
@@ -66,11 +66,11 @@
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.php">About Us</a></li>  
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li>  
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6"> 

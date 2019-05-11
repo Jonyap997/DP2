@@ -53,12 +53,12 @@
         <div class="nav col-md-12 col-sm-12 col-xs-12">
             <ul>
                 <li class="home_icon"><a href="index.php">Home</a></li>
-                <li><a href="loginPage.php">Log out</a></li>>
-                <li><a href="about.php">About Us</a></li>
-                <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="services.php">Services</a></li>
+                <li><a href="loginPage.php">Log out</a></li>
                 <li><a href="products.php">Products</a></li>
+                <li><a href="services.php">Services</a></li>
+                <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -149,7 +149,7 @@
                         <th>Price</th>
                         <th>Source</th>
                         <th>Description</th>
-                        <th>Image ID</th>
+                        <th>Image Name</th>
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
@@ -164,7 +164,7 @@
                             <td><?php echo $row["price"]; ?></td>
                             <td><?php echo $row["source"]; ?></td>
                             <td><?php echo $row["description"]; ?></td>
-                            <td><?php echo $row["imageName"]; ?></td>
+                            <td><?php echo $row["image_id"]; ?></td>
                             <td>
                                 <a class="edit_btn" href="adminStockAndInventories.php?edit=<?php echo $row['id']; ?>">Edit</a>
                             </td>
@@ -195,11 +195,11 @@
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
             <ul>
+                <li><a href="about.php">About Us</a></li>
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
-                <li><a href="products.php">Products</a></li>
-                <li><a href="services.php">Services</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
-                <li><a href="about.php">About Us</a></li>  
+                <li><a href="services.php">Services</a></li>
+                <li><a href="products.php">Products</a></li> 
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6"> 

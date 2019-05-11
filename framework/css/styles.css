@@ -21,7 +21,7 @@
 
 body {
     overflow-x:hidden;
-    background-color: #1F2833;
+    background-color: #1F2833 !important;
 }
 
 .clearfix:after {
@@ -582,6 +582,14 @@ form.booking {
 .fc-unthemed td.fc-today {
     background: #337ab7 !important;
     /*background: #66FCF1 !important;*/
+}
+
+.modal-dialog h4, .modal-dialog label {
+    color: black !important;
+}
+
+.controls, #modalWhen {
+    color: black !important;
 }
 
 /*************
