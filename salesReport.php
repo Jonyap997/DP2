@@ -116,7 +116,7 @@
             <div class="center">
 
                 
-                <form id="sales_report" class="sales_report" method="POST" action="fetchSalesChartData.php">
+                <form id="sales_report" class="sales_report" method="POST" action="salesReport.php">
                     
                 <label for="sales_report_year">Select a year:</label>
                 <select name="sales_report_year">
@@ -131,7 +131,7 @@
                     
                 <br/>
 
-                    <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
+                    <input type="submit" name="generate_sales_report" class="generate_report_button" value="Generate Monthly Report"/>
 
                     <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
                 </form>
@@ -148,7 +148,7 @@
             
             <div id="chart_container">
 
-            <canvas id="salesChart" width="400" height="400"></canvas>
+            <canvas id="salesChart" width="400" height="170"></canvas>
             </div>
 
                 

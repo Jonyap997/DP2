@@ -116,7 +116,8 @@
             <div class="center">
                 
 
-                <form id="hairdresser_performance" class="hairdresser_performance" method="POST" action="fetchPerformanceChartData.php">
+                <form id="hairdresser_performance" class="hairdresser_performance" method="POST"
+                      action="hairdresserPerformance.php">
                     
                 <label for="report_year_select">Select a year:</label>
                 <select class="performance_report_year" name="performance_report_year">

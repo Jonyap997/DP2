@@ -115,7 +115,7 @@
             <div class="center">
                 
 
-                <form id="daily_customer" class="daily_customer" method="POST" action="fetchDailyCustomerChartData.php">
+                <form id="daily_customer" class="daily_customer" method="POST" action="dailyCustomerReport.php">
                     
                 <label for="daily_customer_report_year">Select a year:</label>
                 <select class="daily_customer_report_year" name="daily_customer_report_year">
@@ -164,7 +164,7 @@
                 
             <div id="chart_container">
 
-                <canvas id="dailyCustomerChart" width="400" height="400"></canvas>
+                <canvas id="dailyCustomerChart" width="400" height="170"></canvas>
             </div>
             
             
