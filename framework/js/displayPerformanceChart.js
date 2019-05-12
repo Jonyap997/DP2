@@ -1,53 +1,12 @@
-function displayPerformanceChart(){
-  $.ajax({
-    url: "https://demosalon.000webhostapp.com/fetchPerformanceChartData.php",
-    method: "GET",
-    success: function(data) {
-      console.log(data);
-      var hairdressers = [];
-      var customerCount = [];
-
-      for(var i in data) {
-        hairdressers.push(data[i].hairdressers);
-        customerCount.push(data[i].customers);
-      }
-        
-    document.getElementById("generate_PDF").style.visibility = "visible";
-
-      var chartdata = {
-        labels: hairdressers,
-        datasets : [
-          {
-            label: 'Daily Customer',
-            backgroundColor: 'rgba(200, 200, 200, 0.75)',
-            borderColor: 'rgba(200, 200, 200, 0.75)',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
-            data: customerCount
-          }
-        ]
-      };
-
-      var ctx = $("#performanceChart");
-
-      var barGraph = new Chart(ctx, {
-        type: 'bar',
-        data: chartdata
-      });
-    },
-    error: function(data) {
-      console.log(data);
-    }
-  });
+function downloadPDF() {
+  var canvas = document.querySelector('#performanceChart');
+	//creates image
+	var canvasImg = canvas.toDataURL("image/jpeg", 1.0);
+  
+	//creates PDF from img
+	var doc = new jsPDF('landscape');
+	doc.setFontSize(20);
+	doc.text(15, 15, "Performance Chart");
+	doc.addImage(canvasImg, 'JPEG', 10, 10, 280, 150 );
+	doc.save('performance report.pdf');
 }
-
-function init() 
-{
-    var generateReport = document.getElementById("hairdresser_performance");
-    
-    generateReport.onsubmit = displayPerformanceChart;
-    
-}
-
-document.addEventListener("DOMContentLoaded",init);
-

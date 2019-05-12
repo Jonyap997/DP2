@@ -24,11 +24,10 @@
 
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
-<script src="framework/js/displayPerformanceChart.js"></script>
 <script src="framework/js/html2canvas.min.js"></script>
 <script src="framework/js/jquery.min.js"></script>
-<script src="framework/js/jspdf.min.js"></script>
-<script src="framework/js/saveAsPDF.js"></script>
+<script src="framework/js/displayPerformanceChart.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     
 <script>
     function displayPerformanceChart(){
@@ -45,7 +44,7 @@
         customerCount.push(data[i].customers);
       }
         
-    document.getElementById("generate_PDF").style.visibility = "visible";
+   document.getElementById("generate_PDF").setAttribute("disabled","none");
 
       var chartdata = {
         labels: hairdressers,
@@ -154,7 +153,7 @@
                     
                 <br/>
                     <input type="submit" name="generate_performance_report" class="generate_report_button" value="Generate Monthly Report" onsubmit="displayPerformanceChart"/>
-                    <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
+                    <button  id="generate_PDF" class="generate_report_button" onclick="downloadPDF()" disabled="disabled" >Export as PDF</button>
                 </form>
                 
                 <?php
@@ -166,9 +165,7 @@
 
             </div>
             
-            <div id="chart_container">
             <canvas id="performanceChart" width="400" height="170"></canvas>
-            </div>
             
         </div>
         </div>

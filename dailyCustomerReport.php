@@ -21,14 +21,12 @@
  
 <!-- Media Queries-->
 <link href="framework/css/mediaqueries.css" rel="stylesheet" />
-
 <script src="framework/js/navBarActive.js"></script>
 <script src="framework/js/Chart.min.js"></script>
-<script src="framework/js/displayDailyCustomerChart.js"></script>
 <script src="framework/js/html2canvas.min.js"></script>
 <script src="framework/js/jquery.min.js"></script>
-<script src="framework/js/jspdf.min.js"></script>
-<script src="framework/js/saveAsPDF.js"></script>
+<script src="framework/js/displayDailyCustomerChart.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     
 <script>
     function displayDailyCustomerChart(){
@@ -45,7 +43,7 @@
         customerCount.push(data[i].count);
       }
         
-    document.getElementById("generate_PDF").style.visibility = "visible";
+    document.getElementById("generate_PDF").setAttribute("disabled","none");
 
       var chartdata = {
         labels: days,
@@ -73,6 +71,7 @@
     }
   });
 }
+
 </script>
     
 </head>
@@ -149,8 +148,8 @@
                 $_SESSION['daily_month'] = $_POST['daily_customer_report_month'];
                 ?>
                 <br/>
-                    <input type="submit" class="generate_report_button" value="Generate Monthly Report"/>
-                    <button  id="generate_PDF" class="generate_report_button" onclick="saveAsPDF()" value="Export as PDF"></button>
+                    <input type="submit" name="generate_customer_report" id="generate_customer_report" class="generate_report_button" value="Generate Monthly Report"/>
+                    <button  id="generate_PDF" class="generate_report_button" onclick="downloadPDF()" disabled="disabled">Export as PDF</button>
                 </form>
                 
                 <?php
@@ -161,12 +160,8 @@
                 ?>
 
             </div>
-                
-            <div id="chart_container">
 
                 <canvas id="dailyCustomerChart" width="400" height="170"></canvas>
-            </div>
-            
             
         </div>
         </div>
