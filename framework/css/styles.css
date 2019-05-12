@@ -576,9 +576,9 @@ form.booking {
     overflow-y: auto;
 }
 
-/*************
-* CALENDAR
-*************/
+/******************
+* CALENDAR BOOKING
+******************/
 .fc-unthemed td.fc-today {
     background: #337ab7 !important;
     /*background: #66FCF1 !important;*/
@@ -590,6 +590,11 @@ form.booking {
 
 .controls, #modalWhen {
     color: black !important;
+}
+
+.hairdresserChoice a {
+    color: #66FCF1;
+    padding: 0 10px;
 }
 
 /*************

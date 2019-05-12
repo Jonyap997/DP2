@@ -3,7 +3,7 @@ session_start();
 include("database.php");
 if(!isset($_SESSION['user']))
 {
-    $_SESSION['user'] = session_id();
+    $_SESSION['user'] = "0001";
 }
 $uid = $_SESSION['user'];  // set your user id settings
 $datetime_string = date('c',time());    
@@ -135,6 +135,16 @@ if(isset($_POST['action']) or isset($_GET['view']))
                 <div class="adminHeading">
                     <h2>Manage Bookings</h2>
                     <p>Make or cancel bookings</p>
+                    
+                <div class="hairdresserChoice"> 
+                    <p>
+                        <a href="booking.php">Hairdresser 1</a>
+                        <a href="booking2.php">Hairdresser 2</a>
+                        <a href="booking3.php">Hairdresser 3</a>
+                        <a href="booking4.php">Hairdresser 4</a>
+                    </p>
+                </div> 
+                    
                 </div>
                 <div id="calendar"></div>
 

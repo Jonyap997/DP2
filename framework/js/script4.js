@@ -10,7 +10,7 @@ $(document).ready(function(){
             selectable: true,
             allDaySlot: false,
             
-            events: "booking.php?view=1",
+            events: "booking4.php?view=1",
    
             
             eventClick:  function(event, jsEvent, view) {
@@ -37,7 +37,7 @@ $(document).ready(function(){
            },
            eventDrop: function(event, delta){
                $.ajax({
-                   url: 'booking.php',
+                   url: 'booking4.php',
                    data: 'action=update&title='+event.title+'&start='+moment(event.start).format()+'&end='+moment(event.end).format()+'&id='+event.id ,
                    type: "POST",
                    success: function(json) {
@@ -47,7 +47,7 @@ $(document).ready(function(){
            },
            eventResize: function(event) {
                $.ajax({
-                   url: 'booking.php',
+                   url: 'booking4.php',
                    data: 'action=update&title='+event.title+'&start='+moment(event.start).format()+'&end='+moment(event.end).format()+'&id='+event.id,
                    type: "POST",
                    success: function(json) {
@@ -73,7 +73,7 @@ $(document).ready(function(){
            $("#calendarModal").modal('hide');
            var eventID = $('#eventID').val();
            $.ajax({
-               url: 'booking.php',
+               url: 'booking4.php',
                data: 'action=delete&id='+eventID,
                type: "POST",
                success: function(json) {
@@ -93,7 +93,7 @@ $(document).ready(function(){
            var endTime = $('#endTime').val();
            
            $.ajax({
-               url: 'booking.php',
+               url: 'booking4.php',
                data: 'action=add&title='+title+'&start='+startTime+'&end='+endTime,
                type: "POST",
                success: function(json) {

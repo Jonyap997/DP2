@@ -16,7 +16,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
         $start = mysqli_real_escape_string($connection,$_GET["start"]);
         $end = mysqli_real_escape_string($connection,$_GET["end"]);
         
-        $result = mysqli_query($connection,"SELECT `id`, `start` ,`end` ,`title` FROM  `bookings` where (date(start) >= '$start' AND date(start) <= '$end') and uid='".$uid."'");
+        $result = mysqli_query($connection,"SELECT `id`, `start` ,`end` ,`title` FROM  `bookings2` where (date(start) >= '$start' AND date(start) <= '$end') and uid='".$uid."'");
         while($row = mysqli_fetch_assoc($result))
         {
             $events[] = $row; 
@@ -26,7 +26,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
     }
     elseif($_POST['action'] == "add")
     {   
-        mysqli_query($connection,"INSERT INTO `bookings` (
+        mysqli_query($connection,"INSERT INTO `bookings2` (
                     `title` ,
                     `start` ,
                     `end` ,
@@ -44,7 +44,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
     }
     elseif($_POST['action'] == "update")
     {
-        mysqli_query($connection,"UPDATE `bookings` set 
+        mysqli_query($connection,"UPDATE `bookings2` set 
             `start` = '".mysqli_real_escape_string($connection,date('Y-m-d H:i:s',strtotime($_POST["start"])))."', 
             `end` = '".mysqli_real_escape_string($connection,date('Y-m-d H:i:s',strtotime($_POST["end"])))."' 
             where uid = '".mysqli_real_escape_string($connection,$uid)."' and id = '".mysqli_real_escape_string($connection,$_POST["id"])."'");
@@ -52,7 +52,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
     }
     elseif($_POST['action'] == "delete") 
     {
-        mysqli_query($connection,"DELETE from `bookings` where uid = '".mysqli_real_escape_string($connection,$uid)."' and id = '".mysqli_real_escape_string($connection,$_POST["id"])."'");
+        mysqli_query($connection,"DELETE from `bookings2` where uid = '".mysqli_real_escape_string($connection,$uid)."' and id = '".mysqli_real_escape_string($connection,$_POST["id"])."'");
         if (mysqli_affected_rows($connection) > 0) {
             echo "1";
         }
@@ -89,7 +89,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
     
     <!--Fullcalendar scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="framework/js/script.js"></script>
+    <script type="text/javascript" src="framework/js/script2.js"></script>
 
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" >-->
@@ -159,7 +159,7 @@ if(isset($_POST['action']) or isset($_GET['view']))
                 <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
                 <li><a href="hairdressers.php">Our hairdressers</a></li>
                 <li><a href="services.php">Services</a></li>
-                <li><a href="products.php">Products</a></li>   
+                <li><a href="products.php">Products</a></li>    
             </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-6"> 
