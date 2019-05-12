@@ -44,7 +44,7 @@
         customerCount.push(data[i].customers);
       }
         
-   document.getElementById("generate_PDF").setAttribute("disabled","none");
+   document.getElementById("generate_PDF").disabled = false;
 
       var chartdata = {
         labels: hairdressers,
