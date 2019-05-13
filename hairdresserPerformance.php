@@ -44,7 +44,8 @@
         customerCount.push(data[i].customers);
       }
         
-   document.getElementById("generate_PDF").disabled = false;
+    document.getElementById("generate_PDF").disabled = false;
+    document.getElementById("generate_PDF").style.backgroundColor = white;
 
       var chartdata = {
         labels: hairdressers,
@@ -153,7 +154,7 @@
                     
                 <br/>
                     <input type="submit" name="generate_performance_report" class="generate_report_button" value="Generate Monthly Report" onsubmit="displayPerformanceChart"/>
-                    <button  id="generate_PDF" class="generate_report_button" onclick="downloadPDF()" disabled="disabled" >Export as PDF</button>
+                    <button  id="generate_PDF" class="generate_report_button disabled_button" onclick="downloadPDF()" disabled="disabled" >Export as PDF</button>
                 </form>
                 
                 <?php

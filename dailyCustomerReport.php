@@ -44,6 +44,7 @@
       }
         
     document.getElementById("generate_PDF").disabled = false;
+    document.getElementById("generate_PDF").style.backgroundColor = white;
 
       var chartdata = {
         labels: days,
@@ -149,7 +150,7 @@
                 ?>
                 <br/>
                     <input type="submit" name="generate_customer_report" id="generate_customer_report" class="generate_report_button" value="Generate Monthly Report"/>
-                    <button id="generate_PDF" class="generate_report_button" onclick="downloadPDF()" disabled="disabled">Export as PDF</button>
+                    <button id="generate_PDF" class="generate_report_button disabled_button" onclick="downloadPDF()" disabled="disabled">Export as PDF</button>
                 </form>
                 
                 <?php
