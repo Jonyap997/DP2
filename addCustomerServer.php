@@ -31,13 +31,13 @@
         //To prevent sql injection
         $fullname = stripcslashes($fullname);
         $gender = stripcslashes($gender);
-        $date = stripcslashes($dob);
+        $date = stripcslashes($date);
         $countryCode = stripcslashes($countryCode);
         $phoneNumber = stripcslashes($phoneNumber);
 
         $fullname = mysqli_real_escape_string($connection, $fullname);
         $gender = mysqli_real_escape_string($connection, $gender);
-        $date = mysqli_real_escape_string($connection, $dob);
+        $date = mysqli_real_escape_string($connection, $date);
         $countryCode = mysqli_real_escape_string($connection, $countryCode);
         $phoneNumber = mysqli_real_escape_string($connection, $phoneNumber);
 
