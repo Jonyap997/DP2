@@ -459,6 +459,7 @@ form.add_customer, form.add_purchase {
 }
 
 #add_customer_submit, #add_customer_reset, #add_customer_update, #add_purchase_submit {
+/*
     text-align: center;
     background-color: white;
     color: black;
@@ -466,15 +467,41 @@ form.add_customer, form.add_purchase {
     padding: 16px 32px;
     margin: 5px;
     border-radius: 5px;
+*/
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #e5b6fc;
+    border: none;
+    border-radius: 5px;
 }
 
+/*
 #add_customer_submit:hover, #add_customer_reset:hover, #add_customer_update:hover, #add_purchase_submit:hover {
     background-color: black;
     color: white;
 }
+*/
+
+.legendWhite{
+    color: white;
+}
 
 #countryCode {
-    width: 10%;
+    width:13%;
+    float: left;
+}
+#phoneNumber {
+    width:40%;
+    float: left;
+}
+
+.phoneDash{
+    float:left;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
 }
 
 .add_purchase_btn {
@@ -495,7 +522,7 @@ input[type="search"] {
 }
 
 #product_1, #product_2, #product_3, #product_4, #product_5, #product_6 {
-    width: 20%;
+    width: 40%;
 }
 
 /*******************

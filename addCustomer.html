@@ -67,31 +67,42 @@
              <form id="add_customer" class="add_customer" method="POST" action="addCustomerServer.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <fieldset>
-                    <legend>Personal Information:</legend>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
-                    <br/>
-                    <label for="gender">Gender:</label>
+                    <legend class="legendWhite">Personal Information</legend>
+                    <div class="row">
+                       <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="input-group">
+                                <label for="fullname">Full Name</label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
+                             </div>
+                             <div class="input-group">
+                                <label for="dob">Date of Birth</label>
+                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                             </div>
+                        </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
                     <select id="gender" name="gender"  required="required">
                         <option value="M">Male</option>
                         <option value="F">Female</option>
                     </select>
-                    <br/>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
-                </fieldset>
+                    </div>
+                    <div class="row input-group">
+                       <label for="countryCode">Phone Number</label>
+                        <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
+                        <p class="phoneDash">&mdash;</p>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/></div>
+                    
 
-                 <fieldset>
-                    <legend>Contact Information:</legend>
-                    <label for="countryCode">Phone Number:</label>
-                    <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
-                    <label for="phoneNumber">-</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
-                </fieldset>
-
+                </div>
+                <div class="input-group">
+                </div>
                  <input type="submit" id="add_customer_submit" name="add_customer_submit" value="Submit"/>
-
                  <input type="reset" id="add_customer_reset" name="add_customer_reset" value="Reset"/>
+            </div>
+              
+               
+                </fieldset>
             </form>
 
              <div class="msg">

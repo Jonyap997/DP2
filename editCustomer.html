@@ -89,7 +89,7 @@
             </div>
             
             <div class="center">
-                <label for="customer_profile_search">Customer Name</label>
+                <label for="customer_profile_search">Customer Name: </label>
                 <input type="search" autofocus="autofocus"/>
             </div>
                      
@@ -100,26 +100,34 @@
                 <form id="add_customer" class="add_customer" method="POST" action="editCustomerServer.php">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <fieldset>
-                        <legend>Personal Information:</legend>
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
-                        <label for="gender">Gender:</label>
-                        <select id="gender" name="gender"  required="required">
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                        </select>
-                        <label for="dob">Date of Birth:</label>
-                        <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Contact Information:</legend>
-                        <label for="countryCode">Phone Number:</label>
+                        <legend class="legendWhite">Personal Information</legend>
+                        <div class="row">
+                       <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="input-group">
+                                <label for="fullname">Full Name</label>
+                                    <input type="text" name="fullname" id="fullname" placeholder="Customer's Name" autofocus="autofocus" value="<?php echo $fullname; ?>" required="required"/>
+                             </div>
+                             <div class="input-group">
+                                <label for="dob">Date of Birth</label>
+                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                             </div>
+                        </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                    <select id="gender" name="gender"  required="required">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                    </div>
+                    <div class="row input-group">
+                       <label for="countryCode">Phone Number</label>
                         <input type="text" id="countryCode" name="countryCode" required="required" placeholder="Code" value="<?php echo $countryCode; ?>"/>
-                        <label for="phoneNumber">-</label>
-                        <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/>
+                        <p class="phoneDash">&mdash;</p>
+                        <input type="text" id="phoneNumber" name="phoneNumber" required="required" placeholder="Number" value="<?php echo $phoneNumber; ?>"/></div>
+                </div>
+            </div>    
                     </fieldset>
-                    
                     <input type="submit" id="add_customer_update" name="add_customer_update" value="Update"/>
                     
                 </form>
@@ -133,52 +141,67 @@
                 <form id="add_purchase" class="add_purchase" method="POST" action="editCustomerServer.php">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <fieldset>
-                        <legend>Services</legend>
-                        <label for="hair_service">Hair Services:</label>
-                        <select id="hair_service" name="hair_service">
-                            <option value="">None</option>
-                            <option value="HairCut(M)">HairCut(Men)</option>
-                            <option value="HairCut(F)">HairCut(Women)</option>
-                            <option value="HairWash(M)">HairWash(Men)</option>
-                            <option value="HairCut(F)">HairWash(Women)</option>
-                            <option value="Styling">Styling</option>
-                            <option value="Hair Colouring">Hair Colouring</option>
-                            <option value="Hair Treatment">Hair Treatment</option>
-                            <option value="Scalp Treatment">Scalp Treatment</option>
-                        </select>
-                        <label for="massage">Massage:</label>
-                        <select id="massage" name="massage">
-                            <option value="">None</option>
-                            <option value="Relaxation Massage(1/2hr)">Relaxation Massage(1/2hr)</option>
-                            <option value="Relaxation Massage(1hr)">Relaxation Massage(1hr)</option>
-                            <option value="Relaxation Massage(1 and 1/2hr)">Relaxation Massage(1 and 1/2hr)</option>
-                            <option value="Sports Therapy(1/2hr)">Sports Therapy(1/2hr)</option>
-                            <option value="Sports Therapy(1hr)">Sports Therapy(1hr)</option>
-                            <option value="Sports Therapy(1 and 1/2hr)">Sports Therapy(1 and 1/2hr)</option>
-                            <option value="Foot Reflexology(40 mins)">Foot Reflexology(40 mins)</option>
-                        </select>
-                        <label for="body_wax">Body Wax:</label>
-                        <select id="body_wax" name="body_wax">
-                            <option value="">None</option>
-                            <option value="Body Part(Bikini)">Body Part(Bikini)</option>
-                            <option value="Body Part(Brazilian)">Body Part(Brazilian)</option>
-                            <option value="Body Part(Full Face)">Body Part(Full Face)</option>
-                            <option value="Face(Eye Brown)">Face(Eye Brown)</option>
-                            <option value="Face(Sideburn)">Face(Sideburn)</option>
-                            <option value="Face(Neck)">Face(Neck)</option>
-                            <option value="Face(Chin)">Face(Chin)</option>
-                            <option value="Upper Body(Underarm)">Upper Body(Underarm)</option>
-                            <option value="Upper Body(Chest)">Upper Body(Chest)</option>
-                            <option value="Upper Body(Navel)">Upper Body(Navel)</option>
-                            <option value="Lower Body(Full Leg)">Lower Body(Full Leg)</option>
-                            <option value="Lower Body(Lower Back)">Lower Body(Lower Back)</option>
-                            <option value="Lower Body(Bums)">Lower Body(Bums)</option>
-                        </select>
+                        <legend class="legendWhite">Services</legend>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="input-group">
+                                    <label for="hair_service">Hair Services</label>
+                                        <select id="hair_service" name="hair_service">
+                                            <option value="">None</option>
+                                            <option value="HairCut(M)">HairCut(Men)</option>
+                                            <option value="HairCut(F)">HairCut(Women)</option>
+                                            <option value="HairWash(M)">HairWash(Men)</option>
+                                            <option value="HairCut(F)">HairWash(Women)</option>
+                                            <option value="Styling">Styling</option>
+                                            <option value="Hair Colouring">Hair Colouring</option>
+                                            <option value="Hair Treatment">Hair Treatment</option>
+                                            <option value="Scalp Treatment">Scalp Treatment</option>
+                                        </select>
+                                </div>
+                                <div class="input-group">
+                                    <label for="massage">Massage</label>
+                                        <select id="massage" name="massage">
+                                            <option value="">None</option>
+                                            <option value="Relaxation Massage(1/2hr)">Relaxation Massage(1/2hr)</option>
+                                            <option value="Relaxation Massage(1hr)">Relaxation Massage(1hr)</option>
+                                            <option value="Relaxation Massage(1 and 1/2hr)">Relaxation Massage(1 and 1/2hr)</option>
+                                            <option value="Sports Therapy(1/2hr)">Sports Therapy(1/2hr)</option>
+                                            <option value="Sports Therapy(1hr)">Sports Therapy(1hr)</option>
+                                            <option value="Sports Therapy(1 and 1/2hr)">Sports Therapy(1 and 1/2hr)</option>
+                                            <option value="Foot Reflexology(40 mins)">Foot Reflexology(40 mins)</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                <div class="input-group">
+                                    <label for="body_wax">Body Wax</label>
+                                        <select id="body_wax" name="body_wax">
+                                            <option value="">None</option>
+                                            <option value="Body Part(Bikini)">Body Part(Bikini)</option>
+                                            <option value="Body Part(Brazilian)">Body Part(Brazilian)</option>
+                                            <option value="Body Part(Full Face)">Body Part(Full Face)</option>
+                                            <option value="Face(Eye Brown)">Face(Eye Brown)</option>
+                                            <option value="Face(Sideburn)">Face(Sideburn)</option>
+                                            <option value="Face(Neck)">Face(Neck)</option>
+                                            <option value="Face(Chin)">Face(Chin)</option>
+                                            <option value="Upper Body(Underarm)">Upper Body(Underarm)</option>
+                                            <option value="Upper Body(Chest)">Upper Body(Chest)</option>
+                                            <option value="Upper Body(Navel)">Upper Body(Navel)</option>
+                                            <option value="Lower Body(Full Leg)">Lower Body(Full Leg)</option>
+                                            <option value="Lower Body(Lower Back)">Lower Body(Lower Back)</option>
+                                            <option value="Lower Body(Bums)">Lower Body(Bums)</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </fieldset>
 
                     <fieldset>
-                        <legend>Products:</legend>
-                        <label for="product_1">Product 1:</label>
+                        <legend class="legendWhite">Products</legend>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="input-group">
+                                <label for="product_1">Product 1</label>
                         <select id="product_1" name="product_1">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -194,10 +217,9 @@
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
-                        <label for="p1_quantity">Quantity:</label>
-                        <input type="number" id="p1_quantity" name="p1_quantity"/>
-                        <br />
-                        <label for="product_2">Product 2:</label>
+                            </div>
+                            <div class="input-group">
+                                <label for="product_2">Product 2</label>
                         <select id="product_2" name="product_2">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -213,10 +235,9 @@
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
-                        <label for="p2_quantity">Quantity:</label>
-                        <input type="number" id="p2_quantity" name="p2_quantity"/>
-                        <br />
-                        <label for="product_3">Product 3:</label>
+                            </div>
+                            <div class="input-group">
+                                <label for="product_3">Product 3</label>
                         <select id="product_3" name="product_3">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -232,10 +253,9 @@
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
-                        <label for="p3_quantity">Quantity:</label>
-                        <input type="number" id="p3_quantity" name="p3_quantity"/>
-                        <br />
-                        <label for="product_4">Product 4:</label>
+                            </div>
+                            <div class="input-group">
+                               <label for="product_4">Product 4</label>
                         <select id="product_4" name="product_4">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -250,11 +270,10 @@
                             <option value="Elegance Plus Matte Hair Wax (140g) x">Elegance Plus Matte Hair Wax (140g)</option>
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
-                        </select>
-                        <label for="p4_quantity">Quantity:</label>
-                        <input type="number" id="p4_quantity" name="p4_quantity"/>
-                        <br />
-                        <label for="product_5">Product 5:</label>
+                        </select> 
+                            </div>
+                            <div class="input-group">
+                                <label for="product_5">Product 5</label>
                         <select id="product_5" name="product_5">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -270,10 +289,9 @@
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
-                        <label for="p5_quantity">Quantity:</label>
-                        <input type="number" id="p5_quantity" name="p5_quantity"/>
-                        <br />
-                        <label for="product_6">Product 6:</label>
+                            </div>
+                            <div class="input-group">
+                                <label for="product_6">Product 6</label>
                         <select id="product_6" name="product_6">
                             <option value="">None</option>
                             <option value="Art Hairspray(420ml) x">Art Hairspray(420ml)</option>
@@ -289,11 +307,40 @@
                             <option value="Arimino Spice Water Shining Straight x">Arimino Spice Water Shining Straight</option>
                             <option value="L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x">L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml)</option>
                         </select>
-                        <label for="p6_quantity">Quantity:</label>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="input-group">
+                                <label for="p1_quantity">Quantity</label>
+                        <input type="number" id="p1_quantity" name="p1_quantity"/>
+                            </div>
+                            <div class="input-group">
+                                <label for="p2_quantity">Quantity</label>
+                        <input type="number" id="p2_quantity" name="p2_quantity"/>
+                            </div>
+                            <div class="input-group">
+                                <label for="p3_quantity">Quantity</label>
+                        <input type="number" id="p3_quantity" name="p3_quantity"/>
+                            </div>
+                            <div class="input-group">
+                                <label for="p4_quantity">Quantity</label>
+                        <input type="number" id="p4_quantity" name="p4_quantity"/>
+                            </div>
+                            <div class="input-group">
+                                <label for="p5_quantity">Quantity</label>
+                        <input type="number" id="p5_quantity" name="p5_quantity"/>
+                            </div>
+                            <div class="input-group">
+                                <label for="p6_quantity">Quantity</label>
                         <input type="number" id="p6_quantity" name="p6_quantity"/>
-                        <br />
-                        <label for="total">Total:</label>
+                            </div>
+                        </div>
+                       
+                           <div class="input-group">
+                               <label for="total">Total</label>
                         <input type="text" name="total" value="<?php echo $total; ?>" required="required"/>
+                           </div>
+                       
                     </fieldset>
                     
                     <input type="submit" id="add_purchase_submit" name="add_purchase_submit" value="Add Purchase"/>
@@ -307,7 +354,7 @@
                 </div>
                 
                 <div>
-                    <table class="table-striped table-hover">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Date Purchased</th>
@@ -347,7 +394,7 @@
             </div>
             
             <div>
-                <table class="table-striped table-hover">
+                <table>
                     <thead>
                         <tr>
                             <th>ID</th>
