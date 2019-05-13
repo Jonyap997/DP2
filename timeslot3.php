@@ -80,24 +80,22 @@ if(isset($_POST['action']) or isset($_GET['view']))
     </div>
    
    <div class="container">
-   <div class="row">
-       <div class="col-md-12 col-sm-12 col-xs-12">
-           <h2 class="text-center">Time slots</h2>
-           <div class="col-md-5 col-sm-5 col-xs-5" >
-               <p>These are the time slots available for hairdressers</p>
-           <p><span><strong class="green_text">Green</strong></span> - Available for booking</p>
-           <p><span><strong class="red_text">Red</strong></span> - Time slot fully booked</p>
-           <p><span><strong class="grey_text">Grey</strong></span> - Time slot not available</p>
-           </div>
-           <div class="col-md-2 col-sm-2 col-xs-2">
-               <p>_</p>
-               <p class="open">Available</p>
-               <p class="booked">Full Booked</p>
-               <p class="closed">Not available for booking</p>     
-           </div>
-           <div class="col-md-5 col-sm-5 col-xs-2 text-right">
-               <a href="hairdressers.php" class="btn btn-primary btn-info role=button active btn-sm">View our Hairdressers' info here >>></a>
-           </div>
+       <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12">
+               <h2 class="text-center">Time slots</h2>
+               <div class="col-md-5 col-sm-5 col-xs-5" >
+                   <p>These are the time slots available for hairdressers</p>
+               <p><span><strong class="booked_text">Light Blue</strong></span> - Time slot fully booked</p>
+               <p><span><strong class="grey_text">Grey</strong></span> - Non-business Hour</p>
+               </div>
+               <div class="col-md-2 col-sm-2 col-xs-2">
+                   <p>_</p>
+                   <p class="booked">Full Booked</p>
+                   <p class="closed">Not available for booking</p>     
+               </div>
+               <div class="col-md-5 col-sm-5 col-xs-2 text-right">
+                   <a href="hairdressers.php" class="btn btn-primary btn-info role=button active btn-sm">View our Hairdressers' info here >>></a>
+               </div>
            
            </div>
        </div>

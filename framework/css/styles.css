@@ -427,32 +427,23 @@ tr:hover {
 /******************
 *  TIMESLOTS PAGE
 ******************/
-
-.green_text{
-   color: limegreen;
-}
  
-.red_text{
-    color: red;
+.booked_text {
+    color: #66d4fc;
 }
 
-.grey_text{
-    color: dimgray;
+.grey_text {
+    color: lightgrey;
 }
 
-.open{
-   background-color: limegreen;
-}
-
-.booked{
-   background-color: red;
+.booked {
+   background-color: #3a97ad;
 }
 
 .closed{
-    background-color: dimgray;
+    background-color: lightgrey;
+    color: #5a5959;
 }
-
-
 
 /*********************************
 *  ADMIN ADD/EDIT CUSTOMER PROFILE
@@ -595,6 +586,10 @@ form.booking {
 .hairdresserChoice a {
     color: #66FCF1;
     padding: 0 10px;
+}
+
+.fc-bgevent {
+    opacity: .85 !important;
 }
 
 /*************

@@ -5,6 +5,11 @@ $(document).ready(function(){
                 center: 'title',
                 right: 'agendaWeek,agendaDay'
             },
+            businessHours: {
+                start: '09:00',
+                end: '17:30',
+                dow: [1, 2, 3, 4, 5, 6]
+            },
             defaultView: 'agendaWeek',
             allDaySlot: false,
             
