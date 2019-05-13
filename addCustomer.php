@@ -78,7 +78,9 @@
                     </select>
                     <br/>
                     <label for="dob">Date of Birth:</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                    <!--<input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>-->
+                    
+                    <input type="date" name="dob" id="dob" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
                 </fieldset>
 
                  <fieldset>
