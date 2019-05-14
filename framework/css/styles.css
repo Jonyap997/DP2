@@ -1,7 +1,7 @@
 /**************************************************************
-* Light purple color on Admin Login Page (previously): #e5b6fc
+* Light purple color on Admin Login Page (previously): #337ab7
 * Background color of site: #1F2833
-* Theme color: #66FCF1
+* Theme color: #337ab7
 **************************************************************/
 
 /**********************************
@@ -79,7 +79,7 @@ li.home_icon {
 }
 
 .nav ul a:hover {
-    color:#66FCF1;
+    color:#337ab7;
 }
 
 hr {
@@ -162,7 +162,7 @@ a.active{
 }
 
 .vertical_nav li a:hover:not(.vactive) {
- color: #66FCF1;
+ color: #337ab7;
 }
 
 .adminHeading h2 {
@@ -181,7 +181,7 @@ a.active{
 }*/
 
 .vactive{
-    background-color: #66FCF1;
+    background-color: #337ab7;
 }
 
 /****************
@@ -262,7 +262,7 @@ a.active{
 .login-box h1 {
     float: left;
     font-size: 40px;
-    border-bottom: 6px solid #66FCF1;
+    border-bottom: 6px solid #337ab7;
     margin-bottom: 30px;
     padding: 13px 0;
 }
@@ -273,7 +273,7 @@ a.active{
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
-    border-bottom: 1px solid #66FCF1;
+    border-bottom: 1px solid #337ab7;
 }
 
 .textbox i {
@@ -297,7 +297,7 @@ a.active{
 .loginBtn {
     width: 100%;
     background: none;
-    border: 2px solid #66FCF1 !important;
+    border: 2px solid #337ab7 !important;
     color: white;
     padding: 5px;
     font-size: 18px;
@@ -314,7 +314,7 @@ a.active{
 }
 
 tr {
-    border-bottom: 1px solid #e5b6fc;
+    border-bottom: 1px solid #337ab7;
 }
 
 th, td {
@@ -360,7 +360,7 @@ tr:hover {
     padding: 10px;
     font-size: 15px;
     color: white;
-    background: #e5b6fc;
+    background: #337ab7;
     border: none;
     border-radius: 5px;
 }
@@ -472,7 +472,7 @@ form.add_customer, form.add_purchase {
     padding: 10px;
     font-size: 15px;
     color: white;
-    background: #e5b6fc;
+    background: #337ab7;
     border: none;
     border-radius: 5px;
 }
@@ -599,7 +599,7 @@ form.booking {
 ******************/
 .fc-unthemed td.fc-today {
     background: #337ab7 !important;
-    /*background: #66FCF1 !important;*/
+    /*background: #337ab7 !important;*/
 }
 
 .modal-dialog h4, .modal-dialog label {
@@ -611,7 +611,7 @@ form.booking {
 }
 
 .hairdresserChoice a {
-    color: #66FCF1;
+    color: #337ab7;
     padding: 0 10px;
 }
 
