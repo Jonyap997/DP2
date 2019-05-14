@@ -39,13 +39,13 @@
     </div>
    
    <div class="center_space row">
-      
-       <div class="col-md-6 col-sm-6 col-xs-6">
-           <div class="row">
+      <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12">
-                   <h2 class="gap">PRICE LIST</h2>
+                   <h2 class="text-center">PRICE LIST</h2>
                </div>
            </div>
+       <div class="col-md-6 col-sm-6 col-xs-6">
+           <div class="space"></div>
            <div class="row">
                <div class="col-md-3 col-sm-3 col-xs-3"></div>
                <div class="col-md-1 col-sm-1 col-xs-1"></div>
@@ -128,10 +128,7 @@
            </div>
        </div>
        <div class="col-md-6 col-sm-6 col-xs-6">
-         <div class="row">
-               <div class="col-md-12 col-sm-12 col-xs-12">
-                   <h2 class="gap">_</h2>
-               </div>
+         <div class="space">   
            </div>
            <div class="row">
                <div class="col-md-1 col-sm-1 col-xs-1"></div>
