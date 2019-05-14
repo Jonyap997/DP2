@@ -42,28 +42,28 @@
      <div class="container">
        <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-              <h2 class="gap">ABOUT US</h2>
+              <h2 class="text-center">About Us</h2>
           </div>
            
            <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12">
-                   I don't know what I have to write about us here......
+                   <br/>
+                   <p><strong>Humble beginnings</strong></p>
+                   <p>Smile &amp; Style was established in the year 2015 as a small-time barber in the streets of Jalan Song. Founded by the late Mr. Adam Lim Chee Xiang, the barber shop vowed to provide cheap and affordable services to the people in the neighbourhood. The founder was a lovable and humble man who always served customers with a smile, hence the name "Style &amp; Smile".</p>
+                   <br/>
+                   <p><strong>Rise to fame</strong></p>
+                   <p>In a short span of 2 years, after the passing away of the late founder, the barber shop-turned hair salon found its path towards fame and received overwhelming support from the local community. The hair salon, now headed by the founder's eldest daughter, Ms. Janice Lim paved the way for further success.</p>
+                   <br/>
+                   <p><strong>From dust to class</strong></p>
+                   <p>Since the year 2018, the hair salon upgraded itself and rose up to the challenge to a higher standard of service. The hair salon now prides itself as the leading hair salon in its region.</p>
+                   <br/>
+                   <p><strong>Plans for the future</strong></p>
+                   <p>Smile &amp; Style strives to provide the best for its customers for reasonable prices by nurturing more local talents to take up positions in its manny branches around Kuching city. The company believes in bringing up a new generation of local talents that are able to hold their own in the international scene. In order to accommodate this growing program, the company plans on expand its influence around the city until it can truly be said that: "Smile &amp; Style is like 7-Eleven"</p>
+                   <br/>
                </div>
            </div>
            </div>
            </div>
-    
-   <div class="space"></div>
-   <div class="space"></div>
-   <div class="space"></div>
-   <div class="space"></div>
-   <div class="space"></div>
-   <div class="space"></div>
-   <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
     
     <div class="row footer">
         <div class="col-md-6 col-sm-6 col-xs-6"> 
