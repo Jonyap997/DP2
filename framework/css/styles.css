@@ -627,14 +627,6 @@ input[type=text] {
   color: black;
 }
 
-.disabled_button {
-    background-color: gainsboro;
-}
-
-.disabled_button:hover {
-    background-color: gainsboro;
-}
-
-option {
+select, option {
     color: black;
 }

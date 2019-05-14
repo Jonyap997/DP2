@@ -44,7 +44,6 @@
       }
         
     document.getElementById("generate_PDF").disabled = false;
-    document.getElementById("generate_PDF").style.backgroundColor = white;
 
       var chartdata = {
         labels: days,

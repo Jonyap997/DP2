@@ -29,6 +29,7 @@
 <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     
 <script>
+
     function displaySalesChart()
 { 
   $.ajax({
@@ -45,7 +46,6 @@
       }
 
     document.getElementById("generate_PDF").disabled = false;
-    document.getElementById("generate_PDF").style.backgroundColor = white;
 
       var chartdata = {
         labels: months,
@@ -139,6 +139,7 @@
                 <?php
                     if (isset($_POST['generate_sales_report'])) 
                     {
+
                         echo $_SESSION['year'];
                         echo "<script> displaySalesChart();</script>";
                     }
