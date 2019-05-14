@@ -41,7 +41,7 @@
    <div class="center_space row">
       <div class="row">
                <div class="col-md-12 col-sm-12 col-xs-12">
-                   <h2 class="text-center">PRICE LIST</h2>
+                   <h2 class="text-center">Price List</h2>
                </div>
            </div>
        <div class="col-md-6 col-sm-6 col-xs-6">
