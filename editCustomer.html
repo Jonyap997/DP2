@@ -87,11 +87,6 @@
                 <h2>Edit Customer Profile</h2>
                 <p>Edit a customer's profile</p>
             </div>
-            
-            <div class="center">
-                <label for="customer_profile_search">Customer Name: </label>
-                <input type="search" autofocus="autofocus"/>
-            </div>
                      
             <!-- UPDATE STATE -->
             <?php if ($edit_state == false): ?>

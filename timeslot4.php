@@ -85,8 +85,9 @@ if(isset($_POST['action']) or isset($_GET['view']))
                <h2 class="text-center">Time slots</h2>
                <div class="col-md-5 col-sm-5 col-xs-5" >
                    <p>These are the time slots available for hairdressers</p>
-               <p><span><strong class="booked_text">Light Blue</strong></span> - Time slot fully booked</p>
-               <p><span><strong class="grey_text">Grey</strong></span> - Non-business Hour</p>
+                   <p><span><strong class="booked_text">Light Blue</strong></span> - Time slot fully booked</p>
+                   <p><span><strong class="grey_text">Grey</strong></span> - Non-business Hour</p>
+                   <p>To make a booking, contact Smile &amp; Style at 082&#45;123456. Any questions or inquiries will be happily answered by our professional staff.</p>
                </div>
                <div class="col-md-2 col-sm-2 col-xs-2">
                    <p>_</p>
@@ -107,7 +108,8 @@ if(isset($_POST['action']) or isset($_GET['view']))
         <!--Time slot program here.-->
           <div class="row">
                 <div class="col-md-12">
-                     
+                    <p>To make a booking, contact Smile &amp; Style at 082&#45;123456.</p>
+                    <p>Any questions or inquiries will be happily answered by our talented staff.</p>
                     <div class="hairdresserChoice"> 
                         <p>
                             <a href="timeslot.php">Hairdresser 1</a>

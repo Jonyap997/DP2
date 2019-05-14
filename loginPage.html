@@ -58,6 +58,21 @@ if(isset($_POST['login'])) {
         <link href="framework/css/mediaqueries.css" rel="stylesheet" />
     </head> 
     <body class="loginPage"> 
+       
+       <div class="row">
+            <div class="nav col-md-12 col-sm-12 col-xs-12">
+                <ul>
+                    <li class="home_icon"><a href="index.php">Home</a></li>
+                    <li><a class="active" href="loginPage.php">Admin Sign In</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="services.php">Services</a></li>
+                    <li><a href="hairdressers.php">Our hairdressers</a></li>
+                    <li><a href="timeslot.php">View Hairdressers' Schedule</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+       
         <form method="POST" action="loginPage.php">
             <div class="login-box row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
