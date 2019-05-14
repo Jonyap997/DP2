@@ -58,7 +58,7 @@
                    <p>Since the year 2018, the hair salon upgraded itself and rose up to the challenge to a higher standard of service. The hair salon now prides itself as the leading hair salon in its region.</p>
                    <br/>
                    <p><strong>Plans for the future</strong></p>
-                   <p>Smile &amp; Style strives to provide the best for its customers for reasonable prices by nurturing more local talents to take up positions in its manny branches around Kuching city. The company believes in bringing up a new generation of local talents that are able to hold their own in the international scene. In order to accommodate this growing program, the company plans on expand its influence around the city until it can truly be said that: "Smile &amp; Style is like 7-Eleven"</p>
+                   <p>Smile &amp; Style strives to provide the best for its customers for reasonable prices by nurturing more local talents to take up positions in its many branches around Kuching city. The company believes in bringing up a new generation of local talents that are able to hold their own in the international scene. In order to accommodate this growing program, the company plans on expand its influence around the city until it can truly be said that: "Smile &amp; Style is like 7-Eleven".</p>
                    <br/>
                </div>
            </div>
