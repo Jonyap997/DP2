@@ -39,7 +39,7 @@ if(isset($_POST['login'])) {
 <!DOCTYPE html> 
 <html lang="en" data-ng-app=""> 
     <head> 
-    <title>Sprint 1 Salon</title> 
+    <title>Smile &amp; Style</title> 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--Bootstrap -->
