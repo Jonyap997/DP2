@@ -19,12 +19,19 @@
     $product_4 = "";
     $product_5 = "";
     $product_6 = "";
-    $p1_quantity = "";
-    $p2_quantity = "";
-    $p3_quantity = "";
-    $p4_quantity = "";
-    $p5_quantity = "";
-    $p6_quantity = "";
+    $p1_quantity = 0;
+    $p2_quantity = 0;
+    $p3_quantity = 0;
+    $p4_quantity = 0;
+    $p5_quantity = 0;
+    $p6_quantity = 0;
+
+    $product_1_price = 0;
+    $product_2_price = 0;
+    $product_3_price = 0;
+    $product_4_price = 0;
+    $product_5_price = 0;
+    $product_6_price = 0;
     $total = 0;
 
     //Connect to database
@@ -96,7 +103,177 @@
         $p4_quantity = $_POST['p4_quantity'];
         $p5_quantity = $_POST['p5_quantity'];
         $p6_quantity = $_POST['p6_quantity'];
-        $total = $_POST['total'];
+        
+        if ($product_1 == "Art Hairspray(420ml) x") {
+            $product_1_price = 12;
+        } else if ($product_1 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_1_price = 62;
+        } else if ($product_1 == "Notel Spiky Clap (100ml) x") {
+            $product_1_price = 25;
+        } else if ($product_1 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_1_price = 200;
+        } else if ($product_1 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_1_price = 120;
+        } else if ($product_1 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_1_price = 230;
+        } else if ($product_1 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_1_price = 12;
+        } else if ($product_1 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_1_price = 30;
+        } else if ($product_1 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_1_price = 50;
+        } else if ($product_1 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_1_price = 90;
+        } else if ($product_1 == "Arimino Spice Water Shining Straight x") {
+            $product_1_price = 120;
+        } else if ($product_1 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_1_price = 110;
+        } else {
+            
+        }
+        
+        if ($product_2 == "Art Hairspray(420ml) x") {
+            $product_1_price = 12;
+        } else if ($product_2 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_2_price = 62;
+        } else if ($product_2 == "Notel Spiky Clap (100ml) x") {
+            $product_2_price = 25;
+        } else if ($product_2 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_2_price = 200;
+        } else if ($product_2 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_2_price = 120;
+        } else if ($product_2 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_2_price = 230;
+        } else if ($product_2 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_2_price = 12;
+        } else if ($product_2 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_2_price = 30;
+        } else if ($product_2 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_2_price = 50;
+        } else if ($product_2 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_2_price = 90;
+        } else if ($product_2 == "Arimino Spice Water Shining Straight x") {
+            $product_2_price = 120;
+        } else if ($product_2 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_2_price = 110;
+        } else {
+            
+        }
+        
+        if ($product_3 == "Art Hairspray(420ml) x") {
+            $product_3_price = 12;
+        } else if ($product_3 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_3_price = 62;
+        } else if ($product_3 == "Notel Spiky Clap (100ml) x") {
+            $product_3_price = 25;
+        } else if ($product_3 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_3_price = 200;
+        } else if ($product_3 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_3_price = 120;
+        } else if ($product_3 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_3_price = 230;
+        } else if ($product_3 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_3_price = 12;
+        } else if ($product_3 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_3_price = 30;
+        } else if ($product_3 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_3_price = 50;
+        } else if ($product_3 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_3_price = 90;
+        } else if ($product_3 == "Arimino Spice Water Shining Straight x") {
+            $product_3_price = 120;
+        } else if ($product_3 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_3_price = 110;
+        } else {
+            
+        }
+        
+        if ($product_4 == "Art Hairspray(420ml) x") {
+            $product_4_price = 12;
+        } else if ($product_4 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_4_price = 62;
+        } else if ($product_4 == "Notel Spiky Clap (100ml) x") {
+            $product_4_price = 25;
+        } else if ($product_4 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_4_price = 200;
+        } else if ($product_4 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_4_price = 120;
+        } else if ($product_4 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_4_price = 230;
+        } else if ($product_4 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_4_price = 12;
+        } else if ($product_4 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_4_price = 30;
+        } else if ($product_4 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_4_price = 50;
+        } else if ($product_4 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_4_price = 90;
+        } else if ($product_4 == "Arimino Spice Water Shining Straight x") {
+            $product_4_price = 120;
+        } else if ($product_4 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_4_price = 110;
+        } else {
+            
+        }
+        
+        if ($product_5 == "Art Hairspray(420ml) x") {
+            $product_5_price = 12;
+        } else if ($product_5 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_5_price = 62;
+        } else if ($product_5 == "Notel Spiky Clap (100ml) x") {
+            $product_5_price = 25;
+        } else if ($product_5 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_5_price = 200;
+        } else if ($product_5 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_5_price = 120;
+        } else if ($product_5 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_5_price = 230;
+        } else if ($product_5 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_5_price = 12;
+        } else if ($product_5 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_5_price = 30;
+        } else if ($product_5 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_5_price = 50;
+        } else if ($product_5 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_5_price = 90;
+        } else if ($product_5 == "Arimino Spice Water Shining Straight x") {
+            $product_5_price = 120;
+        } else if ($product_5 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_5_price = 110;
+        } else {
+            
+        }
+        
+        if ($product_6 == "Art Hairspray(420ml) x") {
+            $product_6_price = 12;
+        } else if ($product_6 == "L'Oreal Professional Hair SPA Detoxifying Shampoo(1500ml) x") {
+            $product_6_price = 62;
+        } else if ($product_6 == "Notel Spiky Clap (100ml) x") {
+            $product_6_price = 25;
+        } else if ($product_6 == "Shiseido Professional THC Aqua Intensive Treatment 1 Airy Feel Conditioner (1000g) x") {
+            $product_6_price = 200;
+        } else if ($product_6 == "Kerastase Elixir Ultime (100ml) x") {
+            $product_6_price = 120;
+        } else if ($product_6 == "Shiseido Professional THC Adenovital Advanced Scalp Essence 180ml x") {
+            $product_6_price = 230;
+        } else if ($product_6 == "MNM Aromatic Hairspray (420ml) x") {
+            $product_6_price = 12;
+        } else if ($product_6 == "Schwarzkopf Osis+ Dust It Mattifying Powder 10g x") {
+            $product_6_price = 30;
+        } else if ($product_6 == "Ketastase Resistance Ciment Thermique (150ml) x") {
+            $product_6_price = 50;
+        } else if ($product_6 == "Elegance Plus Matte Hair Wax (140g) x") {
+            $product_6_price = 90;
+        } else if ($product_6 == "Arimino Spice Water Shining Straight x") {
+            $product_6_price = 120;
+        } else if ($product_6 == "L'Oreal Professionnel Serioxyl Stemoxydine 5% Neohesperidin Denser Hair Treatment (90ml) x") {
+            $product_6_price = 110;
+        } else {
+            
+        }
+        
+        //$total = $_POST['total'];
+        $total = (($product_1_price*$p1_quantity)+($product_2_price*$p2_quantity)+($product_3_price*$p3_quantity)+($product_4_price*$p4_quantity)+($product_5_price*$p5_quantity)+($product_6_price*$p6_quantity));
 
         //To prevent sql injection
         $id  = stripcslashes($id);

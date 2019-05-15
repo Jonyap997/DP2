@@ -351,11 +351,6 @@
                             </div>
                         </div>
                        
-                           <div class="input-group">
-                               <label for="total">Total</label>
-                        <input type="text" name="total" value="<?php echo $total; ?>" required="required"/>
-                           </div>
-                       
                     </fieldset>
                     
                     <input type="submit" id="add_purchase_submit" name="add_purchase_submit" value="Add Purchase"/>
