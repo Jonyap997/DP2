@@ -76,7 +76,7 @@
                              </div>
                              <div class="input-group">
                                 <label for="dob">Date of Birth</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                    <input type="date" name="dob" id="dob" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
                              </div>
                         </div>
                 <div class="col-md-8 col-sm-8 col-xs-8">
