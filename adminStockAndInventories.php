@@ -78,7 +78,7 @@
         
         <div class="col-md-9 col-sm-9 col-xs-9">
             <div class="pageContent">
-            <h2>Stock &amp; Inventory</h2>
+            <h2 class="text-center">Stock &amp; Inventory</h2>
             
             <form method="POST" action="adminStockServer.php" class="adminStockForm">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
