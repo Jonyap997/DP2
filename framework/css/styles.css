@@ -623,7 +623,7 @@ form.booking {
 * FORM DESIGN
 *************/
 
-input[type=text], input[type=date] {
+input[type=text], input[type=date], input[type=number] {
   color: black;
 }
 
