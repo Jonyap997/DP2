@@ -81,6 +81,7 @@
         //Get Values from form
         $id = $_POST['id'];
         $hair_service = $_POST['hair_service'];
+        $hairdresser = $_POST['hairdresser'];
         $massage = $_POST['massage'];
         $body_wax = $_POST['body_wax'];
         $product_1 = $_POST['product_1'];
@@ -100,6 +101,7 @@
         //To prevent sql injection
         $id  = stripcslashes($id);
         $hair_service = stripcslashes($hair_service);
+        $hairdresser = stripcslashes($hairdresser);
         $massage = stripcslashes($massage);
         $body_wax = stripcslashes($body_wax);
         $product_1 = stripcslashes($product_1);
@@ -118,6 +120,7 @@
 
         $id = mysqli_real_escape_string($connection, $id);
         $hair_service = mysqli_real_escape_string($connection, $hair_service);
+        $hairdresser = mysqli_real_escape_string($connection, $hairdresser);
         $massage = mysqli_real_escape_string($connection, $massage);
         $body_wax = mysqli_real_escape_string($connection, $body_wax);
         $product_1 = mysqli_real_escape_string($connection, $product_1);
@@ -134,7 +137,7 @@
         $p6_quantity = mysqli_real_escape_string($connection, $p6_quantity);
         $total = mysqli_real_escape_string($connection, $total);
 
-        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, hairServices, massage, bodyWax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$hair_service', '$massage', '$body_wax', CONCAT('$product_1', '$p1_quantity', ' ', '$product_2', '$p2_quantity', ' ', '$product_3', '$p3_quantity', ' ', '$product_4', '$p4_quantity', ' ', '$product_5', '$p5_quantity', ' ', '$product_6', '$p6_quantity'), '$total')";
+        $query = "INSERT INTO customerPurchaseHistory (datePurchased, id, hairServices, hairdresser_id, massage, bodyWax, itemPurchased, total) VALUES (CURRENT_DATE(), '$id', '$hair_service', '$hairdresser', '$massage', '$body_wax', CONCAT('$product_1', '$p1_quantity', ' ', '$product_2', '$p2_quantity', ' ', '$product_3', '$p3_quantity', ' ', '$product_4', '$p4_quantity', ' ', '$product_5', '$p5_quantity', ' ', '$product_6', '$p6_quantity'), '$total')";
         mysqli_query($connection, $query)
             or die("Error".mysqli_error($connection));
         $_SESSION['msg'] = "Purchase Added";

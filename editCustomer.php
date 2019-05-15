@@ -104,7 +104,7 @@
                              </div>
                              <div class="input-group">
                                 <label for="dob">Date of Birth</label>
-                    <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
+                    <input type="date" name="dob" id="dob" autofocus="autofocus" value="<?php echo $dob; ?>" required="required"/>
                              </div>
                         </div>
                 <div class="col-md-8 col-sm-8 col-xs-8">
@@ -168,6 +168,26 @@
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
+                                <div class="input-group">
+                                    <label for="hairdresser">Hairdresser</label>
+                                    <select id="hairdresser" name="hairdresser">
+                                        <option value="">None
+                                        </option>
+                                        <option value="1001">
+                                        Sum Ting Wong</option>
+                                        <option value="1002">
+                                        Noh Yu Mor</option>
+                                        <option value="1003">
+                                        Freddy Jupiter</option>
+                                        <option value="1004">
+                                        Ack Cher Lee</option>
+                                        <option value="1005">
+                                        Ek Zack Lee</option>
+                                        <option value="1006">
+                                        Tan Os</option>
+                                    </select>
+                                </div>
+                                
                                 <div class="input-group">
                                     <label for="body_wax">Body Wax</label>
                                         <select id="body_wax" name="body_wax">
